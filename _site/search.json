@@ -1,0 +1,233 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Marília Melo Favalesso",
+    "section": "",
+    "text": "Hello!Olá!Hola!\n\n\nI am an eco-epidemiologist (MSc/PhD) and data scientist with experience in machine learning and advanced statistical techniques.\nThroughout my career, I have developed predictive models, analyzed large volumes of data, and promoted evidence-based decision-making. These experiences have demonstrated how new technologies can positively impact public health and environmental preservation.\nAs an active participant in data communities, I am always looking for opportunities to learn and share knowledge with colleagues and enthusiasts.\nWelcome!\n\n\nSou uma ecoepidemiologista (MSc/PhD) e cientista de dados com experiência em aprendizado de máquina e técnicas estatísticas avançadas.\nAo longo da minha carreira, desenvolvi modelos preditivos, analisei grandes volumes de dados e incentivei a tomada de decisões baseadas em evidências. Essas experiências mostraram como as novas tecnologias podem ter um impacto positivo na saúde pública e na preservação ambiental.\nParticipante ativa em comunidades de dados, estou sempre à procura de oportunidades para aprender e compartilhar conhecimento com colegas e entusiastas.\nSeja bem-vind@!\n\n\nSoy una ecoepidemióloga (MSc/PhD) y científica de datos con experiencia en aprendizaje automático y técnicas estadísticas avanzadas.\nA lo largo de mi carrera, he desarrollado modelos predictivos, analizado grandes volúmenes de datos y fomentado la toma de decisiones basadas en evidencia. Estas experiencias han demostrado cómo las nuevas tecnologías pueden tener un impacto positivo en la salud pública y en la preservación ambiental.\nParticipante activa en comunidades de datos, siempre estoy en busca de oportunidades para aprender y compartir conocimientos con colegas y entusiastas.\n¡Bienvenid@!"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Marília Melo Favalesso",
+    "section": "",
+    "text": "I am an eco-epidemiologist and data science/biostatistics enthusiast. I am currently pursuing a PhD at the University of Buenos Aires (‘Ecología, Genética y Evolución’ Program), with my workplace being the National Institute of Tropical Medicine in Argentina. I have experience in ecology, biological data analysis, spatial data analysis, epidemiology, entomology, and programming (R and Python). I am a co-founder and co-organizer of the Data Science Study Group (GECD) in Foz do Iguaçu, I speak about biostatistics in Soma dos Quadrados, and I discuss species distribution modeling methods in the Niche Models Group."
+  },
+  {
+    "objectID": "about_es.html",
+    "href": "about_es.html",
+    "title": "About",
+    "section": "",
+    "text": "Hello! Hi! Holla!"
+  },
+  {
+    "objectID": "about_pt.html",
+    "href": "about_pt.html",
+    "title": "About",
+    "section": "",
+    "text": "Hello! Hi! Holla!"
+  },
+  {
+    "objectID": "blog/welcome/index.html",
+    "href": "blog/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "blog/post-with-code/index.html",
+    "href": "blog/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "About",
+    "section": "",
+    "text": "I’m a computational epidemiologist and data scientist working at the intersection of AI/ML, computational dynamics and public health. I am the author of Computational Modeling of Infectious Disease, a richly illustrated compendium on modern computational epidemiology, as well as a growing body of research.\nI attended the University of Oxford for my undergraduate studies, graduating with a distinction (1st class), and returned there for my graduate studies. I also hold degrees from Cardiff and Robert Gordon University Aberdeen, and have studied at the University of Leiden under an Erasmus programme. Today, I am board certified in public health, a Fellow of the Royal Society for Public Health and a member of several other learned societies. I have also been elected a Senior Member of IEEE, where I am a member of the EMBS Technical Committee on Standards and the EMBS Technical Committee on Biomedical and Health Informatics.\nI am currently a Practice Director for Biomedical AI/ML for HCLTech, where I advise the world’s leading life sciences, medical devices and pharma companies on how to leverage AI/ML to improve their products and serve their customers better. I am also a visiting thesis supervisor for students on the data science track of the mathematics programme at the Budapest University of Technology and Economics.\nAs part of my service to the profession, I’ve been a reviewer for JOSS, Frontiers in Immunology and Frontiers in Medicine. Between 2022 and 2023, I served Virginia as a member of the Medical Reserve Corps, and currently serve in both the Rocky Mountain MRC of Denver and Colorado’s radiation response MRC. I was also part of the COVID-19 Healthcare Coalition and the Covid Tracking Project.\nYou can find a list of my publications here. My work on COVID-19 has been featured in the media. I also write on various topics as the fancy strikes – you can peruse my notebook here."
+  },
+  {
+    "objectID": "index.html#key-research-interests",
+    "href": "index.html#key-research-interests",
+    "title": "About",
+    "section": "Key research interests",
+    "text": "Key research interests\n\nComputational epidemiology: agent-based modelling, disease-avoidant behaviours, epidemics over dynamic networks, geospatial computational epidemiology – all primarily in the context of infectious diseases\nPharmacovigilance: VAERS, passive reporting, text mining of large complex report sets using LLMs\nComputational dynamics: computational dynamics of complex systems, computational dynamics of infectious diseases, computational dynamics of social systems\nPublic health: evidence-based public health policy, public health ethics, public health law, quality and systems improvement in public health"
+  },
+  {
+    "objectID": "index.html#teaching",
+    "href": "index.html#teaching",
+    "title": "About",
+    "section": "Teaching",
+    "text": "Teaching\nI am a visiting thesis supervisor for students on the data science track of the mathematics programme at the Budapest University of Technology and Economics - you can read more about this here.\nFrom time to time, I get invited to give talks and lectures. My capacity for this is somewhat limited due to other commitments, but if you are interested in having me speak at your event, please get in touch."
+  },
+  {
+    "objectID": "index.html#selected-papers",
+    "href": "index.html#selected-papers",
+    "title": "About",
+    "section": "Selected papers",
+    "text": "Selected papers\nTocilizumab in addition to standard of care in the management of COVID-19: A meta-analysis of RCTs. Mutua V, Henry BM, von Csefalvay, C, Cheruiyot I, Vikse J, Lippi G, Bundi B, Mong’are N. Acta Biomed. 2022, 93(1):e2022014. doi: 10.23750/abm.v93i1.12208.\nJAMPI: Efficient matrix multiplication in Spark using barrier execution mode. Foldi T, von Csefalvay C, Perez NA. BDCC 2020, 4(4):32. doi: 10.3390/bdcc4040032.\nVAERS data reveals no increased risk of neuroautoimmune adverse events from COVID- vaccines. von Csefalvay, C. medRxiv 2021. doi: 10.1101/2021.06.13.21258851.\nTuberculous polyserositis in endemic areas with an emphasis on empiric therapy: A case report. Munguti J, Mutua V, Cheruiyot I, von Csefalvay C, Opare-Addo P, Kiko N, Wanjiru R. Medicine: Case Reports. 2022, 3(4):e0221. doi: 10.1097/MD9.0000000000000221.\nSee more here."
+  },
+  {
+    "objectID": "index.html#professional-affiliations",
+    "href": "index.html#professional-affiliations",
+    "title": "About",
+    "section": "Professional affiliations",
+    "text": "Professional affiliations\nThe OR Society | Member since 2020\nRoyal Society for Public Health | Fellow since 2021\nTOPRA | Registered Member since 2021\nAmerican Public Health Association | Member since 2021\nIEEE | Senior Member since 2024"
+  },
+  {
+    "objectID": "index.html#personal-life",
+    "href": "index.html#personal-life",
+    "title": "About",
+    "section": "Personal life",
+    "text": "Personal life\nI live in Denver, CO, with my Golden Retriever, Oliver. Born in Budapest, Hungary, I’ve spent my formative years in England, but have called the Netherlands, Germany, Belgium, Austria and the United States home at various points in my life. Since 2020, I’ve been living in the United States, where I am a permanent resident.\nIn my free time, I enjoy reading (mostly Cold War history and classical Greek drama), cooking (with not a lot of success) and Renaissance polyphony (esp. Thomas Tallis and Orlando di Lasso). I’m credited for a somewhat pretty sequence of integers called Jellyfish Heart numbers (OEIS A344856), which I discovered in 2020 while doing something that has nothing at all to do with my day job.\nI live with neuromyelitis optica since 2015, which has left me with a lifelong desire to understand complex, multicausal health conditions like NMOSD better.\nIn what little is left of my free time, I’m an adaptive multisport athlete, competing in wheelchair rugby, adaptive rowing (category PR1) and the SkiErg (category SIT2). In the latter, I currently hold the world records for 100m, 500m, 1,000m, 2,000m, 6,000m, 10,000m, 21,097m and 42,195m distances and the 60 minutes time. I occasionally rant and whine about my forays in the world of adaptive exercise and my attempts at doing so in a mostly science-based manner."
+  },
+  {
+    "objectID": "index.html#pronunciation-guide",
+    "href": "index.html#pronunciation-guide",
+    "title": "About",
+    "section": "Pronunciation guide",
+    "text": "Pronunciation guide\nMy last name rhymes with Chick-Fil-A."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Finley Malloc",
+    "section": "Education",
+    "text": "Education\nUniversity of California, San Diego | San Diego, CA PhD in Mathematics | Sept 2011 - June 2015\nMacalester College | St. Paul MA B.A in Economics | Sept 2007 - June 2011"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Finley Malloc",
+    "section": "Experience",
+    "text": "Experience\nWengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Sept 2012 - April 2018"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "Finley Malloc",
+    "section": "",
+    "text": "University of California, San Diego | San Diego, CA PhD in Mathematics | Sept 2011 - June 2015\nMacalester College | St. Paul MA B.A in Economics | Sept 2007 - June 2011"
+  },
+  {
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
+    "title": "Finley Malloc",
+    "section": "",
+    "text": "Wengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Sept 2012 - April 2018"
+  },
+  {
+    "objectID": "blog/es.html",
+    "href": "blog/es.html",
+    "title": "Marília Melo Favalesso",
+    "section": "",
+    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "blog/es.html#posts-en-español",
+    "href": "blog/es.html#posts-en-español",
+    "title": "Marília Melo Favalesso",
+    "section": "",
+    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "blog/pt.html",
+    "href": "blog/pt.html",
+    "title": "Marília Melo Favalesso",
+    "section": "",
+    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "blog/pt.html#posts-em-português",
+    "href": "blog/pt.html#posts-em-português",
+    "title": "Marília Melo Favalesso",
+    "section": "",
+    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "blog/en.html",
+    "href": "blog/en.html",
+    "title": "Marília Melo Favalesso",
+    "section": "",
+    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "blog/en.html#posts-in-english",
+    "href": "blog/en.html#posts-in-english",
+    "title": "Marília Melo Favalesso",
+    "section": "",
+    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Posts",
+    "section": "",
+    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Posts",
+    "section": "",
+    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "posts/en.html",
+    "href": "posts/en.html",
+    "title": "Marília Melo Favalesso",
+    "section": "",
+    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "posts/en.html#posts-in-english",
+    "href": "posts/en.html#posts-in-english",
+    "title": "Marília Melo Favalesso",
+    "section": "",
+    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "posts/pt.html",
+    "href": "posts/pt.html",
+    "title": "Marília Melo Favalesso",
+    "section": "",
+    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "posts/pt.html#posts-em-português",
+    "href": "posts/pt.html#posts-em-português",
+    "title": "Marília Melo Favalesso",
+    "section": "",
+    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "posts/es.html",
+    "href": "posts/es.html",
+    "title": "Marília Melo Favalesso",
+    "section": "",
+    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "posts/es.html#posts-en-español",
+    "href": "posts/es.html#posts-en-español",
+    "title": "Marília Melo Favalesso",
+    "section": "",
+    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
+  }
+]

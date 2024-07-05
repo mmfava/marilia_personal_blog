@@ -1,0 +1,40 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/about.html"
+    ]
+  },
+  {
+    "listing": "/blog/es.html",
+    "items": []
+  },
+  {
+    "listing": "/blog/pt.html",
+    "items": []
+  },
+  {
+    "listing": "/blog/en.html",
+    "items": []
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/en.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/pt.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/es.html",
+    "items": []
+  }
+]

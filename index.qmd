@@ -1,0 +1,50 @@
+---
+title: "Marília Melo Favalesso"
+image: profile.jpg
+about:
+  #id: hero-heading
+  template: trestles
+  #image-shape: round
+  links:
+    - icon: github
+      href: https://github.com/mmfava/
+    - icon: instagram
+      href: https://www.instagram.com/biologadosdados/
+    - icon: linkedin
+      href: https://www.linkedin.com/in/mariliafavalesso/
+    - icon: envelope
+      href: mailto:marilia.melo.favalesso@gmail.com
+---
+
+::: panel-tabset
+### Hello!
+
+I am an eco-epidemiologist (MSc/PhD) and data scientist with experience in machine learning and advanced statistical techniques.
+
+Throughout my career, I have developed predictive models, analyzed large volumes of data, and promoted evidence-based decision-making. These experiences have demonstrated how new technologies can positively impact public health and environmental preservation.
+
+As an active participant in data communities, I am always looking for opportunities to learn and share knowledge with colleagues and enthusiasts.
+
+Welcome! 
+
+### Olá!
+
+Sou uma ecoepidemiologista (MSc/PhD) e cientista de dados com experiência em aprendizado de máquina e técnicas estatísticas avançadas.
+
+Ao longo da minha carreira, desenvolvi modelos preditivos, analisei grandes volumes de dados e incentivei a tomada de decisões baseadas em evidências. Essas experiências mostraram como as novas tecnologias podem ter um impacto positivo na saúde pública e na preservação ambiental.
+
+Participante ativa em comunidades de dados, estou sempre à procura de oportunidades para aprender e compartilhar conhecimento com colegas e entusiastas.
+
+Seja bem-vind@! 
+
+### Hola!
+
+Soy una ecoepidemióloga (MSc/PhD) y científica de datos con experiencia en aprendizaje automático y técnicas estadísticas avanzadas.
+
+A lo largo de mi carrera, he desarrollado modelos predictivos, analizado grandes volúmenes de datos y fomentado la toma de decisiones basadas en evidencia. Estas experiencias han demostrado cómo las nuevas tecnologías pueden tener un impacto positivo en la salud pública y en la preservación ambiental.
+
+Participante activa en comunidades de datos, siempre estoy en busca de oportunidades para aprender y compartir conocimientos con colegas y entusiastas.
+
+¡Bienvenid@!
+
+:::
