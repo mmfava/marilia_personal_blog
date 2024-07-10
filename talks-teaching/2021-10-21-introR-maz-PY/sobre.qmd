@@ -1,0 +1,201 @@
+---
+title: 'Curso: Programación con R'
+subtitle: En "V Jornadas Paraguayas de Mastozoología"
+image: image.png
+execute:
+  echo: true
+  output: false
+date: 2021-10-18 09:00:00
+categories:
+  - R
+  - Code
+tags:
+  - ES-AR
+lang: es-ar
+---
+
+<button class="custom-button" onclick="window.location.href='https://somaquadrados.netlify.app/talk/2021-10-18-intror-asopyamasto/'">Site del curso</button>
+
+# Descripción
+
+Este es un curso de una semana en programación R para analizar datos mastozoologícos. Se realiza de forma sincrónica, con ejercicios. Es un curso intensivo y desafiante que invita a los estudiantes a pensar y desarrollar algoritmos para el análisis de datos. Específicamente, el curso tiene como objetivo enseñar a los participantes a:
+
+(a) desarrollar e interpretar scripts R
+
+(b) importar y manipular datos
+
+(c) describir y visualizar datos
+
+Subiremos los videos de las clases al canal de youtube de [\@somaquadrados](https://www.youtube.com/channel/UC8_OHjnszxRiit92ZJlNH4A). Los videos se pueden ver de forma asincrónica. El material escrito, las diapositivas, los guiones y las tareas estarán disponibles en el post en la continuación. 
+
+## Fechas
+- Inicio: 18/10/2021
+- Finaliza: 22/10/2021
+
+-----
+
+# Profesores
+
+## Daniela Lamattina
+
+<img src="https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/fotos/DL.png?raw=true" style="width: 20%;" />
+
+Veterinaria (UNCPBA, Argentina), Doctora en Cs. Veterinarias (UNL, Argentina), técnica profesional del Instituto Nacional de Medicina Tropical e Investigadora asistente de CONICET (Argentina). Empezó a incursionar en R en 2015, cuando inició sus estudios de posgrado
+
+{{< fa envelope >}} daniela.lamattina@gmail.com
+
+-----
+
+## Eliana Florencia Burgos
+
+<img src="https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/fotos/EFB.png?raw=true" style="width: 20%;" />
+
+Bióloga (UADER - Argentina), estudiante de la especialización en Biología de la Conservación (UNaM - Argentina) y estudiante de Doctorado en Ecología, Genética y Evolución (UBA - Argentina). Trabaja con R desde 2018 cuando inició sus estudios de posgrado.
+
+{{< fa envelope >}} burgosef@gmail.com
+
+-----
+
+## Julio Torres
+
+<img src="https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/fotos/JT.png?raw=true" style="width: 20%;" />
+
+Biólogo por la Universidad Nacional de Asunción (UNA). Doctor en Ciencias Naturales por la Universidad Nacional de la Plata (UNLP). Actualmente es Investigador asociado al Instituto de Investigación Biológica del Paraguay (IIBP) y consultor en relevamientos de mamíferos. Trabaja con el Lenguaje R desde 2017, aplicando esta herramienta en tareas de limpieza de datos, elaboración de gráficos y análisis con datos de morfometría geométrica.
+
+{{< fa envelope >}} juliomystorres@gmail.com
+
+-----
+
+## Marília Melo Favalesso
+
+<img src="https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/fotos/MMF.png?raw=true" style="width: 20%;" />
+
+Bióloga (UFPR - Brasil), Magíster en Conservación y Manejo de Recursos Naturales (UNIOESTE - Brasil) y Estudiante de Doctorado en Ecología, Genética y Evolución (UBA - Argentina). Trabaja con R desde 2016 cuando realizaba labores de consultoría y asesoría en bioestadística.
+
+{{< fa envelope >}} mariliabioufpr@gmail.com
+
+-----
+
+# Link de la reunión
+Les dejamos aquí el link de la reunión que será el mismo a utilizar durante toda la semana:  [https://us02web.zoom.us/j/86944112348](https://us02web.zoom.us/j/86944112348 )       
+
+
+-----
+
+# Clases
+
+## Clase 0 (hasta 16/10/2021)
+
+1. Responda el cuestionario presente en [*Google Forms* (haga clic aquí)](https://docs.google.com/forms/d/e/1FAIpQLSdLulk1972mhuLnrvWqq2pc_onegCfJQAgi2Ne7ak_hzrJQWg/viewform).
+
+2. Únase a nuestro grupo en el Telegrama: [https://t.me/R_VJPM](https://t.me/R_VJPM)
+
+2. Ver video-clase 0: 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/avI8KI9rpII" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[https://youtu.be/avI8KI9rpII](https://youtu.be/avI8KI9rpII)
+
+4. Instalar R: [https://cran.r-project.org/bin/windows/base/](https://cran.r-project.org/bin/windows/base/)
+
+5. Instalar RStudio: [https://www.rstudio.com/products/rstudio/download/](https://www.rstudio.com/products/rstudio/download/)
+
+*¿No puede instalar los programas a tiempo o ha tenido algún problema con la instalación? ¡Posibilidad de utilizar la el *RStudio cloud*!: [https://rstudio.cloud/](https://rstudio.cloud/ ) 
+
+-----
+
+## Clase 1 (lunes - 18/10/2021)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ked98wm2vaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+**Slides**
+
+[Download en PDF](https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/clases/c1/clase_1.pdf?raw=true)
+
+[Download en html](https://somaquadrados.netlify.app/talk/2021-10-18-intror-asopyamasto/clases/c2/clase_2#1)
+
+**Script**
+
+[Script Clase 1](https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/clases/c1/clase_1.R)
+
+-----
+
+## Clase 2 (martes - 19/10/2021)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dA62tbWyluc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+**Slides**
+
+[Download en PDF](https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/clases/c2/clase_2.pdf?raw=true)
+
+[Download en HTML](https://somaquadrados.netlify.app/talk/2021-10-18-intror-asopyamasto/clases/c2/clase_2#1)
+
+
+**Script**
+
+[Script Clase 2](https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/clases/c2/clase_2.R?raw=true)
+
+**Datos**
+
+[datos.csv](https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/clases/c2/datos.csv?raw=true)
+
+[datos.txt](https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/clases/c2/datos.txt?raw=true)
+
+[datos.xlsx](https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/clases/c2/datos.xlsx?raw=true)
+
+[tidy_ej.xlsx](https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/clases/c2/tidy_ej.xlsx?raw=true)
+
+-----
+
+## Clase 3 (miércoles - 20/10/2021)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EEObxIABMaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Parte I
+
+**Slides**
+
+[Download en PDF - Teorica](https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/clases/c3/Clase31a.pdf?raw=true)
+
+[Download en PDF - Practica](https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/clases/c3/Clase31b.pdf?raw=true)
+
+**Script**
+
+[Script Clase 3.1 - Teorica](https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/clases/c3/Script31a.R?raw=true)
+
+[Script Clase 3.1 - Practica](https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/clases/c3/Script31b.R?raw=true)
+
+**Datos**
+
+[Ejercicio_7](https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/clases/c3/Ejercicio_7.csv?raw=true)
+
+[Ejercicio_6](https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/clases/c3/Ejercicio_6.csv?raw=true)
+
+[Cuicas](https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/clases/c3/Cuicas.csv)
+
+### Parte II
+
+**Slides**
+
+[Download en PDF 3.2 - Teorica](https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/clases/c3/Clase32.pdf?raw=true)
+
+[Download en PPTX 3.2 - Teorica](https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/clases/c3/Clase32.pptx?raw=true)
+
+**Script**
+
+[Script Clase 3.2 - Teorica](https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/clases/c3/Script32.R?raw=true)
+
+**Datos**
+
+[Frecuencias](https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/clases/c3/tablasfrecuenciasDani.csv?raw=true)
+
+-----
+
+
+## Clase 4 (jueves - 21/10/2021)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xAc1xiM6XI8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Trabajo final (viernes - 22/10/2021)
+
+[Trabajo final](https://github.com/somaquadrados/site_soma/blob/master/content/talk/2021-10-13-curso-r-masto-py/clases/tf/TF.R?raw=true)

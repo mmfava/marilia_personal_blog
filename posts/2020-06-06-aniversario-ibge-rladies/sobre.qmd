@@ -1,0 +1,29 @@
+---
+title: "Como fazer um mapa animado com dados do IBGE"
+subtitle: "Post para o blog das R-Ladies BH"
+image: image.png
+author:
+  - name: "Marília Melo Favalesso"
+    email: "marilia.melo.favalesso@gmail.com"
+date: "2020-06-06"
+citation: 
+  url: "http://www.mmfava.com"
+  version: 1
+categories:
+  - Code
+  - R
+  - R-Ladies
+  - Spatial
+lang: pt-br
+tags: 
+  - PT-BR
+---
+
+![](image.png)
+
+Trabalhando ou não com dados, com certeza você já deve ter ouvido falar sobre o nosso Instituto Brasileiro de Geografia e Estatística (IBGE). O IBGE é uma entidade da administração pública federal, vinculada ao Ministério da Economia, responsável por prover todas as informações estatísticas oficiais do nosso país. Através do seu trabalho analítico, o IBGE nos fornece informações espaço-temporais importantes, como dados sociodemográficos, de ocupação e de uso da terra, sobre a indústria, o meio ambiente e a agricultura, além de cartas e mapas com delimitações do território brasileiro.
+
+Com o objetivo de homenagear a fundação dessa instituição, hoje comemora-se o Dia da Criação do IBGE 🎂. Foi em 6 de julho de 1934 que o Decreto-Lei nº 24.609 foi sancionado, iniciando o projeto que se tornou a instituição que conhecemos atualmente. Para que essa data tão importante não passe em branco, hoje eu vou te ensinar a fazer um mapa animado no R utilizando dados fornecidos pelo IBGE. Para tal, é só acessar a minha postagem no MEDIUM:
+
+<button class="custom-button" onclick="window.location.href='https://medium.com/rladiesbh/como-fazer-um-mapa-animado-com-dados-do-ibge-feffd73c8b6b'">medium.com/rladiesbh</button>
+

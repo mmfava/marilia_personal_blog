@@ -1,0 +1,28 @@
+---
+title: "Análise estatística descritiva com uso de R"
+subtitle: "Curso ENAP - Apresentação do trabalho final"
+image: image.png
+execute:
+  echo: true
+  output: false
+date: 2021-08-13 09:00:00
+author:
+  - Marília Melo Favalesso
+citation: 
+  url: "https://www.mmfava.com"
+  version: 1
+categories:
+  - R
+  - Code
+  - Course
+lang: pt-br
+format: html
+tags: 
+  - PT-BR
+---
+
+# Sobre
+
+Nas últimas três semanas, participei de um curso que visava capacitar profissionais e usuários de R para o ensino de estatística introdutória nessa línguagem. Ao final do período, todos os participantes apresentaram uma aula, sendo a minha a seguinte:
+
+<iframe src="https://mmfava.netlify.app/talk/2021-08-14-trabalhofinal-enap/slides.html#1" width="100%" height="500px" style="border:none;"></iframe>

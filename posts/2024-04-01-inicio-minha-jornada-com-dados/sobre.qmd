@@ -1,0 +1,39 @@
+---
+title: "Minha história com dados: Parte 1"
+subtitle: "Implementação do projeto 'Qual é a sua pergunta?'"
+image: image.png
+author:
+  - name: "Marília Melo Favalesso"
+    email: "marilia.melo.favalesso@gmail.com"
+date: "2024-04-01"
+citation: 
+  url: "http://www.mmfava.com"
+  version: 1
+categories:
+  - Git
+  - Github
+  - Soma dos Quadrados
+lang: pt-br
+tags: 
+  - PT-BR
+---
+
+Olá, pessoal! Tudo bem com vocês? ☀
+
+Hoje quero falar sobre a minha jornada com dados, que começou em meados de 2015!
+
+Depois de completar minha graduação em biologia, decidi aprofundar meus conhecimentos em estatística para me tornar uma pesquisadora. Naquele momento, acreditava que um bom pesquisador em ecologia deveria ser capaz de analisar seus próprios dados.
+
+Nessa caminhada, entrei em contato com a Profa. Dra. Ana Tereza Bettencourt Guimarães, da Universidade Estadual do Oeste do Paraná. A Ana me acolheu imediatamente, proporcionando-me a chance de trabalhar com consultorias em bioestatística sob sua orientação. Em 2015, realizamos assessorias e consultorias para clientes da iniciativa pública e privada.
+
+Em 2016, com o sucesso de nosso trabalho, lançamos oficialmente "Qual é a sua pergunta?" (QESP) na UNIOESTE. A Ana escolheu este título porque entender a pergunta que precisa ser respondida é o primeiro passo para compreender as necessidades de nossos clientes em relação à análise de dados. O projeto existe até hoje e funciona como uma empresa de bioestatística dentro da universidade. 
+
+Entre 2016 e 2018, o projeto envolveu graduandos e pós-graduandos, atendendo a clientes dos setores público e privado com mais de 60 projetos concluídos e um faturamento bruto de 58 mil reais. O QESP reinveste os recursos em bolsas de auxílio aos estudantes e na infraestrutura do projeto, como o pagamento de softwares e materiais de informática.
+
+Durante minha participação no QESP, realizei 18 consultorias e assessorias em bioestatística. Nessas atividades, utilizei técnicas descritivas e gráficas, além de testes paramétricos e não paramétricos. Também apliquei regressões lineares simples e multivariadas, e trabalhei com modelos generalizados e mistos. Minhas análises incluíram técnicas multivariadas como PCA, RDA, análise fatorial, NMDS, cluster e outras. Utilizei ANOVA para um ou mais fatores, ANOVA para medidas repetidas, ANOVA DIC/DBC, além de modelos SAR e CAR, entre outros. 
+
+As solicitações dos clientes eram recebidas por e-mail. Mantínhamos uma fila para determinar quem poderia atender à solicitação naquele momento (considerando a disponibilidade, os alunos tinham aulas ou estavam envolvidos com pesquisa). Após o recebimento, agendávamos uma reunião com o cliente para esclarecer dúvidas e entender melhor suas necessidades. O prazo para a entrega dos resultados e do relatório era de 30 dias. As análises eram realizadas em R ou no XLSTAT. 
+
+Quando comecei o doutorado na Universidade de Buenos Aires, precisei deixar as consultorias por conta de uma norma do meu programa de pós-graduação. No entanto, valorizo muito essa experiência, que me ensinou bastante sobre análise de dados. Ainda hoje, chamo a Ana de minha "mãe científica/bioestatística". Muito do que conquistei em minha jornada se deve ao apoio dela!
+
+Agora quero saber de você! Compartilhe como foi ou está sendo o início da sua jornada.

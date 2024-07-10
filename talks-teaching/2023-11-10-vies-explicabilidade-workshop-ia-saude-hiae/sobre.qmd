@@ -1,0 +1,33 @@
+---
+title: "Compreendendo Viés e Explicabilidade em Modelos de Dados Sensíveis"
+subtitle: "Palestra no Workshop de Inteligência Artificial na Área da Saúde - HIAE"
+image: image.png
+author:
+  - Isabella Bicalho
+  - Marília Melo Favalesso
+date: 2023-11-10
+citation: 
+  url: "http://www.mmfava.com"
+  version: 1
+categories:
+  - Scientific outreach
+  - Code
+  - Data analysis
+lang: pt-br
+tags: 
+  - PT-BR
+---
+Palestra sobre viés e interpretabilidade de modelos quando falamos sobre dados sensíveis no contexto da saúde, no I Workshop sobre Inteligência Artificial na Área da Saúde, promovida pelo PROADI - Banco de Imagens, Hospital Israelita Albert Einstein.
+
+A palestra foi pensada e construída por mim, Marília Melo Favalesso, e Isabella Bicalho, que foi a apresentadora principal. Exploramos os desafios e soluções para garantir que modelos de inteligência artificial sejam justos e compreensíveis, aumentando a confiança e a transparência no uso de dados sensíveis na área da saúde.
+
+<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGKkUPW_QM&#x2F;mTDVPvMyK82k2lfAMsTg8g&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGKkUPW_QM&#x2F;mTDVPvMyK82k2lfAMsTg8g&#x2F;view?utm_content=DAGKkUPW_QM&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Viés e explicabilidade</a> 
+
+[Acessar a apresentação em PDF](vies_interpretabilidade.pdf)

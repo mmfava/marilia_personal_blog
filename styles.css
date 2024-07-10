@@ -1,1 +1,22 @@
 /* css styles */
+
+/*Customizar as cores dos botões*/
+
+.custom-button {
+    background-color: #001f3f;
+    /* Azul marinho */
+    color: white;
+    /* Letra branca */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    /* Torna o botão redondo */
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.custom-button:hover {
+    background-color: #001a36;
+    /* Azul marinho um pouco mais escuro para o hover */
+}

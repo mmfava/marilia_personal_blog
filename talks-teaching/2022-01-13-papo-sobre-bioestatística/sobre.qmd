@@ -1,0 +1,29 @@
+---
+title: "Um papo sobre a profissão 'bioestatística'"
+subtitle: "Conversa com a Dra. Ana Tereza Bittencourt Guimarães para o Soma dos Quadrados"
+image: image.png
+author:
+  - name: "Marília Melo Favalesso"
+    email: "marilia.melo.favalesso@gmail.com"
+date: "2019-06-27"
+citation: 
+  url: "http://www.mmfava.com"
+  version: 1
+categories:
+  - Scientific outreach
+  - Code
+  - Data analysis
+lang: pt-br
+tags: 
+  - PT-BR
+---
+
+Direto do Soma dos Quadrados!
+
+Conversei com a Profa. Dra. Ana T. B. Guimarães sobre o papel do profissional bioestatístico na academia e no mercado.
+
+Vem ouvir esse papo! 😍
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DRNIVSQH6E0?si=a8NEcgt5EMHWVWE6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<button class="custom-button" onclick="window.location.href='https://somaquadrados.netlify.app'">Conheça o "Soma dos Quadrados"</button>

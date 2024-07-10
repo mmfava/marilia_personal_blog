@@ -2,3 +2,6 @@
   quarto-pub:
     - id: 875666c0-4e10-4866-8ba0-03133a2be851
       url: 'https://mmfava.quarto.pub/mmfava'
+  netlify:
+    - id: 9099dd63-c9d0-4bf7-9516-581250fb08d3
+      url: 'https://heartfelt-treacle-fb38ec.netlify.app'
