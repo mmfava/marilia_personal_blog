@@ -1,0 +1,32 @@
+---
+title: "I Webinar Ciência no Parque"
+subtitle: "Divulgação dos projetos desenvolvidos no Parque Nacional do Iguaçu"
+image: images/image.png
+date: 2020-09-03 09:00:00
+author:
+  - name: "Marília Melo Favalesso"
+    url: "http://www.mmfava.com"
+abstract: >
+  O Parque Nacional do Iguaçu, conhecido por suas Cataratas espetaculares, também é um centro de intensa produção científica. Este webinar online, organizado em co-parceria com servidores do PNI, apresenta alguns dos projetos de pesquisa realizados no parque.
+citation: 
+  url: "http://www.mmfava.com"
+  version: 1
+categories:
+  - Scientific outreach
+lang: pt-br
+tag: 
+  - PT-BR
+---
+
+# I Webinar Ciência no Parque
+
+Você sabia que o Parque Nacional do Iguaçu (PNI), além de ter muitas atividades culturais e um dos cenários mais espetaculares do planeta, com as incríveis Cataratas do Iguaçu, também é um centro de intensa produção científica? Em conjunto com os servidores do PNI, organizamos um evento online com a intenção de difundir alguns dos projetos de pesquisa realizados no parque! Ficou curioso(a)? Deixo a seguir os vídeos de acesso para o Webinar!
+
+## Dia 1
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9tkDSwSPFUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Dia 2
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tFtBj9mvqwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Dia 3
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c7x71muKcTQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

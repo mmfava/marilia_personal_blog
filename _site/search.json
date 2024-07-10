@@ -1,5 +1,82 @@
 [
   {
+    "objectID": "talks-teaching/2023-05-26-biologia-e-ciencia-de-dados/sobre.html",
+    "href": "talks-teaching/2023-05-26-biologia-e-ciencia-de-dados/sobre.html",
+    "title": "Biologia e Ciência de Dados",
+    "section": "",
+    "text": "CitaçãoBibTeX@online{melo favalesso2023,\n  author = {Melo Favalesso, Marília},\n  title = {Biologia e Ciência de Dados},\n  version = {1},\n  date = {2023-05-26},\n  url = {http://www.mmfava.com},\n  langid = {pt-br}\n}\nPor favor, cite este trabalho como:\nMelo Favalesso, Marília. 2023. “Biologia e Ciência de\nDados.” May 26, 2023. http://www.mmfava.com."
+  },
+  {
+    "objectID": "talks-teaching/index.html",
+    "href": "talks-teaching/index.html",
+    "title": "Talks and Teaching",
+    "section": "",
+    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nMinicurso: Apache Superset\n\n\nInteratividade open-source para impulsionar seu projeto/pesquisa\n\n\n\n1 de mai. de 2024\n\n\n\n\n\n\ntags\n\n\nPT-BR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBiologia e Ciência de Dados\n\n\nPalestrei na Semana Acadêmica das Ciências Biológicas da UFPR\n\n\n\n26 de mai. de 2023\n\n\n\n\n\n\ntags\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGit e GitHub sem programação\n\n\nCurso que ministrei na 2ª edição do Hacktoberfest GECD e GDG Foz do Iguaçu\n\n\n\n2 de out. de 2021\n\n\n\n\n\n\ntags\n\n\nPT-BR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHerramientas eco-epidemiológicas para la vigilancia de los envenenamientos\n\n\nCon énfasis en la epidemiología espacial\n\n\n\n11 de mai. de 2021\n\n\n\n\n\n\ntags\n\n\nES-AR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEstatística Descritiva\n\n\nCurso ministrado para o GECD - Foz do Iguaçu\n\n\n\n17 de abr. de 2021\n\n\n\n\n\n\ntags\n\n\nPT-BR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGit e GitHub no RStudio\n\n\nCurso ministrado para o maravilhoso grupo do R-ladies Fortaleza\n\n\n\n12 de dez. de 2020\n\n\n\n\n\n\ntags\n\n\nPT-BR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModelos de distribuição de espécies no R\n\n\nCurso ministrado no evento ‘Dados da Ecologia e Meio Ambiente Aplicados ao R’\n\n\n\n31 de out. de 2020\n\n\n\n\n\n\ntags\n\n\nPT-BR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI Webinar Ciência no Parque\n\n\nDivulgação dos projetos desenvolvidos no Parque Nacional do Iguaçu\n\n\n\n3 de set. de 2020\n\n\n\n\n\n\ntags\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLagartas são armas biologicas?\n\n\nUm papo sobre bioestatística no podcast ‘Intervalo de Confiança’\n\n\n\n3 de set. de 2020\n\n\n\n\n\n\ntags\n\n\nPT-BR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOrugas de importancia médica\n\n\nCiencia ciudadana en Misiones - Argentina\n\n\n\n27 de jun. de 2019\n\n\n\n\n\n\ntags\n\n\nES-AR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModelagem de nicho ecológico e distribuição de espécies\n\n\nCurso ministrado na XXV SACB - UNIOESTE\n\n\n\n28 de ago. de 2017\n\n\n\n\n\n\ntags\n\n\nPT-BR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMinicurso de Ecologia Numérica\n\n\nPCA, Cluster e Índices de Diversidade\n\n\n\n21 de nov. de 2016\n\n\n\n\n\n\ntags\n\n\nPT-BR\n\n\n\n\n\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "talks-teaching/2021-05-14-minha-primeira-participao-em-um-podcast/minha-primeira-participao-em-um-podcast.html",
+    "href": "talks-teaching/2021-05-14-minha-primeira-participao-em-um-podcast/minha-primeira-participao-em-um-podcast.html",
+    "title": "Lagartas são armas biologicas?",
+    "section": "",
+    "text": "Tenho o prazer de compartilhar com vocês minha primeira participação no podcast Intervalo de Confiança! Neste episódio especial do Dia do Biólogo, fui convidada pelo apresentador Igor Alcantara para discutir um tema fascinante e essencial: a bioestatística.\nOs dados estão presentes em todos os aspectos da vida, desde pesquisas eleitorais até reuniões de trabalho, exploração espacial, inteligência artificial, criatividade, jogos de azar, esportes, e muito mais. Entender como utilizamos dados e suas metodologias é crucial para compreender como eu, você, o dragão-de-Komodo, Rogério Skylab e até as lagartas venenosas funcionamos.\n\n\nNo episódio, exploramos uma das áreas mais promissoras e interessantes do trabalho com dados: a bioestatística. Discutimos seus métodos, técnicas e segredos, e como eles são aplicados em diversas áreas da biologia e além.\nPara acessar o episódio completo, visite o site: Intervalo de Confiança - IC 25: Lagartas são armas biológicas"
+  },
+  {
+    "objectID": "talks-teaching/2021-05-14-minha-primeira-participao-em-um-podcast/minha-primeira-participao-em-um-podcast.html#sobre-o-episódio",
+    "href": "talks-teaching/2021-05-14-minha-primeira-participao-em-um-podcast/minha-primeira-participao-em-um-podcast.html#sobre-o-episódio",
+    "title": "Lagartas são armas biologicas?",
+    "section": "",
+    "text": "No episódio, exploramos uma das áreas mais promissoras e interessantes do trabalho com dados: a bioestatística. Discutimos seus métodos, técnicas e segredos, e como eles são aplicados em diversas áreas da biologia e além.\nPara acessar o episódio completo, visite o site: Intervalo de Confiança - IC 25: Lagartas são armas biológicas"
+  },
+  {
+    "objectID": "talks-teaching/2021-04-17-eda-gecd/sobre.html",
+    "href": "talks-teaching/2021-04-17-eda-gecd/sobre.html",
+    "title": "Estatística Descritiva",
+    "section": "",
+    "text": "CitaçãoBibTeX@online{melo favalesso2021,\n  author = {Melo Favalesso, Marília},\n  title = {Estatística Descritiva},\n  version = {1},\n  date = {2021-04-17},\n  url = {http://www.mmfava.com},\n  langid = {pt-br},\n  abstract = {Curso introdutório sobre a análise exploratória de dados\n    ministrado para o Grupo de Estudos em Ciência de Dados (GECD).}\n}\nPor favor, cite este trabalho como:\nMelo Favalesso, Marília. 2021. “Estatística Descritiva.”\nApril 17, 2021. http://www.mmfava.com."
+  },
+  {
+    "objectID": "talks-teaching/2020-12-12-git-e-github-com-o-rstudio/sobre.html",
+    "href": "talks-teaching/2020-12-12-git-e-github-com-o-rstudio/sobre.html",
+    "title": "Git e GitHub no RStudio",
+    "section": "",
+    "text": "O Git é um software de controle de versões que tem como objetivo gerenciar arquivos texto, principalmente códigos de programação. O funcionamento dessa ferramenta é semelhante aos sistemas de nuvens (Google Drive, Dropbox, Mega, etc), em que podemos compartilhar as edições de um script com uma equipe, além de retomar antigas versões de nossos arquivos.\nResumidamente, o Git examina as mudanças realizadas nos arquivos de um diretório e vai guardando essas informações para compartilhar com outros usuários e/ou possibilitar a reversão de alterações realizadas. Além de ser uma ferramenta extremamente útil, o Git se conecta ao serviço de hospedagem e armazenamento de versões chamado GitHub. A partir do GitHub é possível contribuir com projetos de qualquer lugar do mundo, além de compartilhar os nossos próprios códigos com fins de divulgação e/ou colaboração.\nA partir do RStudio temos algumas maneiras bem práticas de trabalhar com o Git e o GitHub, o que poderá mudar a sua vida diária nos seus trabalhos com o R!\n\n\n\n\nEm html: link\n\n\n\nDescrição da atividade aqui!"
+  },
+  {
+    "objectID": "talks-teaching/2020-12-12-git-e-github-com-o-rstudio/sobre.html#slides",
+    "href": "talks-teaching/2020-12-12-git-e-github-com-o-rstudio/sobre.html#slides",
+    "title": "Git e GitHub no RStudio",
+    "section": "",
+    "text": "Em html: link"
+  },
+  {
+    "objectID": "talks-teaching/2020-12-12-git-e-github-com-o-rstudio/sobre.html#postagem-no-gecd",
+    "href": "talks-teaching/2020-12-12-git-e-github-com-o-rstudio/sobre.html#postagem-no-gecd",
+    "title": "Git e GitHub no RStudio",
+    "section": "",
+    "text": "Descrição da atividade aqui!"
+  },
+  {
+    "objectID": "talks-teaching/2021-05-11-ferramentas-ecoepidemio/text.html",
+    "href": "talks-teaching/2021-05-11-ferramentas-ecoepidemio/text.html",
+    "title": "Herramientas eco-epidemiológicas para la vigilancia de los envenenamientos",
+    "section": "",
+    "text": "A continuación, se presentan las diapositivas correspondientes a la clase “Herramientas eco-epidemiológicas para la vigilancia de los accidentes por animales venenosos”, impartida a los estudiantes del curso de “Biotoxinología: Herramientas para la investigación biomédica y su importancia en salud”, del Programa de Posgrado en Biociencias de la Universidad Federal de la Integración Latinoamericana, en Foz do Iguaçu – PR – Brasil.\n¡Más información haciendo clic aquí!\n\n\n\n\nPresentación en html (enlace)."
+  },
+  {
+    "objectID": "talks-teaching/2021-05-11-ferramentas-ecoepidemio/text.html#diapositivas",
+    "href": "talks-teaching/2021-05-11-ferramentas-ecoepidemio/text.html#diapositivas",
+    "title": "Herramientas eco-epidemiológicas para la vigilancia de los envenenamientos",
+    "section": "",
+    "text": "Presentación en html (enlace)."
+  },
+  {
+    "objectID": "talks-teaching/2021-05-14-orugas-de-importancia-medica/orugas-de-importancia-mdica.html",
+    "href": "talks-teaching/2021-05-14-orugas-de-importancia-medica/orugas-de-importancia-mdica.html",
+    "title": "Orugas de importancia médica",
+    "section": "",
+    "text": "Sobre\nPresenté una conferencia sobre las principales orugas de importancia médica encontradas en Argentina, durante un evento dirigido a los guías turísticos de la provincia de Misiones. La conferencia se llevó a cabo en el municipio de Puerto Iguazú el 27/06/2019, destacando las características, prevención y manejo de los accidentes causados por estas orugas.\n\n\nSlides\n\n\n\n\n\n\nCómo citarBibTeX@online{melo favalesso2019,\n  author = {Melo Favalesso, Marília},\n  title = {**Orugas de importancia médica**},\n  version = {1},\n  date = {2019-06-27},\n  url = {http://www.mmfava.com},\n  langid = {es-ar}\n}\nPor favor, cita este trabajo como:\nMelo Favalesso, Marília. 2019. “**Orugas de importancia\nmédica**.” June 27, 2019. http://www.mmfava.com."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Marília Melo Favalesso",
@@ -7,179 +84,60 @@
     "text": "Hello!Olá!Hola!\n\n\nI am an eco-epidemiologist (MSc/PhD) and data scientist with experience in machine learning and advanced statistical techniques.\nThroughout my career, I have developed predictive models, analyzed large volumes of data, and promoted evidence-based decision-making. These experiences have demonstrated how new technologies can positively impact public health and environmental preservation.\nAs an active participant in data communities, I am always looking for opportunities to learn and share knowledge with colleagues and enthusiasts.\nWelcome!\n\n\nSou uma ecoepidemiologista (MSc/PhD) e cientista de dados com experiência em aprendizado de máquina e técnicas estatísticas avançadas.\nAo longo da minha carreira, desenvolvi modelos preditivos, analisei grandes volumes de dados e incentivei a tomada de decisões baseadas em evidências. Essas experiências mostraram como as novas tecnologias podem ter um impacto positivo na saúde pública e na preservação ambiental.\nParticipante ativa em comunidades de dados, estou sempre à procura de oportunidades para aprender e compartilhar conhecimento com colegas e entusiastas.\nSeja bem-vind@!\n\n\nSoy una ecoepidemióloga (MSc/PhD) y científica de datos con experiencia en aprendizaje automático y técnicas estadísticas avanzadas.\nA lo largo de mi carrera, he desarrollado modelos predictivos, analizado grandes volúmenes de datos y fomentado la toma de decisiones basadas en evidencia. Estas experiencias han demostrado cómo las nuevas tecnologías pueden tener un impacto positivo en la salud pública y en la preservación ambiental.\nParticipante activa en comunidades de datos, siempre estoy en busca de oportunidades para aprender y compartir conocimientos con colegas y entusiastas.\n¡Bienvenid@!"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "notebooks/202405_instalar_apache_superset/instalacao_apache_superset.html",
+    "href": "notebooks/202405_instalar_apache_superset/instalacao_apache_superset.html",
+    "title": "Como instalar o Apache Superset",
     "section": "",
-    "text": "This is a post with executable code."
+    "text": "Nota\n\n\n\n\nTutorial para usuários do linux.\nPara usuários windows, utilizar o WSL."
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "objectID": "notebooks/202405_instalar_apache_superset/instalacao_apache_superset.html#pré-requisitos",
+    "href": "notebooks/202405_instalar_apache_superset/instalacao_apache_superset.html#pré-requisitos",
+    "title": "Como instalar o Apache Superset",
+    "section": "1. Pré-requisitos",
+    "text": "1. Pré-requisitos\n\n1.1 Docker & Docker-Compose\n\n\nO Docker é uma plataforma de containerização que facilita a criação, o envio e a execução de aplicações em contêineres.\nO Docker-Compose é uma ferramenta para definir e gerenciar multi-contêineres Docker.\n\n\nPara instalar o Docker e o Docker-Compose, execute os comandos abaixo no terminal:\nsudo snap install docker\nsudo apt install docker-compose\n\n\n1.2 Git\nPara clonar repositórios do GitHub, você precisará do Git, um sistema de controle de versão distribuído:\nsudo apt install git"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Marília Melo Favalesso",
-    "section": "",
-    "text": "I am an eco-epidemiologist and data science/biostatistics enthusiast. I am currently pursuing a PhD at the University of Buenos Aires (‘Ecología, Genética y Evolución’ Program), with my workplace being the National Institute of Tropical Medicine in Argentina. I have experience in ecology, biological data analysis, spatial data analysis, epidemiology, entomology, and programming (R and Python). I am a co-founder and co-organizer of the Data Science Study Group (GECD) in Foz do Iguaçu, I speak about biostatistics in Soma dos Quadrados, and I discuss species distribution modeling methods in the Niche Models Group."
+    "objectID": "notebooks/202405_instalar_apache_superset/instalacao_apache_superset.html#clonar-o-repositório",
+    "href": "notebooks/202405_instalar_apache_superset/instalacao_apache_superset.html#clonar-o-repositório",
+    "title": "Como instalar o Apache Superset",
+    "section": "2. Clonar o Repositório",
+    "text": "2. Clonar o Repositório\nClone o repositório do Apache Superset para obter os arquivos necessários para a instalação. Após clonar o repositório, use o comando cd para mudar o diretório de trabalho para o diretório do projeto clonado.\ngit clone https://github.com/apache/*Superset*.git\n1cd *Superset*\n\n1\n\nO comando cd (change directory) é usado no terminal para navegar entre diretórios."
   },
   {
-    "objectID": "about_es.html",
-    "href": "about_es.html",
-    "title": "About",
-    "section": "",
-    "text": "Hello! Hi! Holla!"
+    "objectID": "notebooks/202405_instalar_apache_superset/instalacao_apache_superset.html#conexão-com-fonte-de-dados",
+    "href": "notebooks/202405_instalar_apache_superset/instalacao_apache_superset.html#conexão-com-fonte-de-dados",
+    "title": "Como instalar o Apache Superset",
+    "section": "3. Conexão com fonte de dados",
+    "text": "3. Conexão com fonte de dados\nSe você planeja usar o Google BigQuery como uma fonte de dados, adicione a biblioteca sqlalchemy-bigquery aos requisitos locais. Isso garante que o Superset possa se conectar ao BigQuery.\necho \"sqlalchemy-bigquery\" | sudo tee -a ./docker/requirements-local.txt\n\n\n\n\n\n\nImportante\n\n\n\n\n\nVocê pode se conectar a outras fontes de dados, como:\n\nPostgreSQL: Adicione a biblioteca psycopg2 aos requisitos locais para conectar ao PostgreSQL.\necho \"psycopg2\" | sudo tee -a ./docker/requirements-local.txt\nPara mais informações, acesse PostgreSQL.\nMySQL: Adicione a biblioteca mysqlclient aos requisitos locais para conectar ao MySQL.\necho \"mysqlclient\" | sudo tee -a ./docker/requirements-local.txt\nPara mais informações, acesse MySQL.\nSQLite: Adicione a biblioteca sqlite aos requisitos locais para conectar ao SQLite.\necho \"sqlite\" | sudo tee -a ./docker/requirements-local.txt\nPara mais informações, acesse SQLite.\nMicrosoft SQL Server: Adicione a biblioteca pyodbc e sqlalchemy aos requisitos locais para conectar ao SQL Server.\necho \"pyodbc\" | sudo tee -a ./docker/requirements-local.txt\necho \"sqlalchemy\" | sudo tee -a ./docker/requirements-local.txt\nPara mais informações, acesse Microsoft SQL Server.\nAmazon Redshift: Adicione a biblioteca sqlalchemy-redshift aos requisitos locais para conectar ao Amazon Redshift.\necho \"sqlalchemy-redshift\" | sudo tee -a ./docker/requirements-local.txt\nPara mais informações, acesse Amazon Redshift.\nGoogle Sheets: Adicione a biblioteca gsheetsdb aos requisitos locais para conectar ao Google Sheets.\necho \"gsheetsdb\" | sudo tee -a ./docker/requirements-local.txt\nPara mais informações, acesse Google Sheets."
   },
   {
-    "objectID": "about_pt.html",
-    "href": "about_pt.html",
-    "title": "About",
-    "section": "",
-    "text": "Hello! Hi! Holla!"
+    "objectID": "notebooks/202405_instalar_apache_superset/instalacao_apache_superset.html#lançar-o-superset",
+    "href": "notebooks/202405_instalar_apache_superset/instalacao_apache_superset.html#lançar-o-superset",
+    "title": "Como instalar o Apache Superset",
+    "section": "4. Lançar o Superset",
+    "text": "4. Lançar o Superset\n\n4.1 Versão para Desenvolvimento\nPara iniciar o Apache Superset em um ambiente de desenvolvimento (ideal para testes e desenvolvimento), use o comando abaixo. Este comando iniciará todos os serviços necessários para o Superset, como o banco de dados e o servidor web.\ndocker-compose up\n\n\n4.2 Versão para Produção\nPara iniciar o Apache Superset em um ambiente de produção (mais otimizado e seguro para uso real), use os seguintes comandos. O primeiro comando baixa as imagens do Docker necessárias, e o segundo comando inicia os contêineres em segundo plano (-d).\ndocker-compose -f docker-compose-non-dev.yml pull\ndocker-compose -f docker-compose-non-dev.yml up -d\n\n\n4.3 Executar uma Versão Específica\nSe você precisar de uma versão específica do Superset, use os comandos abaixo para fazer checkout do código dessa versão e iniciar os contêineres.\ngit checkout 3.0.0\nTAG=3.0.0 docker-compose -f docker-compose-non-dev.yml pull\nTAG=3.0.0 docker-compose -f docker-compose-non-dev.yml up -d"
   },
   {
-    "objectID": "blog/welcome/index.html",
-    "href": "blog/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "objectID": "notebooks/202405_instalar_apache_superset/instalacao_apache_superset.html#acessar-o-superset",
+    "href": "notebooks/202405_instalar_apache_superset/instalacao_apache_superset.html#acessar-o-superset",
+    "title": "Como instalar o Apache Superset",
+    "section": "5. Acessar o Superset",
+    "text": "5. Acessar o Superset\nApós iniciar o Superset, acesse a interface web pelo endereço: http://localhost:8088/\n\n5.1 Login Inicial\nUse as credenciais padrão para o primeiro login:\n\nLogin: admin\nSenha: admin\n\n\n\n\n5.2 Alterar as Credenciais\nPara aumentar a segurança, é recomendável alterar as credenciais padrão. Para fazer isso:\n\nVá para Settings &gt; List Users &gt; +\nAdicione um novo usuário ou edite o usuário existente."
   },
   {
-    "objectID": "blog/post-with-code/index.html",
-    "href": "blog/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code."
+    "objectID": "notebooks/202405_instalar_apache_superset/instalacao_apache_superset.html#configurar-acesso-ao-google-bigquery",
+    "href": "notebooks/202405_instalar_apache_superset/instalacao_apache_superset.html#configurar-acesso-ao-google-bigquery",
+    "title": "Como instalar o Apache Superset",
+    "section": "6. Configurar Acesso ao Google BigQuery",
+    "text": "6. Configurar Acesso ao Google BigQuery\n\n6.1 Obter a Chave de Acesso (Arquivo JSON)\nPara conectar o Superset ao Google BigQuery, você precisará de uma chave de serviço JSON do Google Cloud. Siga estes passos:\n\nAcesse o Google Cloud Console: Console Google Cloud\nNavegue até a conta de serviço relevante.\nClique em Adicionar Chave &gt; JSON e faça o download do arquivo.\n\n\n\n\n6.2 Dados do Google Sheets para o BigQuery\nPara importar dados do Google Sheets para o BigQuery, siga o guia detalhado disponível neste link:\nSupermetrics: Query Google Sheets in BigQuery"
   },
   {
-    "objectID": "index.html#bio",
-    "href": "index.html#bio",
-    "title": "About",
-    "section": "",
-    "text": "I’m a computational epidemiologist and data scientist working at the intersection of AI/ML, computational dynamics and public health. I am the author of Computational Modeling of Infectious Disease, a richly illustrated compendium on modern computational epidemiology, as well as a growing body of research.\nI attended the University of Oxford for my undergraduate studies, graduating with a distinction (1st class), and returned there for my graduate studies. I also hold degrees from Cardiff and Robert Gordon University Aberdeen, and have studied at the University of Leiden under an Erasmus programme. Today, I am board certified in public health, a Fellow of the Royal Society for Public Health and a member of several other learned societies. I have also been elected a Senior Member of IEEE, where I am a member of the EMBS Technical Committee on Standards and the EMBS Technical Committee on Biomedical and Health Informatics.\nI am currently a Practice Director for Biomedical AI/ML for HCLTech, where I advise the world’s leading life sciences, medical devices and pharma companies on how to leverage AI/ML to improve their products and serve their customers better. I am also a visiting thesis supervisor for students on the data science track of the mathematics programme at the Budapest University of Technology and Economics.\nAs part of my service to the profession, I’ve been a reviewer for JOSS, Frontiers in Immunology and Frontiers in Medicine. Between 2022 and 2023, I served Virginia as a member of the Medical Reserve Corps, and currently serve in both the Rocky Mountain MRC of Denver and Colorado’s radiation response MRC. I was also part of the COVID-19 Healthcare Coalition and the Covid Tracking Project.\nYou can find a list of my publications here. My work on COVID-19 has been featured in the media. I also write on various topics as the fancy strikes – you can peruse my notebook here."
-  },
-  {
-    "objectID": "index.html#key-research-interests",
-    "href": "index.html#key-research-interests",
-    "title": "About",
-    "section": "Key research interests",
-    "text": "Key research interests\n\nComputational epidemiology: agent-based modelling, disease-avoidant behaviours, epidemics over dynamic networks, geospatial computational epidemiology – all primarily in the context of infectious diseases\nPharmacovigilance: VAERS, passive reporting, text mining of large complex report sets using LLMs\nComputational dynamics: computational dynamics of complex systems, computational dynamics of infectious diseases, computational dynamics of social systems\nPublic health: evidence-based public health policy, public health ethics, public health law, quality and systems improvement in public health"
-  },
-  {
-    "objectID": "index.html#teaching",
-    "href": "index.html#teaching",
-    "title": "About",
-    "section": "Teaching",
-    "text": "Teaching\nI am a visiting thesis supervisor for students on the data science track of the mathematics programme at the Budapest University of Technology and Economics - you can read more about this here.\nFrom time to time, I get invited to give talks and lectures. My capacity for this is somewhat limited due to other commitments, but if you are interested in having me speak at your event, please get in touch."
-  },
-  {
-    "objectID": "index.html#selected-papers",
-    "href": "index.html#selected-papers",
-    "title": "About",
-    "section": "Selected papers",
-    "text": "Selected papers\nTocilizumab in addition to standard of care in the management of COVID-19: A meta-analysis of RCTs. Mutua V, Henry BM, von Csefalvay, C, Cheruiyot I, Vikse J, Lippi G, Bundi B, Mong’are N. Acta Biomed. 2022, 93(1):e2022014. doi: 10.23750/abm.v93i1.12208.\nJAMPI: Efficient matrix multiplication in Spark using barrier execution mode. Foldi T, von Csefalvay C, Perez NA. BDCC 2020, 4(4):32. doi: 10.3390/bdcc4040032.\nVAERS data reveals no increased risk of neuroautoimmune adverse events from COVID- vaccines. von Csefalvay, C. medRxiv 2021. doi: 10.1101/2021.06.13.21258851.\nTuberculous polyserositis in endemic areas with an emphasis on empiric therapy: A case report. Munguti J, Mutua V, Cheruiyot I, von Csefalvay C, Opare-Addo P, Kiko N, Wanjiru R. Medicine: Case Reports. 2022, 3(4):e0221. doi: 10.1097/MD9.0000000000000221.\nSee more here."
-  },
-  {
-    "objectID": "index.html#professional-affiliations",
-    "href": "index.html#professional-affiliations",
-    "title": "About",
-    "section": "Professional affiliations",
-    "text": "Professional affiliations\nThe OR Society | Member since 2020\nRoyal Society for Public Health | Fellow since 2021\nTOPRA | Registered Member since 2021\nAmerican Public Health Association | Member since 2021\nIEEE | Senior Member since 2024"
-  },
-  {
-    "objectID": "index.html#personal-life",
-    "href": "index.html#personal-life",
-    "title": "About",
-    "section": "Personal life",
-    "text": "Personal life\nI live in Denver, CO, with my Golden Retriever, Oliver. Born in Budapest, Hungary, I’ve spent my formative years in England, but have called the Netherlands, Germany, Belgium, Austria and the United States home at various points in my life. Since 2020, I’ve been living in the United States, where I am a permanent resident.\nIn my free time, I enjoy reading (mostly Cold War history and classical Greek drama), cooking (with not a lot of success) and Renaissance polyphony (esp. Thomas Tallis and Orlando di Lasso). I’m credited for a somewhat pretty sequence of integers called Jellyfish Heart numbers (OEIS A344856), which I discovered in 2020 while doing something that has nothing at all to do with my day job.\nI live with neuromyelitis optica since 2015, which has left me with a lifelong desire to understand complex, multicausal health conditions like NMOSD better.\nIn what little is left of my free time, I’m an adaptive multisport athlete, competing in wheelchair rugby, adaptive rowing (category PR1) and the SkiErg (category SIT2). In the latter, I currently hold the world records for 100m, 500m, 1,000m, 2,000m, 6,000m, 10,000m, 21,097m and 42,195m distances and the 60 minutes time. I occasionally rant and whine about my forays in the world of adaptive exercise and my attempts at doing so in a mostly science-based manner."
-  },
-  {
-    "objectID": "index.html#pronunciation-guide",
-    "href": "index.html#pronunciation-guide",
-    "title": "About",
-    "section": "Pronunciation guide",
-    "text": "Pronunciation guide\nMy last name rhymes with Chick-Fil-A."
-  },
-  {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Finley Malloc",
-    "section": "Education",
-    "text": "Education\nUniversity of California, San Diego | San Diego, CA PhD in Mathematics | Sept 2011 - June 2015\nMacalester College | St. Paul MA B.A in Economics | Sept 2007 - June 2011"
-  },
-  {
-    "objectID": "index.html#experience",
-    "href": "index.html#experience",
-    "title": "Finley Malloc",
-    "section": "Experience",
-    "text": "Experience\nWengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Sept 2012 - April 2018"
-  },
-  {
-    "objectID": "about.html#education",
-    "href": "about.html#education",
-    "title": "Finley Malloc",
-    "section": "",
-    "text": "University of California, San Diego | San Diego, CA PhD in Mathematics | Sept 2011 - June 2015\nMacalester College | St. Paul MA B.A in Economics | Sept 2007 - June 2011"
-  },
-  {
-    "objectID": "about.html#experience",
-    "href": "about.html#experience",
-    "title": "Finley Malloc",
-    "section": "",
-    "text": "Wengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Sept 2012 - April 2018"
-  },
-  {
-    "objectID": "blog/es.html",
-    "href": "blog/es.html",
-    "title": "Marília Melo Favalesso",
-    "section": "",
-    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "blog/es.html#posts-en-español",
-    "href": "blog/es.html#posts-en-español",
-    "title": "Marília Melo Favalesso",
-    "section": "",
-    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "blog/pt.html",
-    "href": "blog/pt.html",
-    "title": "Marília Melo Favalesso",
-    "section": "",
-    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "blog/pt.html#posts-em-português",
-    "href": "blog/pt.html#posts-em-português",
-    "title": "Marília Melo Favalesso",
-    "section": "",
-    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "blog/en.html",
-    "href": "blog/en.html",
-    "title": "Marília Melo Favalesso",
-    "section": "",
-    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "blog/en.html#posts-in-english",
-    "href": "blog/en.html#posts-in-english",
-    "title": "Marília Melo Favalesso",
-    "section": "",
-    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Posts",
-    "section": "",
-    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
+    "objectID": "notebooks/202405_instalar_apache_superset/instalacao_apache_superset.html#referências",
+    "href": "notebooks/202405_instalar_apache_superset/instalacao_apache_superset.html#referências",
+    "title": "Como instalar o Apache Superset",
+    "section": "Referências",
+    "text": "Referências\n\nYavar’s Medium Article on Apache Superset Docker Installation\nSuperset Official Documentation on Docker Installation"
   },
   {
     "objectID": "posts/index.html",
@@ -189,45 +147,87 @@
     "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
   },
   {
-    "objectID": "posts/en.html",
-    "href": "posts/en.html",
-    "title": "Marília Melo Favalesso",
+    "objectID": "notebooks/index.html",
+    "href": "notebooks/index.html",
+    "title": "Notebooks",
     "section": "",
-    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
+    "text": "Ordenar por\n       Pré-selecionado\n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Título\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nData\n\n\nTítulo\n\n\ntags\n\n\n\n\n\n\n\n\n\n1 de mai. de 2024\n\n\nComo instalar o Apache Superset\n\n\nPT-BR\n\n\n\n\n\n\nNenhum item correspondente"
   },
   {
-    "objectID": "posts/en.html#posts-in-english",
-    "href": "posts/en.html#posts-in-english",
-    "title": "Marília Melo Favalesso",
+    "objectID": "talks-teaching/2021-10-02-git-na-hacktoberfest/sobre.html",
+    "href": "talks-teaching/2021-10-02-git-na-hacktoberfest/sobre.html",
+    "title": "Git e GitHub sem programação",
     "section": "",
-    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
+    "text": "O Git é um software de controle de versões que tem como objetivo gerenciar arquivos texto, principalmente códigos de programação. O funcionamento dessa ferramenta é semelhante aos sistemas de nuvens (Google Drive, Dropbox, Mega, etc), em que podemos compartilhar as edições de um script com uma equipe, além de retomar antigas versões de nossos arquivos.\nResumidamente, o Git examina as mudanças realizadas nos arquivos de um diretório e vai guardando essas informações para compartilhar com outros usuários e/ou possibilitar a reversão de alterações realizadas. Além de ser uma ferramenta extremamente útil, o Git se conecta ao serviço de hospedagem e armazenamento de versões chamado GitHub. A partir do GitHub é possível contribuir com projetos de qualquer lugar do mundo, além de compartilhar os nossos próprios códigos com fins de divulgação e/ou colaboração.\n\n\n\n\nEm html: link"
   },
   {
-    "objectID": "posts/pt.html",
-    "href": "posts/pt.html",
-    "title": "Marília Melo Favalesso",
+    "objectID": "talks-teaching/2021-10-02-git-na-hacktoberfest/sobre.html#slides",
+    "href": "talks-teaching/2021-10-02-git-na-hacktoberfest/sobre.html#slides",
+    "title": "Git e GitHub sem programação",
     "section": "",
-    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
+    "text": "Em html: link"
   },
   {
-    "objectID": "posts/pt.html#posts-em-português",
-    "href": "posts/pt.html#posts-em-português",
-    "title": "Marília Melo Favalesso",
+    "objectID": "talks-teaching/2021-05-14-i-webinar-cincia-no-parque/i-webinar-cincia-no-parque.html",
+    "href": "talks-teaching/2021-05-14-i-webinar-cincia-no-parque/i-webinar-cincia-no-parque.html",
+    "title": "I Webinar Ciência no Parque",
     "section": "",
-    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
+    "text": "Você sabia que o Parque Nacional do Iguaçu (PNI), além de ter muitas atividades culturais e um dos cenários mais espetaculares do planeta, com as incríveis Cataratas do Iguaçu, também é um centro de intensa produção científica? Em conjunto com os servidores do PNI, organizamos um evento online com a intenção de difundir alguns dos projetos de pesquisa realizados no parque! Ficou curioso(a)? Deixo a seguir os vídeos de acesso para o Webinar!"
   },
   {
-    "objectID": "posts/es.html",
-    "href": "posts/es.html",
-    "title": "Marília Melo Favalesso",
+    "objectID": "talks-teaching/2020-10-31-minicurso-modelagem-nicho/sobre.html",
+    "href": "talks-teaching/2020-10-31-minicurso-modelagem-nicho/sobre.html",
+    "title": "Modelos de distribuição de espécies no R",
     "section": "",
-    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
+    "text": "A Modelagem de Distribuição de Espécies (SDM) visa relacionar ocorrências conhecidas de uma determinada espécie com variáveis ambientais preditoras que, combinadas para formar modelos estatísticos teóricos, possibilitam encontrar novas áreas adequadas para a ocorrência dessa espécie no espaço geográfico.\nNeste curso introdutório, falei sobre os princípios básicos da SDM, quais são os dados utilizados na calibração e avaliação de modelos, quais algoritmos são comumente utilizados, as aplicações dessa abordagem na área da ecologia e um exemplo de aplicação no R. Os seguintes tópicos foram abordados:\n\nIntrodução aos Modelos de Distribuição de Espécies\nAplicações\nNicho Ecológico e Distribuição das Espécies\nConstrução e avaliação dos SDMs\nExemplo no R\n\nAqui você acessa o link do evento.\n\n\n\n\nAcessar arquivo em html (link)."
   },
   {
-    "objectID": "posts/es.html#posts-en-español",
-    "href": "posts/es.html#posts-en-español",
-    "title": "Marília Melo Favalesso",
+    "objectID": "talks-teaching/2020-10-31-minicurso-modelagem-nicho/sobre.html#slides",
+    "href": "talks-teaching/2020-10-31-minicurso-modelagem-nicho/sobre.html#slides",
+    "title": "Modelos de distribuição de espécies no R",
     "section": "",
-    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNenhum item correspondente"
+    "text": "Acessar arquivo em html (link)."
+  },
+  {
+    "objectID": "talks-teaching/2024-05-01-minicurso-apache-superset/minicurso_apachesuperset.html",
+    "href": "talks-teaching/2024-05-01-minicurso-apache-superset/minicurso_apachesuperset.html",
+    "title": "Minicurso: Apache Superset",
+    "section": "",
+    "text": "Sobre\nO Apache Superset é uma plataforma de visualização de dados projetada para facilitar a análise de dados para qualquer pessoa, independentemente de seu nível de especialização em tecnologia. Com o Superset, você pode criar e compartilhar painéis interativos que tornam a visualização e compreensão dos dados intuitiva e acessível. A ferramenta permite a criação de consultas para extrair informações precisas, ideal para empresas e projetos pessoais ou acadêmicos.\nUma das principais vantagens do Superset é sua alta personalização, permitindo que a ferramenta seja adaptada às suas necessidades específicas. Ele suporta uma ampla variedade de fontes de dados, o que é crucial ao trabalhar com dados de diferentes origens. Além disso, o Superset possibilita a criação de gráficos diversos, como gráficos de linha, mapas interativos e diagramas de calor, tornando a análise de dados mais poderosa e eficiente.\nOutro ponto forte do Apache Superset é sua comunidade ativa de desenvolvedores, que constantemente adiciona novas funcionalidades ao projeto open-source. Isso garante que a plataforma esteja sempre evoluindo para atender às demandas crescentes do campo da análise de dados. Em suma, o Apache Superset é uma ferramenta flexível e poderosa, essencial para transformar dados brutos em informações visuais significativas, ajudando na tomada de decisões mais informadas.\n\n\nInstalação\nSiga o tutorial de instalação disponível aqui no blog.\n\n\nSlides\n\n\n\n\n\n\nCitaçãoBibTeX@online{melo favalesso2024,\n  author = {Melo Favalesso, Marília},\n  title = {Minicurso: \\textbf{Apache Superset}},\n  version = {1},\n  date = {2024-05-01},\n  url = {http://www.mmfava.com},\n  langid = {pt-br},\n  abstract = {Curso de introdução ao Apache Superset, abordando as\n    possibilidades e vantagens de uso dessa ferramenta open-source.}\n}\nPor favor, cite este trabalho como:\nMelo Favalesso, Marília. 2024. “Minicurso: Apache\nSuperset.” May 1, 2024. http://www.mmfava.com."
+  },
+  {
+    "objectID": "talks-teaching/2017-08-28-minicurso-modelagem-de-nicho/sobre.html",
+    "href": "talks-teaching/2017-08-28-minicurso-modelagem-de-nicho/sobre.html",
+    "title": "Modelagem de nicho ecológico e distribuição de espécies",
+    "section": "",
+    "text": "A Modelagem de Distribuição de Espécies (SDM) visa relacionar ocorrências conhecidas de uma determinada espécie com variáveis ambientais preditoras que, combinadas para formar modelos estatísticos teóricos, possibilitam encontrar novas áreas adequadas para a ocorrência dessa espécie no espaço geográfico.\nNeste curso introdutório, falei sobre os princípios básicos da SDM, quais são os dados utilizados na calibração e avaliação de modelos, quais algoritmos são comumente utilizados, as aplicações dessa abordagem na área da ecologia e um exemplo de aplicação com o openModellerDesktop v.1.1.."
+  },
+  {
+    "objectID": "talks-teaching/2016-11-21-mini-curso-de-ecologia-numerica/mini-curso-de-ecologia-numerica.html",
+    "href": "talks-teaching/2016-11-21-mini-curso-de-ecologia-numerica/mini-curso-de-ecologia-numerica.html",
+    "title": "Minicurso de Ecologia Numérica",
+    "section": "",
+    "text": "Em 2016, ministrei, em parceria com minha querida colega Thais Sobjak, um minicurso de Ecologia Numérica para os graduandos de Ciências Biológicas da Universidade Estadual do Oeste do Paraná (UNIOESTE). O curso foi bem básico e apresentamos os conceitos e práticas de PCA e Cluster em R. A Thais ensinou a parte de índices ecológicos.\n\n\n\n\n\n\n&gt; Script pca.R\n\n\n\n\n\n\n\n\n&gt; Script cluster.R &gt; Atividade.docx\n\n\n\n\n\n\n\n\n&gt; Script indices.R"
+  },
+  {
+    "objectID": "talks-teaching/2016-11-21-mini-curso-de-ecologia-numerica/mini-curso-de-ecologia-numerica.html#dia-1",
+    "href": "talks-teaching/2016-11-21-mini-curso-de-ecologia-numerica/mini-curso-de-ecologia-numerica.html#dia-1",
+    "title": "Minicurso de Ecologia Numérica",
+    "section": "",
+    "text": "&gt; Script pca.R"
+  },
+  {
+    "objectID": "talks-teaching/2016-11-21-mini-curso-de-ecologia-numerica/mini-curso-de-ecologia-numerica.html#dia-2",
+    "href": "talks-teaching/2016-11-21-mini-curso-de-ecologia-numerica/mini-curso-de-ecologia-numerica.html#dia-2",
+    "title": "Minicurso de Ecologia Numérica",
+    "section": "",
+    "text": "&gt; Script cluster.R &gt; Atividade.docx"
+  },
+  {
+    "objectID": "talks-teaching/2016-11-21-mini-curso-de-ecologia-numerica/mini-curso-de-ecologia-numerica.html#dia-3",
+    "href": "talks-teaching/2016-11-21-mini-curso-de-ecologia-numerica/mini-curso-de-ecologia-numerica.html#dia-3",
+    "title": "Minicurso de Ecologia Numérica",
+    "section": "",
+    "text": "&gt; Script indices.R"
   }
 ]

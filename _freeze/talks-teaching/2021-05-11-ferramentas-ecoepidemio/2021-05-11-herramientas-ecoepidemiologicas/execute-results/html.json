@@ -1,0 +1,14 @@
+{
+  "hash": "25d59bdffd1d377acc98f83cf7833513",
+  "result": {
+    "markdown": "---\ntitle: \"Herramientas eco-epidemiológicas para la vigilancia de los accidentes por animales venenosos\"\nsubtitle: \"Con énfasis en la epidemiología espacial\"\nimage: images/epidemiologia.png\nexecute:\n  echo: true\n  output: false\ndate: 2021-05-11 09:00:00\nauthor:\n  - name: \"Marília Melo Favalesso\"\n    url: \"http://www.mmfava.com\"\nabstract: >\n  Slides da aula \"Herramientas eco-epidemiológicas para la vigilancia de los accidentes por animales venenosos\", ministrada para os discentes do curso de “Biotoxinologia: Ferramentas para a pesquisa biomédica e sua importância em saúde” da Universidade Federal da Integração Latino-Americana (UNILA).\ncitation: \n  url: \"http://www.mmfava.com\"\n  version: 1\ncategories:\n  - UNILA\n  - R\n  - Eco-epidemiologia\n  - Animais venenosos\n  - Epidemiologia espacial\nlang: pt-br\n---\n\n\n# Herramientas eco-epidemiológicas para la vigilancia de los accidentes por animales venenosos\n\nNa sequência eu disponibilizo os slides referente a aula de \"Herramientas eco-epidemiológicas para la vigilancia de los accidentes por animales venenosos\", ministrada para os discentes do curso de “Biotoxinologia: Ferramentas para a pesquisa biomédica e sua importância em saúde”, do Programa de Pós-Graduação em Biociências, da Universidade Federal da Integração Latino-Americana, em Foz do Iguaçu – PR – Brasil.\n\n[Maiores informações clicando aqui!](https://portal.unila.edu.br/mestrado/biociencias/disciplinas)\n\n## Slides\n\n\n\n::: {.cell}\n<iframe src=\"presentacion.html\" width=\"672\" height=\"400px\" data-external=\"1\"></iframe>\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

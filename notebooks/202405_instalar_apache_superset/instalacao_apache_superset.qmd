@@ -1,0 +1,175 @@
+---
+title: "Como instalar o *Apache Superset*"
+image: images/superset_simbolo.png
+tags: 
+  - PT-BR
+categories: ["Apache", "Superset", "Dataviz"]
+date: 2024-05-01
+date-format: short
+toc: true
+---
+
+:::::: {.callout-note}
+- Tutorial para usuários do linux.
+- Para usuários windows, utilizar o WSL.
+:::
+ 
+
+## 1. Pré-requisitos
+
+### 1.1 Docker & Docker-Compose
+
+> * O Docker é uma plataforma de containerização que facilita a criação, o envio e a execução de aplicações em contêineres. 
+> * O Docker-Compose é uma ferramenta para definir e gerenciar multi-contêineres Docker.
+
+Para instalar o [Docker](https://www.docker.com/) e o Docker-Compose, execute os comandos abaixo no terminal:
+
+```bash
+sudo snap install docker
+sudo apt install docker-compose
+```
+
+### 1.2 Git
+
+Para clonar repositórios do [GitHub](https://github.com/), você precisará do [Git](https://git-scm.com/), um sistema de controle de versão distribuído:
+
+```bash
+sudo apt install git
+```
+
+## 2. Clonar o Repositório
+
+Clone o repositório do *Apache Superset* para obter os arquivos necessários para a instalação. Após clonar o repositório, use o comando `cd` para mudar o diretório de trabalho para o diretório do projeto clonado. 
+
+```bash
+git clone https://github.com/apache/*Superset*.git
+cd *Superset* # <1>
+```
+1. O comando cd (*change directory*) é usado no terminal para navegar entre diretórios.
+
+## 3. Conexão com fonte de dados
+
+Se você planeja usar o Google BigQuery como uma fonte de dados, adicione a biblioteca `sqlalchemy-bigquery` aos requisitos locais. Isso garante que o *Superset* possa se conectar ao BigQuery.
+
+```bash
+echo "sqlalchemy-bigquery" | sudo tee -a ./docker/requirements-local.txt
+```
+
+::: {.callout-important collapse="true"}
+Você pode se conectar a outras fontes de dados, como:
+
+- **PostgreSQL**: Adicione a biblioteca `psycopg2` aos requisitos locais para conectar ao PostgreSQL.
+  ```bash
+  echo "psycopg2" | sudo tee -a ./docker/requirements-local.txt
+  ```
+  Para mais informações, acesse [PostgreSQL](https://www.postgresql.org/).
+
+- **MySQL**: Adicione a biblioteca `mysqlclient` aos requisitos locais para conectar ao MySQL.
+  ```bash
+  echo "mysqlclient" | sudo tee -a ./docker/requirements-local.txt
+  ```
+  Para mais informações, acesse [MySQL](https://www.mysql.com/).
+
+- **SQLite**: Adicione a biblioteca `sqlite` aos requisitos locais para conectar ao SQLite.
+  ```bash
+  echo "sqlite" | sudo tee -a ./docker/requirements-local.txt
+  ```
+  Para mais informações, acesse [SQLite](https://www.sqlite.org/).
+
+- **Microsoft SQL Server**: Adicione a biblioteca `pyodbc` e `sqlalchemy` aos requisitos locais para conectar ao SQL Server.
+  ```bash
+  echo "pyodbc" | sudo tee -a ./docker/requirements-local.txt
+  echo "sqlalchemy" | sudo tee -a ./docker/requirements-local.txt
+  ```
+  Para mais informações, acesse [Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server).
+
+- **Amazon Redshift**: Adicione a biblioteca `sqlalchemy-redshift` aos requisitos locais para conectar ao Amazon Redshift.
+  ```bash
+  echo "sqlalchemy-redshift" | sudo tee -a ./docker/requirements-local.txt
+  ```
+  Para mais informações, acesse [Amazon Redshift](https://aws.amazon.com/redshift/).
+
+- **Google Sheets**: Adicione a biblioteca `gsheetsdb` aos requisitos locais para conectar ao Google Sheets.
+  ```bash
+  echo "gsheetsdb" | sudo tee -a ./docker/requirements-local.txt
+  ```
+  Para mais informações, acesse [Google Sheets](https://developers.google.com/sheets/api).
+:::
+
+
+## 4. Lançar o *Superset*
+
+### 4.1 Versão para Desenvolvimento
+
+Para iniciar o *Apache Superset* em um ambiente de desenvolvimento (ideal para testes e desenvolvimento), use o comando abaixo. Este comando iniciará todos os serviços necessários para o *Superset*, como o banco de dados e o servidor web.
+
+```bash
+docker-compose up
+```
+
+### 4.2 Versão para Produção
+
+Para iniciar o *Apache Superset* em um ambiente de produção (mais otimizado e seguro para uso real), use os seguintes comandos. O primeiro comando baixa as imagens do Docker necessárias, e o segundo comando inicia os contêineres em segundo plano (`-d`).
+
+```bash
+docker-compose -f docker-compose-non-dev.yml pull
+docker-compose -f docker-compose-non-dev.yml up -d
+```
+
+### 4.3 Executar uma Versão Específica
+
+Se você precisar de uma versão específica do *Superset*, use os comandos abaixo para fazer checkout do código dessa versão e iniciar os contêineres.
+
+```bash
+git checkout 3.0.0
+TAG=3.0.0 docker-compose -f docker-compose-non-dev.yml pull
+TAG=3.0.0 docker-compose -f docker-compose-non-dev.yml up -d
+```
+
+## 5. Acessar o *Superset*
+
+Após iniciar o *Superset*, acesse a interface web pelo endereço: [http://localhost:8088/](http://localhost:8088/)
+
+### 5.1 Login Inicial
+
+Use as credenciais padrão para o primeiro login:
+
+- **Login:** admin
+- **Senha:** admin
+
+![](images/superset_login_page.png){ style="border: 2px solid black;" }
+
+### 5.2 Alterar as Credenciais
+
+Para aumentar a segurança, é recomendável alterar as credenciais padrão. Para fazer isso:
+
+1. Vá para **Settings > List Users > +**
+2. Adicione um novo usuário ou edite o usuário existente.
+
+## 6. Configurar Acesso ao Google BigQuery
+
+### 6.1 Obter a Chave de Acesso (Arquivo JSON)
+
+Para conectar o *Superset* ao Google BigQuery, você precisará de uma chave de serviço JSON do Google Cloud. Siga estes passos:
+
+1. Acesse o Google Cloud Console: [Console Google Cloud](https://console.cloud.google.com/iam-admin/serviceaccounts/details/108374474540748778062/keys?hl=pt-br&project=dashboard-fkc)
+2. Navegue até a conta de serviço relevante.
+3. Clique em **Adicionar Chave > JSON** e faça o download do arquivo.
+
+![](images/bigquery_gcloud_chave1.png){ style="border: 2px solid black;" }
+
+### 6.2 Dados do Google Sheets para o BigQuery
+
+Para importar dados do Google Sheets para o BigQuery, siga o guia detalhado disponível neste link: 
+
+[Supermetrics: Query Google Sheets in BigQuery](https://supermetrics.com/blog/bigquery-query-google-sheets)
+
+------
+
+![](images/giphy.gif)
+
+## Referências
+
+- [Yavar's Medium Article on Apache *Superset* Docker Installation](https://medium.com/yavar/apache-*Superset*-docker-installation-9e4cc58224fd)
+- [*Superset* Official Documentation on Docker Installation](https://*Superset*.apache.org/docs/installation/installing-*Superset*-using-docker-compose/)
+

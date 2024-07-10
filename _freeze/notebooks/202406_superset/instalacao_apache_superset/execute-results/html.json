@@ -1,0 +1,11 @@
+{
+  "hash": "a66981053783df7158864ba2db36c280",
+  "result": {
+    "markdown": "---\ntitle: \"Instalação do Apache Superset\"\ndate: 2024-05-01\ndate-format: short\n---\n\n# [1] Pré-requisitos\n\n## Docker & Docker-Compose\n\n\n```{bash}\nsudo snap install docker\nsudo apt install docker-compose\n```\n\n\n## Git\n\n\n```{bash}\nsudo apt install git\n```\n\n\n# [2] Clonar o repositório\n\n\n```{bash}\nsudo git clone https://github.com/apache/superset.git\n```\n\n\n# [3] Adicionar biblioteca para Google Big Query\n\n\n```{bash}\ncd superset\nsudo echo \"sqlalchemy-bigquery\" >> ./docker/requirements-local.txt\n```\n\n\n## Lauch-superset\n\n### Versão desenvolvedor\n\n\n```{bash}\n`#docker compose up`\n```\n\n\n### Versão de produção (usar sem desenvolver)\n\n`docker compose -f docker-compose-non-dev.yml pull\ndocker compose -f docker-compose-non-dev.yml up -d\n\n# superset run -p 8088 --with-threads --reload --debugger --host=0.0.0.0`\n\n### Para rodar uma versão especifica\n\n`#git checkout 3.0.0\n#TAG=3.0.0 docker compose -f docker-compose-non-dev.yml pull\n#TAG=3.0.0 docker compose -f docker-compose-non-dev.yml up`\n\n**Acesso ao Superset**: http://localhost:8088/\n\n## Login/Senha\n\n**Login/Senha**: admin/admin\n\n### Mudança\n\n**`Settings > List users > +`**\n\n## Acesso ao Big Query\n\n### Obter a chave de acesso (arquivo JSON)\n\n**Em** https://console.cloud.google.com/iam-admin/serviceaccounts/details/108374474540748778062/keys?hl=pt-br&project=dashboard-fkc **> Adicionar chave > JSON.**\n\n\n## Dados do Google Sheet para o BigQuery\n\nhttps://supermetrics.com/blog/bigquery-query-google-sheets?utm_content=lat-bigquery-dsa&utm_term=&utm_campaign=G_LAT_PPC_Prod_BQ&utm_source=google&utm_medium=cpc&hsa_acc=4074947239&hsa_cam=20267524488&hsa_grp=160933344440&hsa_ad=689842839341&hsa_src=g&hsa_tgt=dsa-2087196098763&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAjwnv-vBhBdEiwABCYQA3MKagWYDS_TlOQBcNJ7RJnJ4HmiKSKaB-OcCcHUK9AG2spC6VfMkxoC4vIQAvD_BwE\n\n## Referências\n\nhttps://medium.com/yavar/apache-superset-docker-installation-9e4cc58224fd\n\nhttps://superset.apache.org/docs/installation/installing-superset-using-docker-compose/\n\n",
+    "supporting": [
+      "instalacao_apache_superset_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

@@ -1,0 +1,43 @@
+---
+title: "Modelos de distribuição de espécies no R"
+subtitle: "Curso ministrado no evento 'Dados da Ecologia e Meio Ambiente Aplicados ao R'"
+image: images/image.png
+date: 2020-10-31 09:00:00
+author:
+  - name: "Marília Melo Favalesso"
+    url: "http://www.mmfava.com"
+abstract: >
+  Curso introdutório sobre a Modelagem de Distribuição de Espécies (SDM), abordando princípios básicos, dados utilizados, algoritmos comuns, aplicações na ecologia e um exemplo prático no R.
+citation: 
+  url: "http://www.mmfava.com"
+  version: 1
+categories:
+  - R-ladies
+  - R
+  - SDM
+  - Code
+tags: 
+  - PT-BR
+lang: pt-br
+---
+
+# Sobre
+
+A Modelagem de Distribuição de Espécies (SDM) visa relacionar ocorrências conhecidas de uma determinada espécie com variáveis ambientais preditoras que, combinadas para formar modelos estatísticos teóricos, possibilitam encontrar novas áreas adequadas para a ocorrência dessa espécie no espaço geográfico.
+
+Neste curso introdutório, falei sobre os princípios básicos da SDM, quais são os dados utilizados na calibração e avaliação de modelos, quais algoritmos são comumente utilizados, as aplicações dessa abordagem na área da ecologia e um exemplo de aplicação no R. Os seguintes tópicos foram abordados:
+
+- Introdução aos Modelos de Distribuição de Espécies
+- Aplicações
+- Nicho Ecológico e Distribuição das Espécies
+- Construção e avaliação dos SDMs
+- Exemplo no R
+
+[Aqui você acessa o link do evento.](https://www.sympla.com.br/we-r-ladies---dados-da-ecologia-e-meio-ambiente-aplicados-ao-r__1013350)
+
+## Slides
+
+<iframe src="modelagem_distribuicao_especies.pdf" width="100%" height="600px"></iframe>
+
+Acessar arquivo em html ([link](https://mmfava.netlify.app/talk/2021-08-14-mode-nicho-rladies/niche_modelling.html#1)).
+

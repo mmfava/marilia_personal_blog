@@ -1,6 +1,7 @@
 ---
 title: "Marília Melo Favalesso"
 image: profile.jpg
+#page-layout: full
 about:
   #id: hero-heading
   template: trestles

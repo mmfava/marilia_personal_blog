@@ -1,59 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.mmfava.com/about_es.html</loc>
-    <lastmod>2024-06-29T23:41:07.718Z</lastmod>
+    <loc>https://mmfava.quarto.pub/mmfava/talks-teaching/2023-05-26-biologia-e-ciencia-de-dados/sobre.html</loc>
+    <lastmod>2024-07-10T01:59:48.603Z</lastmod>
   </url>
   <url>
-    <loc>https://www.mmfava.com/about_pt.html</loc>
-    <lastmod>2024-06-29T19:44:59.278Z</lastmod>
+    <loc>https://mmfava.quarto.pub/mmfava/talks-teaching/index.html</loc>
+    <lastmod>2024-07-10T01:59:47.533Z</lastmod>
   </url>
   <url>
-    <loc>https://www.mmfava.com/blog/welcome/index.html</loc>
-    <lastmod>2024-06-29T19:44:57.498Z</lastmod>
+    <loc>https://mmfava.quarto.pub/mmfava/talks-teaching/2021-05-14-minha-primeira-participao-em-um-podcast/minha-primeira-participao-em-um-podcast.html</loc>
+    <lastmod>2024-07-10T01:59:45.723Z</lastmod>
   </url>
   <url>
-    <loc>https://www.mmfava.com/blog/post-with-code/index.html</loc>
-    <lastmod>2024-06-29T19:44:58.378Z</lastmod>
+    <loc>https://mmfava.quarto.pub/mmfava/talks-teaching/2021-04-17-eda-gecd/sobre.html</loc>
+    <lastmod>2024-07-10T01:59:44.413Z</lastmod>
   </url>
   <url>
-    <loc>https://www.mmfava.com/about.html</loc>
-    <lastmod>2024-06-30T00:30:20.248Z</lastmod>
+    <loc>https://mmfava.quarto.pub/mmfava/talks-teaching/2020-12-12-git-e-github-com-o-rstudio/sobre.html</loc>
+    <lastmod>2024-07-10T01:59:43.133Z</lastmod>
   </url>
   <url>
-    <loc>https://www.mmfava.com/index.html</loc>
-    <lastmod>2024-07-05T21:11:38.802Z</lastmod>
+    <loc>https://mmfava.quarto.pub/mmfava/talks-teaching/2021-05-11-ferramentas-ecoepidemio/text.html</loc>
+    <lastmod>2024-07-10T01:59:41.823Z</lastmod>
   </url>
   <url>
-    <loc>https://www.mmfava.com/blog/es.html</loc>
-    <lastmod>2024-07-05T02:21:16.170Z</lastmod>
+    <loc>https://mmfava.quarto.pub/mmfava/talks-teaching/2021-05-14-orugas-de-importancia-medica/orugas-de-importancia-mdica.html</loc>
+    <lastmod>2024-07-10T01:59:40.413Z</lastmod>
   </url>
   <url>
-    <loc>https://www.mmfava.com/blog/pt.html</loc>
-    <lastmod>2024-07-05T02:21:15.680Z</lastmod>
+    <loc>https://mmfava.quarto.pub/mmfava/index.html</loc>
+    <lastmod>2024-07-10T01:59:38.923Z</lastmod>
   </url>
   <url>
-    <loc>https://www.mmfava.com/blog/en.html</loc>
-    <lastmod>2024-07-05T02:21:15.940Z</lastmod>
+    <loc>https://mmfava.quarto.pub/mmfava/notebooks/202405_instalar_apache_superset/instalacao_apache_superset.html</loc>
+    <lastmod>2024-07-10T01:59:37.903Z</lastmod>
   </url>
   <url>
-    <loc>https://www.mmfava.com/blog/index.html</loc>
-    <lastmod>2024-07-05T02:32:09.570Z</lastmod>
+    <loc>https://mmfava.quarto.pub/mmfava/posts/index.html</loc>
+    <lastmod>2024-07-10T01:59:36.543Z</lastmod>
   </url>
   <url>
-    <loc>https://www.mmfava.com/posts/index.html</loc>
-    <lastmod>2024-07-05T21:11:41.372Z</lastmod>
+    <loc>https://mmfava.quarto.pub/mmfava/notebooks/index.html</loc>
+    <lastmod>2024-07-10T01:59:38.263Z</lastmod>
   </url>
   <url>
-    <loc>https://www.mmfava.com/posts/en.html</loc>
-    <lastmod>2024-07-05T02:47:16.990Z</lastmod>
+    <loc>https://mmfava.quarto.pub/mmfava/talks-teaching/2021-10-02-git-na-hacktoberfest/sobre.html</loc>
+    <lastmod>2024-07-10T01:59:39.663Z</lastmod>
   </url>
   <url>
-    <loc>https://www.mmfava.com/posts/pt.html</loc>
-    <lastmod>2024-07-05T02:47:16.740Z</lastmod>
+    <loc>https://mmfava.quarto.pub/mmfava/talks-teaching/2021-05-14-i-webinar-cincia-no-parque/i-webinar-cincia-no-parque.html</loc>
+    <lastmod>2024-07-10T01:59:42.453Z</lastmod>
   </url>
   <url>
-    <loc>https://www.mmfava.com/posts/es.html</loc>
-    <lastmod>2024-07-05T02:47:17.240Z</lastmod>
+    <loc>https://mmfava.quarto.pub/mmfava/talks-teaching/2020-10-31-minicurso-modelagem-nicho/sobre.html</loc>
+    <lastmod>2024-07-10T01:59:43.813Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mmfava.quarto.pub/mmfava/talks-teaching/2024-05-01-minicurso-apache-superset/minicurso_apachesuperset.html</loc>
+    <lastmod>2024-07-10T01:59:45.073Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mmfava.quarto.pub/mmfava/talks-teaching/2017-08-28-minicurso-modelagem-de-nicho/sobre.html</loc>
+    <lastmod>2024-07-10T01:59:46.373Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mmfava.quarto.pub/mmfava/talks-teaching/2016-11-21-mini-curso-de-ecologia-numerica/mini-curso-de-ecologia-numerica.html</loc>
+    <lastmod>2024-07-10T01:59:48.053Z</lastmod>
   </url>
 </urlset>

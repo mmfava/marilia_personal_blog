@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: 875666c0-4e10-4866-8ba0-03133a2be851
+      url: 'https://mmfava.quarto.pub/mmfava'

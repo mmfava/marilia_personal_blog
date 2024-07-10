@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Git e GitHub com o RStudio</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Marília Melo Favalesso 😻" />
+    <meta name="date" content="2020-12-12" />
+    <script src="slides_files/header-attrs-2.7/header-attrs.js"></script>
+    <link href="slides_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="slides_files/remark-css-0.0.1/rladies.css" rel="stylesheet" />
+    <link href="slides_files/remark-css-0.0.1/rladies-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Git e GitHub com o RStudio
+### Marília Melo Favalesso 😻
+### R-Ladies Fortaleza 💻
+### 12/12/2020
+
+---
+
+background-image: url(figs/me.jpg)
+background-size: 300px
+background-position: 90% 5%
+
+
+&lt;style type="text/css"&gt;
+pre {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+pre[class] {
+  max-height: 600px;
+}
+&lt;/style&gt;
+
+# Marília Melo Favalesso 
+**Formação**
+- Bióloga (UFPR - 2015) 
+- Mestre em Ciências Ambientais (UNIOESTE- 2018) 
+- Doutoranda em Ecologia (UBA - Argentina, 2018)
+
+&lt;p&gt;
+
+**Trabalho com:**
+- Ecoepidemiologia
+- Análise de dados geoespaciais
+- Modelagem de nicho
+
+**Projetos**
+- **GECD** ([Grupo de Estudos em Ciência de Dados](https://github.com/gecdfoz/GECD) - Foz do Iguaçu)
+
+**Contatos**
+&lt;br&gt;
+* [E-mail: mariliabioufpr@gmail.com]()
+&lt;br&gt;
+* [Twitter: @mmfbee](https://twitter.com/mmfbee)
+&lt;br&gt;
+* [Github: /mmfava](https://github.com/mmfava)
+&lt;br&gt;
+* [Site: www.mmfava.com](www.mmfava.com)
+
+---
+class: clear
+background-image: url(figs/Slide1.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide2.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide3.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide4.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide5.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide6.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide7.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide8.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide9.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide10.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide11.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide12.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide13.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide14.JPG)
+background-size: 1000px
+---
+class: clear
+background-image: url(figs/Slide15.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide16.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide17.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide18.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide19.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide20.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide21.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide22.JPG)
+background-size: 1000px
+---
+class: clear
+background-image: url(figs/Slide23.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide24.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide25.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide26.JPG)
+background-size: 1000px
+
+---
+class: clear
+background-image: url(figs/Slide27.JPG)
+background-size: 1000px
+
+---
+
+## Pré-requisitos 
+
+-   Instalar o [R](https://cran.r-project.org/bin/windows/base/R-4.0.3-win.exe) e o [RStudio](https://rstudio.com/products/rstudio/download/) (lembre de sempre manter versões atualizadas!).
+
+--
+
+-   Fazer uma conta no [GitHub](https://github.com/). Se você é estudande, pode usar o seu e-mail institucional para obter alguns beneficios com o [GitHub Student Developer Pack](https://education.github.com/pack).
+
+--
+
+-   Instalar o [Git](https://git-scm.com/download/).
+
+--
+
+-   Instalar o pacote "[usethis](https://usethis.r-lib.org/)".
+
+
+```r
+install.packages("usethis")
+```
+
+---
+## Configurar o Git no PC
+.center[
+&lt;img src="figs/repo_loc.png" style="width:80%;"/&gt;
+]
+
+---
+## Configurar o Git no PC
+### Pelo RStudio
+- Após instalar todas as aplicações necessárias, nós vamos configurar o Git em nossas máquinas. Esse passo será feito uma única vez! &lt;br /&gt;
+
+- No RStudio você precisa escrever e executar a seguinte função com o nome e e-mail cadastrado em sua conta GitHub:
+
+
+```r
+usethis::use_git_config(user.name = "Fulana de tal", # Seu nome
+                        user.email = "fulanadetal@email.com.br") # Seu email
+```
+
+---
+
+## Configurar o Git no PC
+### Pelo cmd do Git
+Outra possibilidade é executar essa configuração diretamente no Git em sua máquina:
+
+![](https://github.com/gecdfoz/GECD/raw/master/Nivelamento%20e%20Integra%C3%A7%C3%A3o/GitHub/Git%20e%20GitHub%20com%20o%20R/images/conf_git.png)
+
+---
+## Configurando o GitHub
+&lt;img src="figs/repo_remoto.jpg" style="width:80%;"/&gt;
+
+---
+## Configurando o GitHub
+### Token de acesso pessoal (PAT)
+- Um PAT é uma alternativa à senha que você usaria ao acessar sua conta GitHub. De forma simplificada, é uma chave semelhante a `48t979e5677b198592e5047da8a79f53bcasb4b10` que dará permissão para o *RStudio* acessar diretamente o seu GitHub. &lt;br /&gt;
+
+--
+
+- Cada PAT pode ter uma configuração própria (veremos a seguir). &lt;br /&gt;
+
+--
+
+- Para criar o token de acesso, vamos executar o comando que aparece na sequência. &lt;br /&gt;
+
+
+
+```r
+usethis::browse_github_token()
+```
+
+- Ao executa-lo, uma página do GitHub irá abrir. Nessa páginá você poderá nomear o seu token e selecionar as permissões que irá conceder a ele. 
+
+---
+&lt;div class="background" style="width: 1000px; height: 700px; white-space: nowrap; overflow-x: scroll; border: 0; padding: 10px;"&gt; 
+
+&lt;img src="https://github.com/gecdfoz/GECD/raw/master/Nivelamento%20e%20Integra%C3%A7%C3%A3o/GitHub/Git%20e%20GitHub%20com%20o%20R/images/token.png"&gt;
+
+---
+&lt;div class="background" style="width: 1000px; height: 700px; white-space: nowrap; overflow-x: scroll; border: 0; padding: 10px;"&gt; 
+
+&lt;img src="figs/token2.png"&gt;
+
+---
+### Token de acesso pessoal (PAT)
+
+- Agora vamos incluir o PAT nas configurações do nosso ambiente R. 
+
+--
+
+- Abra o arquivo `.Renviron`:
+
+
+```r
+usethis::edit_r_environ()
+
+# * Modify 'C:/Users/MMF/Documents/.Renviron'
+# * Restart R for changes to take effect
+```
+--
+
+- No arquivo, digite `GITHUBPAT=NUMERO_TOKEN` &lt;br /&gt;
+&lt;img src="https://github.com/gecdfoz/GECD/raw/master/Nivelamento%20e%20Integra%C3%A7%C3%A3o/GitHub/Git%20e%20GitHub%20com%20o%20R/images/github_PAT.png"&gt;
+
+--
+- Após escreve-lo, pule uma linha e salve o arquivo. Na sequência, reinicie o RStudio com CTRL + SHIFT + F10.
+
+---
+class: center
+&lt;img src="https://i.pinimg.com/originals/61/2b/8c/612b8c27f15c63c08052d8de2c1bb15b.gif"&gt;
+
+**Tudo pronto para começarmos a trabalhar com o Git e o Github**
+
+---
+## Criar um repositório local pelo RStudio
+.center[
+&lt;img src="figs/repo_loc.png" style="width:80%;"&gt;
+]
+---
+## Criar um repositório local pelo RStudio
+- Para criar um repositório local, vamos utilizar a função `create_project()` do pacote `usethis`. &lt;br /&gt;
+--
+  - Com ela, você precisará fornecer um diretório e o nome do novo repositório em `path =`. &lt;br /&gt;
+--
+  - CUIDADO para não repetir o nome de outros repositórios! &lt;br /&gt;
+--
+
+
+```r
+usethis::create_project(path = "C:/Users/MMF/Desktop/nome_do_repo2")
+
+# v Creating 'C:/Users/MMF/Desktop/nome_do_repo/'
+# v Setting active project to 'C:/Users/MMF/Desktop/nome_do_repo'
+# v Creating 'R/'
+# v Writing 'nome_do_repo.Rproj'
+# v Adding '.Rproj.user' to '.gitignore'
+# v Opening 'C:/Users/MMF/Desktop/nome_do_repo/' in new RStudio session
+# v Setting active project to 'C:/Users/MMF/Dropbox/GitHub/GECD'
+```
+
+--
+- O *RStudio* abrirá outra janela com o novo projeto criado.
+---
+## Criar um repositório local pelo RStudio
+
+.center[
+&lt;img src="figs/pasta_repo.png" style="width:80%;"&gt;
+]
+---
+## Criar um repositório local pelo RStudio
+
+- As próximas etapas serão aprender a salvar alterações  na linha do tempo do Git (`commit`) e envia-las para um repositório remoto (`push`). 
+
+--
+
+- É provável que nessa etapa uma **guia chamada “Git”** já tenha aparecido na sua IDE. Caso não, a próxima função que vamos utilizar (`use_git()`) vai adiciona-la. 
+
+&lt;div class="background" style="width: 1000px; height: 700px; white-space: nowrap; overflow-x: scroll; border: 0; padding: 10px;"&gt;
+
+&lt;img src="https://github.com/gecdfoz/GECD/raw/master/Nivelamento%20e%20Integra%C3%A7%C3%A3o/GitHub/Git%20e%20GitHub%20com%20o%20R/images/guia_git.png"&gt;
+
+---
+## Iniciar o repositório local
+
+- Aqui vamos trabalhar na janela que o RStudio abriu após criar um novo projeto.
+
+--
+
+- Vamos usar a função `use_git()` para realizar o nosso primeiro `commit` (salvar nossos arquivos na linha do tempo) e dar inicio ao nosso repositório.
+
+.center[
+&lt;img src="figs/arquivos_repo.png"&gt;
+]
+
+  - Quando realizamos um `commit` na linha do tempo, é importante descrever a mudança que foi realizada no(s) arquivo(s). 
+  
+--
+
+- A função também adiciona arquivos importantes ao `.gitignore`.
+
+  - O .gitignore especifica arquivos intencionalmente não rastreados para ignorar. 
+  
+--
+
+- Na ausência da guia "*Git*", o programa irá pedir para reiniciar o *RStudio* com a finalidade de adiciona-la. 
+
+---
+.center[
+&lt;img src="https://github.com/gecdfoz/GECD/raw/master/Nivelamento%20e%20Integra%C3%A7%C3%A3o/GitHub/Git%20e%20GitHub%20com%20o%20R/images/WhatsApp%20Image%202020-11-27%20at%2000.19.21-01.jpeg" style="width:50%;"&gt;
+]
+
+---
+
+
+```r
+usethis::use_git(message = "Initial commit")
+
+# √ Setting active project to 'C:/Users/MMF/Desktop/nome_do_repo'
+# √ Initialising Git repo
+# √ Adding '.Rhistory', '.RData' to '.gitignore'
+# There are 2 uncommitted files:
+# * '.gitignore'
+# * '.nome_do_repo.Rproj'
+
+# Is it ok to commit them?
+
+# 1: No way
+* # 2: Definitely
+# 3: Absolutely not
+
+# Selection: 2
+# √ Adding files
+  
+# A restart of RStudio is required to activate the Git pane **&lt;--**
+# Restart now?
+  
+# 1: No way
+* # 2: For sure
+# 3: Negative
+# Selection: 2
+  
+# √ Adding files
+# √ Commit with message 'Initial commit'
+```
+
+---
+## Do Git local para o GitHub
+
+.center[
+&lt;img src="figs/repo_remoto.jpg" style="width:100%;"/&gt;
+]
+
+---
+## Do Git local para o GitHub
+- Agora que já **criamos um novo projeto no Git** e já **salvamos os arquivos iniciais criados** com um `commit`, o nosso próximo passo será **criar um repositório associado ao GitHub**, adicionando-o ao nosso repo local como uma origem remota, e então fazemos um `push` inicial para sincronizar os dois. 
+
+  - `push` é a palavra em inglês para 'empurrar'. 
+
+--
+
+- Para tal, vamos usar a função `use_github()` do pacote `usethis`.
+
+---
+
+
+```r
+usethis::use_github()
+
+# √ Setting active project to 'C:/Users/MMF/Desktop/nome_do_repo'
+# √ Checking that current branch is 'master'
+# Which git protocol to use? (enter 0 to exit) 
+
+# 1: ssh   &lt;-- presumes that you have set up ssh keys
+*# 2: https &lt;-- choose this if you don't have ssh keys (or don't know if you do)
+
+# Selection: 2
+
+# * Tip: To suppress this menu in future, put
+#   `options(usethis.protocol = "https")`
+#   in your script or in a user- or project-level startup file, '.Rprofile'.
+#   Call `usethis::edit_r_profile()` to open it for editing.
+# * Check title and description
+#   Name:        nome_do_repo
+#   Description: 
+
+# Are title and description ok?
+
+# 1: No
+# 2: No way
+*# 3: For sure
+
+# Selection: 3
+
+# √ Creating GitHub repository
+# √ Setting remote 'origin' to 'https://github.com/mmfava/nome_do_repo.git'
+# √ Pushing 'master' branch to GitHub and setting remote tracking branch
+# √ Opening URL 'https://github.com/mmfava/nome_do_repo'
+```
+
+- Ela vai abrir o repositório no *GitHub*. 
+---
+
+## Criar um arquivo README.md
+
+- Arquivo que descreve o conteúdo do seu repositório remoto (repo *GitHub*).
+
+- Utiliza a linguagem [**Markdown**](https://www.markdownguide.org/cheat-sheet/). 
+  - É uma linguagem simples que converte texto em html. 
+
+- É considerada uma "boa prática" para repos remotos. 
+
+
+```r
+usethis::use_readme_md() #somente markdown
+# usethis::use_readme_rmd() #rmarkdown - depois salvar apenas como 'md'
+```
+
+- Após a execução da função, abrirá um arquivo chamado "README.md". Faça as alterações que você achar necessário e salve o arquivo. 
+
+![](figs/readme.gif)
+---
+## Subir o README.md no GitHub 
+
+&lt;img src="figs/Slide23.png" style="width:90%;"/&gt;
+
+---
+## Subir o README.md no GitHub 
+### Criar uma `branch`
+- O primeiro passo é criar uma `branch` que irá monitorar as nossas alterações no repositório. 
+  - `branches` são ramificações de trabalho que permitem edições em paralelo em nosso arquivo, sem alterar o projeto principal (`branch master`) até o momento que quisermos assim. 
+  - Evitar salvar alterações na `branch master`. 
+  - Em geral, uma `branch` de desenvolvimento é uma bifurcação do estado do código que cria um novo caminho para a evolução do mesmo. Elas podem estar relacionadas a distintos tipos de trabalho que compõem o nosso projeto (ex. introdução, métodos, resultados e discussão) ou pessoas (você, orientadora e coorientadora).
+  
+
+```r
+usethis::pr_init(branch = "MMF_aluna")
+
+# √ Checking that local branch 'master' has the changes in 'origin/master'
+# √ Creating local PR branch 'MMF_aluna'
+# √ Switching to branch 'MMF_aluna'
+# * Use `pr_push()` to create PR
+```
+  
+---
+## Subir o README.md no GitHub 
+### `commit` para salvar as alterações no Git local
+- Fazer um `commit` é salvar as alterações que realizamos no projeto na "linha do tempo" do *Git*.
+- Os `commits` são acompanhados de uma descrição. 
+
+
+
+```r
+usethis::use_git("Escreva aqui uma descrição para o seu commit")
+
+# There are 1 uncommitted files:
+# * 'README.md'
+# Is it ok to commit them?
+
+*# 1: Yes
+# 2: Nope
+# 3: Not now
+  
+# selection: 
+# Enter an item from the menu, or 0 to exit
+# Selection: 1
+# √ Adding files
+# √ Commit with message 'Escreva aqui uma descrição para o seu commit'
+```
+
+---
+## Subir o README.md no GitHub 
+### `push` para subrir as alterações para o remoto (*GitHub*)
+
+- O `push` atualiza o repositório remoto com quaisquer `commits` feitos localmente em um `branch`.
+- Ou seja, é o comando que envia as alterações do repositório local (*Git*) para o remoto (*GitHub*).
+
+```r
+usethis::pr_push()
+
+# √ Checking that local branch 'MMF_aluna' has the changes in 'origin/MMF_aluna'
+# √ Pushing local 'MMF_aluna' branch to 'origin:MMF_aluna'
+# √ Create PR at link given below
+*# √ Opening URL 'https://github.com/mmfava/nome_do_repo/compare/MMF_aluna'
+```
+
+- A página do GitHub será aberta para terminar o `Pull Request`. 
+
+---
+&lt;div class="background" style="width: 1000px; height: 700px; white-space: nowrap; overflow-x: scroll; border: 0; padding: 10px;"&gt;
+
+&lt;img src="figs/modificacoes.png"&gt;
+
+
+---
+&lt;div class="background" style="width: 1000px; height: 700px; white-space: nowrap; overflow-x: scroll; border: 0; padding: 10px;"&gt;
+
+&lt;img src="figs/modificacoes2.png"&gt;
+
+---
+
+&lt;div class="background" style="width: 1000px; height: 700px; white-space: nowrap; overflow-x: scroll; border: 0; padding: 10px;"&gt;
+
+&lt;img src="figs/modificacoes3.png"&gt;
+
+---
+&lt;div class="background" style="width: 1000px; height: 700px; white-space: nowrap; overflow-x: scroll; border: 0; padding: 10px;"&gt;
+
+&lt;img src="figs/modificacoes4.png"&gt;
+
+---
+&lt;div class="background" style="width: 1000px; height: 700px; white-space: nowrap; overflow-x: scroll; border: 0; padding: 10px;"&gt;
+
+&lt;img src="figs/modificacoes5.png"&gt;
+
+---
+
+&lt;div class="background" style="width: 1000px; height: 700px; white-space: nowrap; overflow-x: scroll; border: 0; padding: 10px;"&gt;
+
+&lt;img src="figs/modificacoes6.png"&gt;
+
+---
+## Convidar um colaborar para o projeto GitHub
+- Caso você esteja desenvolvendo um projeto que contará com a contribuição de outres, você poderá adiciona-los ao seu repositório *GitHub*. 
+
+  - No seu repo, vá em `Settings` &gt; `Manage access` &gt; `invite a collaborator`.
+  - Escreve o nome do colaborador/a (como aparece no *GitHub* ou a *@* dele/a).
+
+&lt;img src="figs/colab.png"&gt;
+
+---
+## Finalizar a `branch` criada
+- Após realizar todas as alterações necessárias no projeto, você poderá fuzionar a sua `branch`(= *MMF_aluna*) com a `branch master` e encerrar a atividade dela no projeto.
+
+
+```r
+usethis::pr_finish()
+
+# √ Checking that remote branch 'origin/MMF_aluna' has the changes in 'local/MMF_aluna'
+# √ Switching back to 'master' branch
+# √ Pulling changes from GitHub source repo 'origin/master'
+# √ Deleting local 'MMF_aluna' branch
+```
+
+- "**TCC pronto para a entrega?**"
+
+---
+## Do GitHub para o Git local
+.center[
+&lt;img src="figs/vimos.png" style="width:80%;"/&gt;
+]
+
+---
+## Do GitHub para o Git local
+.center[
+&lt;img src="figs/veremos.png" style="width:80%;"/&gt;
+]
+
+
+---
+## Do GitHub para o Git local
+### `clonar` um repósitorio remoto
+
+- `Clonar` um repositório **=** criar uma cópia local (no PC) de um projeto que já existe remotamente. 
+
+--
+
+- O `clone` inclui todos os arquivos, histórico e `branches` do projeto. 
+
+--
+
+- Ao `clonar` um repositório, as alterações que você realizar não entrarão no projeto principal se não for sequênciada de um `fork` ou estiver associada por um `branch`.
+
+--
+
+.center[
+&lt;img src="https://resumodasnovelas.online/wp-content/uploads/2019/12/o-clone.jpg" style="width:40%;"/&gt;
+]
+
+---
+## Do GitHub para o Git local
+### `clonar` um repósitorio remoto
+
+```r
+usethis::create_from_github(repo_spec = "beatrizmilz/RLadies-Git-RStudio-2019",
+                            destdir = "C:/Users/MMF/Desktop",
+                            fork = FALSE) # clonar, mas sem o fork!
+
+# Which git protocol to use? (enter 0 to exit) 
+
+# 1: ssh   &lt;-- presumes that you have set up ssh keys
+* # 2: https &lt;-- choose this if you don't have ssh keys (or don't know if you do)
+
+# Selection: 2
+
+# * Tip: To suppress this menu in future, put
+#  `options(usethis.protocol = "https")`
+#  in your script or in a user- or project-level startup file, '.Rprofile'.
+#  Call `usethis::edit_r_profile()` to open it for editing.
+# v Cloning repo from 'https://github.com/beatrizmilz/RLadies-Git-RStudio-2019.git' into 
+# 'C:/Users/MMF/Desktop/RLadies-Git-RStudio-2019'
+# v Setting active project to 'C:/Users/MMF/Desktop/RLadies-Git-RStudio-2019'
+# v Opening 'C:/Users/MMF/Desktop/RLadies-Git-RStudio-2019/' in new RStudio session
+```
+
+---
+## Do GitHub para o Git local
+### `clonar` com um `fork`
+- Uma *bifurcação* ou *ramificação* (em inglês: `fork`) é uma cópia de um repositório remoto (*GitHub*) na sua máquina local com uma "ponte" para o projeto original. 
+
+- Séria `clonar` um projeto na sua máquina, realizar as alterações no projeto finalizado com um `pull request`. O responsável pelo repositório pode ou não aceitar as suas modificações. 
+
+- Se você você fizer um `fork` com algum projeto, irá notar uma barra informando quantos `commits` a sua `branch` está atrás ou na frente do projeto inicial. 
+
+.center[
+&lt;img src="https://gableroux.com/to-pull-or-not-to-pull/resources/github-fork-node.gif" style="width:25%;"/&gt;
+]
+
+
+---
+## Do GitHub para o Git local
+### `clonar` com um `fork`
+
+```r
+usethis::create_from_github(repo_spec = "beatrizmilz/RLadies-Git-RStudio-2019",
+                            destdir = "C:/Users/MMF/Desktop",
+                            fork = TRUE)
+
+# v Creating 'C:/Users/MMF/Desktop/RLadies-Git-RStudio-2019/'
+# v Forking 'beatrizmilz/RLadies-Git-RStudio-2019'
+# v Cloning repo from 'https://github.com/mmfava/RLadies-Git-RStudio-2019.git' into # # 'C:/Users/MMF/Desktop/RLadies-Git-RStudio-2019'
+# v Setting active project to 'C:/Users/MMF/Desktop/RLadies-Git-RStudio-2019'
+# v Adding 'upstream' remote: 'https://github.com/beatrizmilz/RLadies-Git-RStudio-2019.git'
+# v Pulling changes from GitHub source repo 'upstream/master'
+# v Setting remote tracking branch for local 'master' branch to 'upstream/master'
+# v Opening 'C:/Users/MMF/Desktop/RLadies-Git-RStudio-2019/' in new RStudio session
+# v Setting active project to 'C:/Users/MMF/Dropbox/GitHub/GECD'
+```
+
+---
+## Do GitHub para o Git local
+### Atualizar o repositório local (`pull`)
+
+- O `pull` é a palavra em inglês para *puxar*. 
+
+--
+
+- O `pull` atualiza a linha local de desenvolvimento com as alterações da contraparte remota. 
+
+--
+
+- Nós usamos esse comando se um colega de equipe fez um `pull request` no GitHub, deixando a nossa `branch` atrasada em relação ao projeto no repo remoto. 
+
+--
+
+- Em outras palavras, é atualizar o nosso Git local para as mudanças realizadas no remoto. 
+
+
+```r
+usethis::pr_pull()
+# √ Pulling changes from GitHub PR
+```
+
+---
+## Do GitHub para o Git local
+
+&lt;br /&gt;
+
+.center[
+**Pronto! agora é só trabalhar 😸** &lt;br /&gt;
+![](https://data.whicdn.com/images/54406285/original.gif)
+]
+
+---
+class: inverse, center, middle
+
+# Interface do Git no RStudio
+## Trabalhando com 'cliques'
+
+.center[
+&lt;img src="https://static.vecteezy.com/system/resources/previews/001/187/026/non_2x/mouse-pointer-png.png" style="width:15%;"/&gt;
+]
+
+---
+class: inverse, center, middle
+
+.center[
+&lt;img src="https://theblackwidower.files.wordpress.com/2013/09/luna-typing.gif" style="width:80%;"/&gt;
+]
+
+---
+## Interface do Git no RStudio
+
+- Para os que preferem 'cliques' a programação, o RStudio oferece a opção "Git Pane" para trabalhar direto da IDE. 
+- O "Git Paine" só aparece em projetos versionados com o Git. 
+
+.center[
+&lt;img src="https://github.com/gecdfoz/GECD/raw/master/Nivelamento%20e%20Integra%C3%A7%C3%A3o/GitHub/Git%20e%20GitHub%20com%20o%20R/images/interface_grafica-01.svg" style="width:100%;"/&gt;
+]
+
+
+[Original: Cheatsheets RStudio 2019](https://rstudio.com/wp-content/uploads/2019/01/Cheatsheets_2019.pdf)
+
+---
+## Interface do Git no RStudio
+### `commit`
+&lt;div class="background" style="width: 800px; height: 500px; white-space: nowrap; overflow-x: scroll; border: 0; padding: 30px;"&gt;
+
+.center[
+&lt;img src="https://github.com/gecdfoz/GECD/raw/master/Nivelamento%20e%20Integra%C3%A7%C3%A3o/GitHub/Git%20e%20GitHub%20com%20o%20R/images/commit.svg"&gt;
+]
+
+---
+## Interface do Git no RStudio
+### `history`
+
+.center[
+&lt;img src="figs/history_1.gif"&gt;
+]
+
+---
+## Criar um repositório diretamente no GitHub
+
+- Acesse a sua conta [GitHub](https://github.com/) e acesse a opção “new” na guia “repositories” (1a). 
+
+- Na página que aparecerá na sequência, incluir um nome para o seu repositório (2b), uma descrição (2c), determinar se o seu repositório será público ou privado (2d) e peça para o GitHub adicionar um arquivo para a descrição do seu repositório (README.md) (2e).
+
+
+&lt;div class="background" style="width: 1000px; height: 500px; white-space: nowrap; overflow-x: scroll; border: 0; padding: 10px;"&gt; 
+
+&lt;img src="https://github.com/gecdfoz/GECD/raw/master/Nivelamento%20e%20Integra%C3%A7%C3%A3o/GitHub/Git%20e%20GitHub%20com%20o%20R/images/novo_proj_dgithub.png"&gt;
+
+---
+## Interface do Git no RStudio
+### Clonar o repositório remoto com interface do RStudio
+
+- Agora que você já criou um repositório no GitHub, é necessário clona-lo para usar no seu RStudio. Para tal, você precisa abrir o RStudio e acessar `File &gt; New Project`.
+
+- Na aba **Create Project**, selecionar a opção **Version Control** e, na sequência, em **Create Project from Version Control** eleger a opção *Git*.
+
+
+&lt;img src="https://github.com/gecdfoz/GECD/raw/master/Nivelamento%20e%20Integra%C3%A7%C3%A3o/GitHub/Git%20e%20GitHub%20com%20o%20R/images/newproject2.png"&gt;
+
+---
+## Interface do Git no RStudio
+### Clonar o repositório remoto com interface do RStudio
+- Na guia **Clone Git Repository**, você precisara preencher os dados do repositório que você quer clonar. 
+  - Copiar a URL do repositório *GitHub* (1a e 1b) 
+  - Inserir a URL no campo **Repository URL** (2a)
+  - Escolher o nome do repositório (2b)
+  - Escolha um diretório para o seu projeto (uma pasta no seu computador) para manter a cópia local (2c)
+
+&lt;img src="https://github.com/gecdfoz/GECD/raw/master/Nivelamento%20e%20Integra%C3%A7%C3%A3o/GitHub/Git%20e%20GitHub%20com%20o%20R/images/clone.png"&gt;
+
+- O RStudio irá fazer o clone do repositório e abrirá um RProj para ele (caso não exista um ainda, será criado).
+
+---
+## Referências
+
+- Beatriz Milz. [Primeiros passos utilizando o Git e o GitHub no RStudio](https://beatrizmilz.github.io/RLadies-Git-RStudio-2019/#1).
+
+
+- Curso-R. [Rstudio e GitHub no dia-a-dia](https://www.curso-r.com/blog/2017-07-17-rstudio-e-github/).
+
+
+- TreinaWeb. [Github: Pare com as senhas e utilize Tokens de Acesso](https://www.treinaweb.com.br/blog/github-pare-com-as-senhas-e-utilize-tokens-de-acesso/).
+
+&lt;br /&gt;
+
+.center[
+**“Nessa vida nada se cria, tudo se transforma ou se copia”.**
+]
+---
+class: center, middle
+
+# Agradecimentos
+
+### [R-Ladies Fortaleza](https://www.meetup.com/pt-BR/rladies-fortaleza/events/275030815/) 💙
+### [Grupo de Estudos em Ciência de Dados (GECD)](https://github.com/gecdfoz/GECD) 💛
+### [Beatriz Milz](https://github.com/beatrizmilz) 💚
+
+&lt;img src="https://media1.tenor.com/images/ceadcc4af571518e125e7964e43bb714/tenor.gif?itemid=5459333" style="width: 20%;"&gt;
+
+---
+
+## Vamos praticar? 💻
+
+1. Instale todas as ferramentas necessárias para tabalhar com o *Git* no *RStudio*.
+
+2. Faça a configuração do seu token *GitHub*.
+
+3. Crie um repostório local pelo *RStudio*, para testar.
+
+4. Suba o seu repositório para o *GitHub*. 
+
+5. Crie um arquivo "README.md" para o seu repositório e adicione uma descrição.
+
+6. Clone o repositório ["nome_do_repo"](https://github.com/mmfava/nome_do_repo) na sua máquina com um `fork`.
+
+7. Inclua o seu nome na listade participantes na [descrição do Curso de Git &amp; GitHub do GECD](https://github.com/gecdfoz/GECD/tree/master/Nivelamento%20e%20Integra%C3%A7%C3%A3o/GitHub/Git%20e%20GitHub%20com%20o%20R). Tente fazer diretamente pelo *GitHub*. 
+
+* Você pode fazer a atividade por linha de comando ou pelo Git pane, você decide! 👈
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

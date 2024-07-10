@@ -1,0 +1,43 @@
+---
+title: "Git e GitHub no RStudio"
+subtitle: "Curso ministrado para o maravilhoso grupo do R-ladies Fortaleza"
+image: image.png
+execute:
+  echo: true
+  output: false
+date: 2020-12-12 09:00:00
+author:
+  - name: "Marília Melo Favalesso"
+    url: "http://www.mmfava.com"
+abstract: >
+  O Git é um software de controle de versões que gerencia arquivos texto, principalmente códigos de programação, permitindo compartilhar edições e retomar versões anteriores. Este curso, ministrado para o grupo R-ladies Fortaleza, ensina como utilizar o Git e o GitHub diretamente do RStudio.
+citation: 
+  url: "http://www.mmfava.com"
+  version: 1
+categories:
+  - Code
+  - R
+  - Git
+  - Github
+lang: pt-br
+tags: 
+  - PT-BR
+---
+
+# Git e GitHub no RStudio
+
+O Git é um software de controle de versões que tem como objetivo gerenciar arquivos texto, principalmente códigos de programação. O funcionamento dessa ferramenta é semelhante aos sistemas de nuvens (Google Drive, Dropbox, Mega, etc), em que podemos compartilhar as edições de um script com uma equipe, além de retomar antigas versões de nossos arquivos.
+
+Resumidamente, o Git examina as mudanças realizadas nos arquivos de um diretório e vai guardando essas informações para compartilhar com outros usuários e/ou possibilitar a reversão de alterações realizadas. Além de ser uma ferramenta extremamente útil, o Git se conecta ao serviço de hospedagem e armazenamento de versões chamado GitHub. A partir do GitHub é possível contribuir com projetos de qualquer lugar do mundo, além de compartilhar os nossos próprios códigos com fins de divulgação e/ou colaboração.
+
+A partir do RStudio temos algumas maneiras bem práticas de trabalhar com o Git e o GitHub, o que poderá mudar a sua vida diária nos seus trabalhos com o R!
+
+## Slides
+
+<iframe src="git-github-rstudio.pdf" width="100%" height="600px" frameborder="0" allowfullscreen></iframe>
+
+<small>Em html: [link](https://mmfava.netlify.app/talk/2021-08-14-trabalhofinal-enap/slides.html#1)</small>
+
+## Postagem no GECD
+
+[Descrição da atividade aqui!](https://github.com/gecdfoz/GECD/tree/master/Nivelamento%20e%20Integra%C3%A7%C3%A3o/GitHub/Git%20e%20GitHub%20com%20o%20R)

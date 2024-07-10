@@ -1,0 +1,20 @@
+---
+title: "Talks and Teaching"
+listing:
+  - id: talksandteaching
+    contents: "*/*.qmd"
+    type: grid
+    fields: [image, date, title, subtitle, tags]
+    sort: "date desc"
+    categories: cloud
+    sort-ui: true
+    filter-ui: true
+    page-size: 36     
+page-layout: full
+title-block-banner: false
+toc: true
+---
+
+
+::: {#talksandteaching}
+:::

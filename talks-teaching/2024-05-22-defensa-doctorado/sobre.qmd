@@ -1,0 +1,43 @@
+---
+title: "Estudios ecoepidemiológicos de *Lonomia achelous* Crammer 1777 Y *Lonomia obliqua* Walker 1955 en Sudamérica"
+subtitle: Defensa de tesis - Universidad de Buenos Aires
+image: images/image.png
+execute:
+  echo: true
+  output: false
+date: 2024-05-22 09:00:00
+author:
+  - name: Marília Melo Favalesso
+    email: marilia.melo.favalesso@gmail.com
+    affiliation: 
+        - Instituto Nacional de Medicina Tropical (INMeT)
+        - ANLIS "Dr. Carlos G Malbrán"
+        - Facultad de Ciencias Exactas y Naturales (FCEyN), Universidad de Buenos Aires 
+  - name: Maria Elisa Peichoto<br>(directora de tesis)
+    affiliation: 
+        - Instituto Nacional de Medicina Tropical (INMeT)
+        - ANLIS "Dr. Carlos G Malbrán"
+  - name: Ana Tereza Bittencourt Guimarães<br>(codirectora de tesis)
+    affiliation:
+        - Universidade Estadual do Oeste do Paraná (UNIOESTE)
+    
+citation: 
+  url: http://www.mmfava.com
+  version: 1
+categories:
+  - PhD
+  - Thesis
+  - Sci
+lang: es-ar
+tags: 
+  - ES-AR
+draft: true
+#funding: "The author received no specific funding for this work."
+---
+# Resumen 
+
+La presente investigación doctoral tuvo como objetivo entender los factores de riesgo asociados a los envenenamientos por Lonomia achelous Cramer 1777 y Lonomia obliqua Walker 1955 (Saturniidae: Hemileucinae) en Sudamérica, también conocido como lonomismo. **Capítulo 1**: Se presenta el primer análisis actualizado e integral del lonomismo en Sudamérica (entre 1960-2020), incluyéndose un total de 13.186 reportes de casos (>90% en Brasil). Se evidencia un aumento en el número de nuevas localizaciones que registran lonomismo a lo largo del tiempo y una mayor prevalencia de casos en hombres en edad económicamente productiva. Además, se destaca la necesidad urgente de disponer un tratamiento específico en los países del continente donde se notifican estos casos. **Capítulo 2**: Se informan dos casos de depredación de orugas de Lonomia spp.: uno (inédito) por un ave de la especie Trogon surrucura aurantius Vieillot 1817 y otro por el hemíptero Alcaeorrhynchus grandis Dallas 1851. **Capítulo 3**: Se examina la relación entre las orugas *L. achelous* y *L. obliqua* con sus hospederos, incluyendo características biológicas, usos humanos y distribución geográfica. Los resultados obtenidos indican que ambas especies son polífagas, pero que la presencia de tanino en las hojas es un factor en común entre los hospederos, las cuales a su vez tienen al menos un uso humano. Además, la distribución geográfica de ambas especies está relacionada con la distribución de sus hospederos nativos, las cuales son mayoritariamente heliófitas. **Capítulo 4**: Se identifican las áreas de riesgo de lonomismo mediante combinación de modelos de distribución de especies basados en el clima y en el paisaje con la distancia a los centros de salud más cercanos. Los países con zonas idóneas son Argentina, Bolivia, Brasil, Colombia, Ecuador, Guayana, Guayana Francesa, Paraguay, Perú, Surinam, y Venezuela, siendo la región norte de América del Sur la más susceptible a los casos graves. El mapa y la caracterización ecoepidemiológica presentada aquí constituyen una herramienta valiosa para la prevención y manejo adecuado de esta enfermedad endémica en el continente.
+
+# Slides
+
+<iframe src="presentacion_tesis.pdf" width="100%" height="600px"></iframe>

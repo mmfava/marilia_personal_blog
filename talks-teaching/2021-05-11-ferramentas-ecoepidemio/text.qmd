@@ -1,0 +1,41 @@
+---
+title: "Herramientas eco-epidemiológicas para la vigilancia de los envenenamientos"
+subtitle: "Con énfasis en la epidemiología espacial"
+image: images/image.png
+execute:
+  echo: true
+  output: false
+date: 2021-05-11 09:00:00
+author:
+  - name: "Marília Melo Favalesso"
+    url: "http://www.mmfava.com"
+abstract: >
+  Diapositivas de la clase "Herramientas eco-epidemiológicas para la vigilancia de los envenenamientos", impartida a los estudiantes del curso de "Biotoxinología: Herramientas para la investigación biomédica y su importancia en salud" de la Universidad Federal de la Integración Latinoamericana (UNILA).
+citation: 
+  url: "http://www.mmfava.com"
+  version: 1
+categories:
+  - R
+  - Ecoepidemiology
+  - Code
+  - Spatial
+  - Data analysis
+lang: es
+format: html
+tags: 
+  - ES-AR
+---
+
+# Sobre
+
+A continuación, se presentan las diapositivas correspondientes a la clase "Herramientas eco-epidemiológicas para la vigilancia de los accidentes por animales venenosos", impartida a los estudiantes del curso de “Biotoxinología: Herramientas para la investigación biomédica y su importancia en salud”, del Programa de Posgrado en Biociencias de la Universidad Federal de la Integración Latinoamericana, en Foz do Iguaçu – PR – Brasil.
+
+[¡Más información haciendo clic aquí!](https://portal.unila.edu.br/mestrado/biociencias/disciplinas)
+
+## Diapositivas
+
+<iframe src="herramientas-ecoepidemiologicas.pdf" width="100%" height="600px" frameborder="0" allowfullscreen></iframe>
+
+Presentación en html ([enlace](https://mmfava.netlify.app/talk/2021-08-14-ferramentas-ecoepidemiologicas/presentacion.html#1)).
+
+

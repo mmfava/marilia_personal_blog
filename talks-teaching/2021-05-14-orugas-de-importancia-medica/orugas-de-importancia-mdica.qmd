@@ -1,0 +1,26 @@
+---
+title: "**Orugas de importancia médica**"
+subtitle: "Ciencia ciudadana en Misiones - Argentina"
+image: "images/image.png"
+author:
+  - name: "Marília Melo Favalesso"
+    email: "marilia.melo.favalesso@gmail.com"
+date: "2019-06-27"
+citation: 
+  url: "http://www.mmfava.com"
+  version: 1
+categories:
+  - Scientific outreach
+  - Venomous animals
+lang: es-ar
+tags: 
+  - ES-AR
+---
+
+# Sobre
+
+Presenté una conferencia sobre las principales orugas de importancia médica encontradas en Argentina, durante un evento dirigido a los guías turísticos de la provincia de Misiones. La conferencia se llevó a cabo en el municipio de Puerto Iguazú el 27/06/2019, destacando las características, prevención y manejo de los accidentes causados por estas orugas.
+
+# Slides
+
+<iframe src="orugas-de-importancia-medica.pdf" width="100%" height="600px"></iframe>

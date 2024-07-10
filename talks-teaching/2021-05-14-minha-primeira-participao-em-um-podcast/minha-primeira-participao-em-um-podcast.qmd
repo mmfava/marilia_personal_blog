@@ -1,0 +1,37 @@
+---
+title: "Lagartas são armas biologicas?"
+subtitle: "Um papo sobre bioestatística no podcast 'Intervalo de Confiança'"
+image: images/image.png
+execute:
+  echo: true
+  output: false
+date: 2020-09-03 09:00:00
+author:
+  - name: "Marília Melo Favalesso"
+    url: "http://www.mmfava.com"
+abstract: >
+  Participei do podcast Intervalo de Confiança, onde discutimos a importância dos dados em diversas áreas, com foco especial na bioestatística e seu papel crucial em pesquisas biológicas e além.
+citation: 
+  url: "http://www.mmfava.com"
+  version: 1
+categories:
+  - Data analysis
+  - Scientific outreach
+  - Podcast
+lang: pt-br
+tags: 
+  - PT-BR
+---
+
+# Minha Primeira Participação em um Podcast!
+
+Tenho o prazer de compartilhar com vocês minha primeira participação no podcast *Intervalo de Confiança*! Neste episódio especial do Dia do Biólogo, fui convidada pelo apresentador Igor Alcantara para discutir um tema fascinante e essencial: a bioestatística.
+
+Os dados estão presentes em todos os aspectos da vida, desde pesquisas eleitorais até reuniões de trabalho, exploração espacial, inteligência artificial, criatividade, jogos de azar, esportes, e muito mais. Entender como utilizamos dados e suas metodologias é crucial para compreender como eu, você, o dragão-de-Komodo, Rogério Skylab e até as lagartas venenosas funcionamos.
+
+## Sobre o Episódio
+
+No episódio, exploramos uma das áreas mais promissoras e interessantes do trabalho com dados: a bioestatística. Discutimos seus métodos, técnicas e segredos, e como eles são aplicados em diversas áreas da biologia e além.
+
+Para acessar o episódio completo, visite o site: [Intervalo de Confiança - IC 25: Lagartas são armas biológicas](https://intervalodeconfianca.com.br/2020/09/03/ic-25-lagartas-sao-armas-biologicas/)
+
