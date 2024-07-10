@@ -19,29 +19,32 @@ tags:
 
 Em 2016, ministrei, em parceria com minha querida colega Thais Sobjak, um minicurso de Ecologia Numérica para os graduandos de Ciências Biológicas da Universidade Estadual do Oeste do Paraná (UNIOESTE). O curso foi bem básico e apresentamos os conceitos e práticas de PCA e Cluster em R. A Thais ensinou a parte de índices ecológicos.
 
-
 ## Dia 1
 
 ### Análise de Componentes Principais (PCA)
 
-<iframe src="pca.pdf" width="100%" height="600px" frameborder="0" allowfullscreen></iframe>
+<iframe src="pca.pdf" width="100%" height="600px" frameborder="0" allowfullscreen>
 
-[> Script pca.R](scripts/pca.R)
+</iframe>
 
+[\> Script pca.R](scripts/pca.R)
 
 ## Dia 2
 
 ### Análise de Agrupamento (Cluster)
 
-<iframe src="cluster.pdf" width="100%" height="600px" frameborder="0" allowfullscreen></iframe>
+<iframe src="cluster.pdf" width="100%" height="600px" frameborder="0" allowfullscreen>
 
-[> Script cluster.R](scripts/cluster.R)
-[> Atividade.docx](atividade.docx)
+</iframe>
+
+[\> Script cluster.R](scripts/cluster.R) [\> Atividade.docx](atividade.docx)
 
 ## Dia 3
 
-### Indices de diversidade 
+### Indices de diversidade
 
-<iframe src="indices.pdf" width="100%" height="600px" frameborder="0" allowfullscreen></iframe>
+<iframe src="indices.pdf" width="100%" height="600px" frameborder="0" allowfullscreen>
 
-[> Script indices.R](scripts/indices.R)
+</iframe>
+
+[\> Script indices.R](scripts/indices.R)

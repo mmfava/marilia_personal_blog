@@ -2,6 +2,7 @@ project:
   type: website
   preview: 
     port: 4200
+  pre-render: python3 generate_cvs.py
 
 website:
   page-navigation: true
@@ -31,6 +32,16 @@ website:
         href: talks-teaching/index.qmd
       - text: projects
         href: projects/index.qmd
+      - text: cv
+        menu:
+          - text: EN
+            href: cv/cv_en.pdf
+          - text: ES
+            href: cv/cv_es.pdf
+          - text: PT-BR
+            href: cv/cv_pt.pdf
+          - text: Academic
+            href: cv/lattes.qmd
 lang: pt
 
 format:

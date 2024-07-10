@@ -1,0 +1,210 @@
+---
+title: ""
+format: 
+  html:
+    self_contained: true
+    css: styles.css
+editor: visual
+---
+
+# Marília Melo Favalesso
+<p class="personal-infos">[\+55 45 99829-2469](https://wa.me/message/JUMS7WXLYPCUA1) | [marilia.melo.favalesso@gmail.com](marilia.melo.favalesso@gmail.com) | [linkedin.com/in/mariliafavalesso/](https://www.linkedin.com/in/mariliafavalesso/) | [github.com/mmfava](https://github.com/mmfava)</p>
+
+<!---- Idioma  ------> 
+```{python}
+#| output: false
+#| echo: false
+idioma = 'ES'
+```
+
+<!---- Habilidades técnicas  ------> 
+```{python}
+#| output: asis
+#| echo: false
+
+# -------------------------------------------------
+# Dicionário com as habilidades técnicas em diferentes idiomas
+technical_skills = {
+    'PT': {
+        'title': '## Habilidades técnicas',
+        'languages': '<b>Linguagens</b>: Python, R, SQL <br>',
+        'libraries': '<b>Bibliotecas</b>: Matplotlib, NumPy, Pandas, Plotly, Scikit-learn, Seaborn, Tidymodels, Tidyverse <br>',
+        'tools': '<b>Outras ferramentas</b>: AWS, Azure DevOps, Docker, Git, GitHub, Google Cloud, Hadoop, Linux, MLFlow, Quarto <br>',
+        'keywords': '<b>Palavras-chave</b>: <i>Machine Learning</i>, Análises Estatísticas, Big Data, CI/CD, Versionamento, EDA, SIG'
+    },
+    'ES': {
+        'title': '## Habilidades técnicas',
+        'languages': '<b>Idiomas</b>: Python, R, SQL <br>',
+        'libraries': '<b>Bibliotecas</b>: Matplotlib, NumPy, Pandas, Plotly, Scikit-learn, Seaborn, Tidymodels, Tidyverse <br>',
+        'tools': '<b>Otras herramientas</b>: AWS, Azure DevOps, Docker, Git, GitHub, Google Cloud, Hadoop, Linux, MLFlow, Quarto <br>',
+        'keywords': '<b>Palabras clave</b>: <i>Machine Learning</i>, Estadística, Big Data, CI/CD, Control de versiones, EDA, SIG'
+    },
+    'EN': {
+        'title': '## Technical Skills',
+        'languages': '<b>Languages</b>: Python, R, SQL <br>',
+        'libraries': '<b>Libraries</b>: Matplotlib, NumPy, Pandas, Plotly, Scikit-learn, Seaborn, Tidymodels, Tidyverse <br>',
+        'tools': '<b>Other tools</b>: AWS, Azure DevOps, Docker, Git, GitHub, Google Cloud, Hadoop, Linux, MLFlow, Quarto <br>',
+        'keywords': '<b>Keywords</b>: <i>Machine Learning</i>, Statistical Analysis, Big Data, CI/CD, Versioning, Data Preparation and Visualization, GIS'
+    }
+}
+
+# Função para imprimir as habilidades técnicas no idioma especificado
+def print_technical_skills(language):
+    if language in technical_skills:
+        skills = technical_skills[language]
+        output = f"{skills['title']}\n\n{skills['languages']}{skills['libraries']}{skills['tools']}{skills['keywords']}"
+        return print(output)
+    else:
+        return "Idioma não suportado."
+
+# Resultados
+print_technical_skills(idioma)
+```
+
+<!---- Experiências e educação ------> 
+
+```{python}
+#| output: asis
+#| echo: false
+
+# -------------------------------------------------
+# Template base para cada tipo de experiência
+template_content = """
+## {type}
+
+{entries}
+"""
+
+# Template para cada entrada
+entry_template_content = """
+<div class="flex-container-1">
+  <p class="left-aligned"><b>{what} | {where_1}</b></p>
+  <p class="right-aligned">{region} ({country})</p>
+</div>
+
+<div class="flex-container-2">
+  <p class="left-aligned"><i>{where_2}</i></p>
+  <p class="right-aligned">{start} - {end}</p>
+</div>
+
+{details_1}
+"""
+
+# Função para gerar a lista de entradas formatadas para cada tipo
+def generate_entries(entries):
+    formatted_entries = ""
+    for _, entry in entries.iterrows():
+        # Processar apenas se todos os detalhes estiverem presentes
+        # TODO: futuramente, possível adicionar as outras colunas 
+        #       referentes a detalhes - por isso details é lista. 
+        details = [entry['details_1']]
+        details = [detail for detail in details if pd.notnull(detail)]
+        details_formatted = " <br>\n".join(details)
+
+        # Adicionar a entrada formatada
+        formatted_entries += entry_template_content.format(
+            what=entry['what'],
+            where_1=entry['where_1'],
+            region=entry['region'],
+            country=entry['country'],
+            where_2=entry['where_2'],
+            start=entry['start'],
+            end=entry['end'] if entry['end'] != 'current' else 'Atual',
+            details_1=details_formatted,
+            details_2='',
+            details_3=''
+        )
+    return formatted_entries.strip()
+
+# Bibliotecas
+import pandas as pd
+
+# Importar a planilha com as informações do currículo,
+# especificaente a folha "sections"
+import pandas as pd
+
+# Link para exportar a planilha como CSV
+csv_url = 'https://docs.google.com/spreadsheets/d/1h-kFMxdNLBDoanj2kMOimbAMGKqmacwB8Kc_rAcP9Xo/export?format=csv'
+
+# Ler a planilha diretamente no pandas
+df = pd.read_csv(csv_url)
+
+# Filtrar para o idioma que será trabalhado
+df = df.query(f"lenguage == '{idioma}'")
+
+# Order do mais antigo para o mais novo
+# e na ordem que os tópicos devem aparecer no currículo
+# (1 = Experiência; 2 = Educação)
+df = df.sort_values('start', ascending=False).sort_values('order')
+
+# Atualizar o agrupamento para manter a ordem da coluna 'order'
+grouped = df.groupby(['type', 'order'], sort=False)
+
+# Gerar a saída formatada para cada tipo, mantendo a ordem definida pela coluna 'order'
+output = ""
+for (type_group, _), entries in grouped:
+    output += template_content.format(
+        type=type_group,
+        entries=generate_entries(entries)
+    )
+
+# Resultados
+print(output)
+```
+
+
+<!---- Idiomas  ------> 
+
+```{python}
+#| output: asis
+#| echo: false
+
+# --------------------------------------------------
+# Dicionário com a seção de idiomas em diferentes idiomas
+language_skills = {
+    'PT': {
+        'title': '## Idiomas',
+        'languages': '<b>Português</b> (Nativo), <b>Espanhol</b> (Intermediário) e <b>Inglês</b> (Intermediário)'
+    },
+    'ES': {
+        'title': '## Idiomas',
+        'languages': '<b>Portugués</b> (Nativo), <b>Español</b> (Intermedio) y <b>Inglés</b> (Intermedio)'
+    },
+    'EN': {
+        'title': '## Languages',
+        'languages': '<b>Portuguese</b> (Native), <b>Spanish</b> (Intermediate) and <b>English</b> (Intermediate)'
+    }
+}
+
+# Função para imprimir a seção de idiomas no idioma especificado
+def print_language_skills(language=idioma):
+    skills = language_skills.get(language, None)
+    if skills:
+        # Construir a saída formatada
+        output = f"{skills['title']}\n\n{skills['languages']}"
+        return print(output)
+    else:
+        return "Language not supported."
+
+# Resultado
+print_language_skills(idioma)  
+```
+
+<!---- Date/hour  ------> 
+```{python}
+#| output: false
+#| echo: false
+from datetime import datetime
+
+# Obter a data atual
+data_atual = datetime.now()
+
+# Formatar a data no estilo 'DD/MM/YYYY'
+data_formatada = data_atual.strftime('%d/%m/%Y')
+```
+
+<div class="right-aligned"><small>
+Made with Python and Quarto <br>
+[github/mmfava/resume](https://github.com/mmfava/resume), `{python} data_formatada`
+ <br>
+</small></div>
