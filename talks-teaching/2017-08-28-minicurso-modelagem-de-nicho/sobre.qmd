@@ -38,3 +38,4 @@ Neste curso introdutório, falei sobre os princípios básicos da SDM, quais sã
 
 ### Dia 3
 <iframe src="3_MNE.pdf" width="100%" height="600px"></iframe>
+

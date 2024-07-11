@@ -2,7 +2,6 @@ project:
   type: website
   preview: 
     port: 4200
-  pre-render: python3 generate_cvs.py
 
 website:
   page-navigation: true
@@ -41,7 +40,7 @@ website:
           - text: PT-BR
             href: cv/cv_pt.pdf
           - text: Academic
-            href: cv/lattes.qmd
+            href: cv/lattes.pdf
 lang: pt
 
 format:
