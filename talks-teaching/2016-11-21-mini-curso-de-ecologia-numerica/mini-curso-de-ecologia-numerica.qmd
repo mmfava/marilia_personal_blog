@@ -13,6 +13,7 @@ categories:
   - R
 tags: 
   - PT-BR
+embed-resources: true
 ---
 
 # Minicurso de Ecologia Numérica
@@ -25,11 +26,9 @@ Em 2016, ministrei, em parceria com minha querida colega Thais Sobjak, um minicu
 
 <iframe src="pca.pdf" width="100%" height="600px" frameborder="0" allowfullscreen>
 
-{{< pdf pca.pdf >}}
-
 </iframe>
 
-[\> Script pca.R](scripts/pca.R)
+[> Script pca.R](scripts/pca.R)
 
 ## Dia 2
 
@@ -39,7 +38,9 @@ Em 2016, ministrei, em parceria com minha querida colega Thais Sobjak, um minicu
 
 </iframe>
 
-[\> Script cluster.R](scripts/cluster.R) [\> Atividade.docx](atividade.docx)
+[> Script cluster.R](scripts/cluster.R) 
+
+[> Atividade.docx](atividade.docx)
 
 ## Dia 3
 
@@ -49,4 +50,4 @@ Em 2016, ministrei, em parceria com minha querida colega Thais Sobjak, um minicu
 
 </iframe>
 
-[\> Script indices.R](scripts/indices.R)
+[> Script indices.R](scripts/indices.R)
