@@ -6,7 +6,7 @@ project:
 website:
   page-navigation: true
   title: "Marília Melo Favalesso"
-  site-url: "https://www.mmfava.com/"
+  site-url: "https://www.mariliafavalesso.com/"
   #google-analytics: "G-XXXXXXXXXX"
   page-footer: 
     left: "©Copyright 2024 Marília Melo Favalesso. Except where otherwise noted, all text and images licensed CC-BY-NC 4.0."
@@ -29,19 +29,16 @@ website:
         href: notebooks/index.qmd
       - text: teaching/talks
         href: talks-teaching/index.qmd
-      - text: projects
-        href: projects/index.qmd
-      - text: cv
+      - text: resume
         menu:
-          - text: EN
+          - text: en
             href: cv/cv_en.pdf
-          - text: ES
+          - text: es
             href: cv/cv_es.pdf
-          - text: PT-BR
+          - text: pt-br
             href: cv/cv_pt.pdf
-          - text: Academic
+          - text: academic
             href: cv/lattes.pdf
-lang: pt
 
 format:
   html:
@@ -51,7 +48,7 @@ format:
       dark: darkly
     link-external-icon: true
     link-external-newwindow: true
-    link-external-filter: '^(?:http:|https:)\/\/www\.mmfava\.com\/**'
+    link-external-filter: '^(?:http:|https:)\/\/www\.mariliafavalesso\.com\/**'
     citations-hover: true
     footnotes-hover: true
     toc: true
@@ -61,7 +58,7 @@ editor: visual
 
 comments:
   giscus:
-    repo: mmfava/blog-en
+    repo: mmfava/marilia_personal_blog
 
 execute:
   freeze: true

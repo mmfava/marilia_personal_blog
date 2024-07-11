@@ -2,6 +2,7 @@
 title: "Marília Melo Favalesso"
 image: profile.jpg
 #page-layout: full
+comments: false
 about:
   #id: hero-heading
   template: trestles
@@ -16,7 +17,6 @@ about:
     - icon: envelope
       href: mailto:marilia.melo.favalesso@gmail.com
 ---
-
 
 ::: panel-tabset
 ### Hello!

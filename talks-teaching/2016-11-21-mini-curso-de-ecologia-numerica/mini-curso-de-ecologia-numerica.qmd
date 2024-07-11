@@ -25,6 +25,8 @@ Em 2016, ministrei, em parceria com minha querida colega Thais Sobjak, um minicu
 
 <iframe src="pca.pdf" width="100%" height="600px" frameborder="0" allowfullscreen>
 
+{{< pdf pca.pdf >}}
+
 </iframe>
 
 [\> Script pca.R](scripts/pca.R)
