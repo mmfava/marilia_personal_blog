@@ -6,3 +6,9 @@ Este repositório contém o código-fonte do meu blog pessoal, construído com [
 
 O blog é implantado automaticamente no Netlify a partir deste repositório. 
 [Em breve] Cada push no branch principal aciona uma nova implantação.
+
+## Acesse
+
+[www.mariliafavalesso.com](www.mariliafavalesso.com)
+
+
