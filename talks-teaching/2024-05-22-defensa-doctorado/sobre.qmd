@@ -20,7 +20,6 @@ author:
   - name: Ana Tereza Bittencourt Guimarães<br>(codirectora de tesis)
     affiliation:
         - Universidade Estadual do Oeste do Paraná (UNIOESTE)
-    
 citation: 
   url: http://www.mmfava.com
   version: 1

@@ -5,6 +5,10 @@ image: image.png
 author:
   - name: Marília Melo Favalesso
     url: www.mmfava.com
+format:
+  html:
+    link-external-icon: true
+    link-external-newwindow: true
 date: 2016-11-21
 categories:
   - Data analysis
@@ -13,41 +17,19 @@ categories:
   - R
 tags: 
   - PT-BR
-embed-resources: true
 ---
 
-# Minicurso de Ecologia Numérica
 
-Em 2016, ministrei, em parceria com minha querida colega Thais Sobjak, um minicurso de Ecologia Numérica para os graduandos de Ciências Biológicas da Universidade Estadual do Oeste do Paraná (UNIOESTE). O curso foi bem básico e apresentamos os conceitos e práticas de PCA e Cluster em R. A Thais ensinou a parte de índices ecológicos.
+# **Minicurso de Ecologia Numérica**
 
-## Dia 1
+[![](image.png)](https://github.com/mmfava/minicurso-ecologia-numerica-2016)
 
-### Análise de Componentes Principais (PCA)
 
-<iframe src="pca.pdf" width="100%" height="600px" frameborder="0" allowfullscreen>
+Em 2016, ministrei, em parceria com minha querida colega Thais Sobjak, um minicurso de Ecologia Numérica para os graduandos de Ciências Biológicas da Universidade Estadual do Oeste do Paraná (UNIOESTE). 
 
-</iframe>
+O curso apresentou conceitos e práticas de PCA, clusterização e índices de diversidade ecológica.
 
-[> Script pca.R](scripts/pca.R)
+## Material completo 
 
-## Dia 2
+[{{< fa brands github size 2x >}} mmfava/minicurso-ecologia-numerica-2016](https://github.com/mmfava/minicurso-ecologia-numerica-2016)
 
-### Análise de Agrupamento (Cluster)
-
-<iframe src="cluster.pdf" width="100%" height="600px" frameborder="0" allowfullscreen>
-
-</iframe>
-
-[> Script cluster.R](scripts/cluster.R) 
-
-[> Atividade.docx](atividade.docx)
-
-## Dia 3
-
-### Indices de diversidade
-
-<iframe src="indices.pdf" width="100%" height="600px" frameborder="0" allowfullscreen>
-
-</iframe>
-
-[> Script indices.R](scripts/indices.R)
