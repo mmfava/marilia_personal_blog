@@ -1,0 +1,35 @@
+---
+title: "Lonomismo en Argentina"
+subtitle: "Aplicación Shiny"
+image: image.png
+author:
+  - name: "Marília Melo Favalesso"
+    email: "marilia.melo.favalesso@gmail.com"
+date: "2021-08-17"
+citation: 
+  url: "http://www.mmfava.com"
+  version: 1
+categories:
+  - Git
+  - Github
+  - Soma dos Quadrados
+lang: pt-br
+tags: 
+  - PT-BR
+---
+
+## Aplicación Shiny: Monitoreo y Gestión de Accidentes con *Lonomia* en Misiones, Argentina
+
+La región de Misiones, Argentina, es conocida por su exuberante biodiversidad, incluyendo una variedad de especies de mariposas y polillas. Entre estas, se encuentra la *Lonomia*, una polilla cuya oruga es conocida por causar accidentes de salud debido a su veneno. Con el objetivo de monitorear y gestionar estos incidentes, hemos desarrollado una innovadora aplicación Shiny: [Dashboard *Lonomia* AR](https://github.com/mmfava/dashboard_Lonomia_AR).
+
+### ¿Qué es Shiny y por qué lo elegimos?
+
+Shiny es un framework de R que permite construir aplicaciones web interactivas con facilidad. Con Shiny, podemos transformar análisis de datos complejos en herramientas accesibles para usuarios que no necesariamente tienen formación técnica en análisis de datos. Esto lo hace ideal para aplicaciones de monitoreo de salud pública, como nuestro dashboard para accidentes con *Lonomia*.
+
+### Colaboración y Desarrollo Continuo
+
+El desarrollo del Dashboard *Lonomia* AR es un esfuerzo colaborativo y está disponible como un proyecto de código abierto en GitHub. Invitamos a otros investigadores y profesionales de la salud a contribuir con mejoras y nuevas funcionalidades. Juntos, podemos seguir mejorando esta herramienta y adaptándola a las necesidades cambiantes de la comunidad.
+
+### Cómo Acceder al Dashboard
+
+Para acceder al Dashboard *Lonomia* AR y explorar todas sus funcionalidades, visita nuestro repositorio en GitHub: [Dashboard *Lonomia* AR](https://github.com/mmfava/dashboard_Lonomia_AR). Aquí encontrarás instrucciones detalladas sobre cómo instalar y ejecutar la aplicación, así como documentación completa sobre sus características.
