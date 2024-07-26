@@ -5,17 +5,19 @@ image: image.png
 author:
   - name: "Marília Melo Favalesso"
     email: "marilia.melo.favalesso@gmail.com"
-date: "2021-08-17"
+date: "2022-02-13"
 citation: 
-  url: "http://www.mmfava.com"
+  url: "http://www.mariliafavalesso.com"
   version: 1
 categories:
-  - Git
-  - Github
-  - Soma dos Quadrados
-lang: pt-br
+  - Shiny-apps
+  - R
+  - Venomous-animals
+  - Ecoepidemiology
+  - Scientific outreach
+lang: es-ar
 tags: 
-  - PT-BR
+  - ES-AR
 ---
 
 ## Aplicación Shiny: Monitoreo y Gestión de Accidentes con *Lonomia* en Misiones, Argentina
