@@ -1,12 +1,2 @@
-[build]
-  publish = "_site"
-  command = "quarto publish netlify"
-
-[context.production]
-  command = """
-  wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.54/quarto-1.5.54-linux-amd64.tar.gz
-  tar -xvzf quarto-1.5.54-linux-amd64.tar.gz
-  mv quarto-1.5.54 /usr/local/bin/quarto
-  export PATH=$PATH:/usr/local/bin/quarto/bin
-  quarto publish netlify
-  """
+[[plugins]]
+package = "@quarto/netlify-plugin-quarto"
