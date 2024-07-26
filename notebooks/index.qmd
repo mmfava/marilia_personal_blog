@@ -2,7 +2,7 @@
 title: "Notebooks"
 listing:
   - id: notebooks
-    contents: "*/*.qmd"
+    contents: ["*/*.qmd", "*/*.ipynb"]
     type: table
     fields: [image, date, title, tags]
     sort: "date desc"

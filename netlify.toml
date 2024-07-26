@@ -1,0 +1,6 @@
+[build]
+  publish = "_site"
+  command = "quarto publish netlify"
+
+[context.production.environment]
+  QUARTO_PUBLISH = "netlify"
