@@ -1,7 +1,7 @@
 ---
 title: "DISTRIBUIÇÃO POTENCIAL E ASPECTOS ECOLÓGICOS DA TATURANA VENENOSA Lonomia obliqua Walker 1855 NO BRASIL"
 image: image.png
-date: 2017-09-27 09:00:00
+date: 2018-10-29 09:00:00
 author:
   - name: "Marília Melo Favalesso"
     url: "http://www.mariliafavalesso.com"
