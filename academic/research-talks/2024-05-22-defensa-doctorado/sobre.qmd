@@ -31,7 +31,6 @@ lang: es-ar
 tags: 
   - ES-AR
 draft: true
-#funding: "The author received no specific funding for this work."
 ---
 
 # Resumen

@@ -3,8 +3,8 @@ title: "Research Talks"
 listing:
   - id: research-talks
     contents: ["*/*.qmd", "*/*.ipynb"]
-    type: table
-    fields: [title, subtitle, citation, date, tags]
+    type: default
+    fields: [image, date, title, subtitle, tags]
     sort: "date desc"
     categories: cloud
     sort-ui: true
