@@ -18,6 +18,7 @@ categories:
   - uba
   - inmet
   - conicet
+  - seminario
 tags: 
   - ES
 lang: es

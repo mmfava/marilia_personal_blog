@@ -1,0 +1,71 @@
+---
+title: "Lonomismo no Brasil: análise epidemiológica dos acidentes causados pela taturana venenosa no período de 2007 e 2018"
+image: "https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2019%20Simp%C3%B3sio%20de%20Zoonosis%20-%20UFPR%2C%20Palotina/banner.pdf"
+date: 2019-06-XX 09:00:00
+author:
+  - name: "Marília Melo Favalesso"
+    url: "http://www.mariliafavalesso.com"
+  - name: "Milena Gisela Casafús"
+  - name: "Ana Tereza Bittencourt Guimarães"
+  - name: "Maria Elisa Peichoto"
+abstract: >
+    Este estudo apresenta uma análise epidemiológica dos acidentes causados pela taturana venenosa Lonomia no Brasil entre os anos de 2007 e 2018. Foram investigados padrões de distribuição geográfica dos casos reportados e discutidos os impactos dessas ocorrências na saúde pública.
+citation: 
+    container-title: "IX Simpósio de Zoonoses com Interesse em Saúde Pública"
+    url: "https://www.ufpr.br/simposiozoonoses"
+    version: 1
+categories:
+  - epidemiologia
+  - lonomia
+  - saúde pública
+  - biociências
+tags: 
+  - PT-BR
+lang: pt-br
+conference:
+  name: "IX Simpósio de Zoonoses com Interesse em Saúde Pública"
+  location: "Universidade Federal do Paraná – UFPR, Palotina - PR, Brasil"
+  date: "Junho de 2019"
+  type: "Apresentação oral"
+funder:
+  - name: "Conselho Nacional de Desenvolvimento Científico e Tecnológico – CNPq"
+  - name: "Consejo Nacional de Investigaciones Científicas y Técnicas – CONICET"
+---
+
+# 📢 Evento
+
+O trabalho **"Lonomismo no Brasil: análise epidemiológica dos acidentes causados pela taturana venenosa no período de 2007 e 2018"** foi apresentado no **IX Simpósio de Zoonoses com Interesse em Saúde Pública**, realizado na **Universidade Federal do Paraná (UFPR)**, no campus **Palotina - PR**, em **junho de 2019**.
+
+-   **Tipo de apresentação:** Apresentação banner\
+-   **Local:** UFPR – Palotina\
+-   **Organização:** Programa de Pós-Graduação em Saúde e Biociências
+
+O estudo investigou os acidentes causados por **Lonomia obliqua**, analisando dados epidemiológicos sobre a distribuição e impactos clínicos desses acidentes no Brasil, bem como medidas de prevenção e controle.
+
+------------------------------------------------------------------------
+
+# 📑 Abstract
+
+::: pdf-container
+<iframe src="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2019%20Simp%C3%B3sio%20de%20Zoonosis%20-%20UFPR%2C%20Palotina/resumen.pdf" 
+          width="100%" 
+          height="600px" 
+          style="border: none;"> </iframe>
+
+<a href="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2019%20Simp%C3%B3sio%20de%20Zoonosis%20-%20UFPR%2C%20Palotina/resumen.pdf" 
+      class="btn btn-primary" target="_blank"> 📄 Baixar o Abstract </a>
+:::
+
+------------------------------------------------------------------------
+
+# 🎨 Banner
+
+::: pdf-container
+<iframe src="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2019%20Simp%C3%B3sio%20de%20Zoonosis%20-%20UFPR%2C%20Palotina/banner.pdf" 
+          width="100%" 
+          height="600px" 
+          style="border: none;"> </iframe>
+
+<a href="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2019%20Simp%C3%B3sio%20de%20Zoonosis%20-%20UFPR%2C%20Palotina/banner.pdf" 
+      class="btn btn-info" target="_blank"> 🖼️ Baixar o banner </a>
+:::

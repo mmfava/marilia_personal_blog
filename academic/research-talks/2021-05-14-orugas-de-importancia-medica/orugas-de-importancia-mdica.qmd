@@ -1,5 +1,5 @@
 ---
-title: "**Orugas de importancia médica**"
+title: "Orugas de importancia médica"
 subtitle: "Ciencia ciudadana en Misiones - Argentina"
 image: "images/image.png"
 author:
@@ -15,6 +15,7 @@ categories:
 lang: es-ar
 tags: 
   - ES-AR
+  - divulgacao-cientifica
 ---
 
 # Sobre

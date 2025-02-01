@@ -1,0 +1,55 @@
+---
+title: "Cuidado onde toca: panorama sobre lonomismo no Brasil"
+image: image.png
+date: 2019-05-15 13:00:00
+author:
+  - name: "Marília Melo Favalesso"
+    url: "http://www.mariliafavalesso.com"
+abstract: >
+    Aula ministrada na disciplina obrigatória "Seminários de Pesquisa III" do Programa de Pós-Graduação em Biociências (PPG-BC) da UNILA. A palestra abordou o panorama do lonomismo no Brasil, incluindo epidemiologia, impactos em saúde pública e medidas de prevenção.
+citation: 
+    container-title: "Seminários de Pesquisa III - Programa de Pós-Graduação em Biociências (PPG-BC)"
+    url: "http://www.mariliafavalesso.com/2019-seminario-lonomismo"
+    version: 1
+categories:
+  - lonomia
+  - biociências
+  - saúde pública
+  - epidemiologia
+tags: 
+  - PT-BR
+lang: pt-br
+conference:
+  name: "Seminários de Pesquisa III"
+  location: "Universidade Federal da Integração Latino-Americana – UNILA, Foz do Iguaçu - PR, Brasil"
+  date: "15 de maio de 2019"
+  type: "Aula"
+funder:
+  - name: "Conselho Nacional de Desenvolvimento Científico e Tecnológico – CNPq"
+  - name: "Consejo Nacional de Investigaciones Científicas y Técnicas – CONICET"
+---
+
+# 📢 Aula
+
+A aula **"Cuidado onde toca: panorama sobre lonomismo no Brasil"** foi ministrada na disciplina **Seminários de Pesquisa III**, parte do **Programa de Pós-Graduação em Biociências (PPG-BC)** da **Universidade Federal da Integração Latino-Americana (UNILA)**, em **Foz do Iguaçu - PR**, no dia **15 de maio de 2019**, das **13h00 às 14h00**.
+
+-   **Disciplina:** Seminários de Pesquisa III 📚\
+-   **Curso:** Programa de Pós-Graduação em Biociências (PPG-BC)\
+-   **Carga horária da disciplina:** 15 horas/aula\
+-   **Docente responsável:** Dr. Flávio Luiz Tavares\
+-   **Local:** Sala G-102-2, Prédio Ginásio, Campus Jardim, UNILA
+
+A palestra abordou aspectos ecológicos, epidemiológicos e clínicos do lonomismo no Brasil, com ênfase nas principais regiões afetadas, impactos em saúde pública e medidas preventivas.
+
+------------------------------------------------------------------------
+
+# 🎤 Slides da Aula
+
+::: pdf-container
+<iframe src="https://docs.google.com/gview?embedded=true&amp;url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2019%20Semin%C3%A1rio%20&#39;Lonomismo%20no%20Brasil%202007%20-%202018&#39;%20-%20UNILA/slides.pdf" width="100%" height="400px" style="border: none;">
+
+</iframe>
+
+<a href="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2019%20Semin%C3%A1rio%20'Lonomismo%20no%20Brasil%202007%20-%202018'%20-%20UNILA/slides.pdf" 
+      class="btn btn-success" target="_blank"> 🎞️ Baixar os slides </a>
+:::

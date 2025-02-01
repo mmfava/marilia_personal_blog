@@ -1,0 +1,89 @@
+---
+title: "Caracterización clínica y epidemiológica de los accidentes con Lonomia en Misiones (Argentina)"
+image: image.png
+date: 2019-10-04 09:00:00
+author:
+  - name: "Marília Melo Favalesso"
+    url: "http://www.mariliafavalesso.com"
+abstract: >
+    Este trabalho apresenta a caracterização clínica e epidemiológica dos acidentes com Lonomia na província de Misiones, Argentina. Foram analisados dados epidemiológicos de casos registrados e discutidos os impactos desses acidentes na saúde pública.
+citation: 
+    container-title: "II Simpósio Latino-Americano de Biociências"
+    url: "https://www.simposiobiociencias.com/programacao"
+    version: 1
+categories:
+  - lonomia
+  - biociências
+  - saúde pública
+  - epidemiologia
+tags: 
+  - PT-BR
+lang: pt-br
+conference:
+  name: "II Simpósio Latino-Americano de Biociências"
+  location: "Universidade Federal da Integração Latino-Americana – UNILA, Foz do Iguaçu - PR, Brasil"
+  date: "30 de setembro a 04 de outubro de 2019"
+  type: "Apresentação oral"
+funder:
+  - name: "Conselho Nacional de Desenvolvimento Científico e Tecnológico – CNPq"
+  - name: "Consejo Nacional de Investigaciones Científicas y Técnicas – CONICET"
+---
+
+# 📢 Evento
+
+O trabalho **"Caracterización clínica y epidemiológica de los accidentes con Lonomia en Misiones (Argentina)"** foi apresentado no **II Simpósio Latino-Americano de Biociências**, realizado na **Universidade Federal da Integração Latino-Americana (UNILA)**, em **Foz do Iguaçu - PR**, entre **30 de setembro e 04 de outubro de 2019**.
+
+-   **Tipo de apresentação:** Apresentação oral 🎤\
+-   **Local:** UNILA – Campus Jardim Universitário, Prédio Ginásio, Sala G-103-1\
+-   **Carga horária:** 1 hora\
+-   **Organização:** Programa de Pós-Graduação em Biociências (PPG-BC)
+
+O evento abordou pesquisas nas áreas de biociências, ecologia e saúde pública, promovendo discussões científicas sobre temas relevantes para a América Latina.
+
+------------------------------------------------------------------------
+
+# 📑 Abstract
+
+::: pdf-container
+<iframe src="https://docs.google.com/gview?embedded=true&amp;url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2019%20Simp%C3%B3sio%20de%20Bioci%C3%AAncias%20II%20-%20UNILA/resumen.pdf" width="100%" height="600px" style="border: none;">
+
+</iframe>
+
+<a href="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2019%20Simp%C3%B3sio%20de%20Bioci%C3%AAncias%20II%20-%20UNILA/resumen.pdf" 
+      class="btn btn-primary" target="_blank"> 📄 Baixar o Abstract </a>
+:::
+
+------------------------------------------------------------------------
+
+# 🎤 Slides da Apresentação
+
+::: pdf-container
+<iframe src="https://docs.google.com/gview?embedded=true&amp;url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2019%20Simp%C3%B3sio%20de%20Bioci%C3%AAncias%20II%20-%20UNILA/slides.pdf" width="100%" height="600px" style="border: none;">
+
+</iframe>
+
+<a href="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2019%20Simp%C3%B3sio%20de%20Bioci%C3%AAncias%20II%20-%20UNILA/slides.pdf" 
+      class="btn btn-success" target="_blank"> 🎞️ Baixar os slides </a>
+:::
+
+------------------------------------------------------------------------
+
+# 🎨 Banner
+
+::: pdf-container
+<iframe src="https://docs.google.com/gview?embedded=true&amp;url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2019%20Simp%C3%B3sio%20de%20Bioci%C3%AAncias%20II%20-%20UNILA/banner.pdf" width="100%" height="600px" style="border: none;">
+
+</iframe>
+
+<a href="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2019%20Simp%C3%B3sio%20de%20Bioci%C3%AAncias%20II%20-%20UNILA/banner.pdf" 
+      class="btn btn-info" target="_blank"> 🖼️ Baixar o banner </a>
+:::
+
+------------------------------------------------------------------------
+
+# 📜 Código do Script R
+
+::: text-left
+<a href="https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2019%20Simp%C3%B3sio%20de%20Bioci%C3%AAncias%20II%20-%20UNILA/script.R" 
+     class="btn btn-dark" target="_blank"> 🖥️ Baixar o código em R </a>
+:::

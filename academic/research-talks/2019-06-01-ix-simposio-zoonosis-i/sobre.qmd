@@ -1,0 +1,68 @@
+---
+title: "Acidentes com abelhas do mel no estado de São Paulo"
+image: image.png
+date: 2019-06-01 09:00:00
+author:
+  - name: "Marília Melo Favalesso"
+    url: "http://www.mariliafavalesso.com"
+  - name: "Priscila Soares Oliveira"
+  - name: "Eliana Burgos"
+abstract: >
+    Este estudo apresenta a caracterização epidemiológica e distribuição dos acidentes com abelhas do mel no estado de São Paulo entre os anos de 2007 e 2018. Foram analisados dados do Sistema de Informação de Agravos de Notificação (SINAN) e do Sistema Eletrônico do Serviço de Informação ao Cidadão (e-SIC), revelando padrões de ocorrência e impactos na saúde pública.
+citation: 
+    container-title: "IX Simpósio de Zoonoses com Interesse em Saúde Pública"
+    url: "https://www.ufpr.br/simposiozoonoses"
+    version: 1
+categories:
+  - epidemiologia
+  - zoonoses
+  - saúde pública
+  - biociências
+tags: 
+  - PT-BR
+lang: pt-br
+conference:
+  name: "IX Simpósio de Zoonoses com Interesse em Saúde Pública"
+  location: "Universidade Federal do Paraná – UFPR, Palotina - PR, Brasil"
+  date: "Junho de 2019"
+  type: "Apresentação oral"
+funder:
+  - name: "Conselho Nacional de Desenvolvimento Científico e Tecnológico – CNPq"
+  - name: "Consejo Nacional de Investigaciones Científicas y Técnicas – CONICET"
+---
+
+# 📢 Evento
+
+O trabalho **"Acidentes com abelhas do mel no estado de São Paulo"** foi apresentado no **IX Simpósio de Zoonoses com Interesse em Saúde Pública**, realizado na **Universidade Federal do Paraná (UFPR)**, no campus **Palotina - PR**, em **junho de 2019**.
+
+-   **Tipo de apresentação:** Apresentação oral 🎤\
+-   **Local:** UFPR – Palotina\
+-   **Organização:** Programa de Pós-Graduação em Saúde e Biociências
+
+O estudo analisou a distribuição dos acidentes por picadas de abelhas do mel (Apis mellifera) no estado de São Paulo, identificando padrões de ocorrência e os impactos na saúde pública.
+
+------------------------------------------------------------------------
+
+# 📑 Abstract
+
+::: pdf-container
+<iframe src="https://docs.google.com/gview?embedded=true&amp;url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2019%20Simp%C3%B3sio%20de%20Zoonosis%20-%20UFPR%2C%20Palotina%202/resumen.pdf" width="100%" height="600px" style="border: none;">
+
+</iframe>
+
+<a href="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2019%20Simp%C3%B3sio%20de%20Zoonosis%20-%20UFPR%2C%20Palotina%202/resumen.pdf" 
+      class="btn btn-primary" target="_blank"> 📄 Baixar o Abstract </a>
+:::
+
+------------------------------------------------------------------------
+
+# 🎨 Banner
+
+::: pdf-container
+<iframe src="https://docs.google.com/gview?embedded=true&amp;url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2019%20Simp%C3%B3sio%20de%20Zoonosis%20-%20UFPR%2C%20Palotina%202/banner.pdf" width="100%" height="600px" style="border: none;">
+
+</iframe>
+
+<a href="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2019%20Simp%C3%B3sio%20de%20Zoonosis%20-%20UFPR%2C%20Palotina%202/banner.pdf" 
+      class="btn btn-info" target="_blank"> 🖼️ Baixar o banner </a>
+:::

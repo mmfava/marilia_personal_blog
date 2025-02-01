@@ -17,6 +17,8 @@ categories:
   - uba
   - inmet
   - conicet
+  - models
+  - simposio
 tags: 
   - PT-BR
 lang: pt-br
@@ -24,49 +26,37 @@ lang: pt-br
 
 # 📑 Abstract
 
-<div class="pdf-container">
-  <iframe src="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20SINECO%20-%20UNILA%2C%20Foz%20do%20Iguaçu/resumen.pdf" 
-          width="100%" 
-          height="600px" 
-          style="border: none;">
-  </iframe>
+::: pdf-container
+<iframe src="https://docs.google.com/gview?embedded=true&amp;url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20SINECO%20-%20UNILA%2C%20Foz%20do%20Iguaçu/resumen.pdf" width="100%" height="600px" style="border: none;">
 
-  <a href="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20SINECO%20-%20UNILA%2C%20Foz%20do%20Iguaçu/resumen.pdf" 
-     class="btn btn-primary" target="_blank">
-     📄 Baixar o Abstract
-  </a>
-</div>
+</iframe>
 
----
+<a href="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20SINECO%20-%20UNILA%2C%20Foz%20do%20Iguaçu/resumen.pdf" 
+     class="btn btn-primary" target="_blank"> 📄 Baixar o Abstract </a>
+:::
+
+------------------------------------------------------------------------
 
 # 📜 Paper
 
-<div class="pdf-container">
-  <iframe src="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20SINECO%20-%20UNILA%2C%20Foz%20do%20Iguaçu/texto.pdf" 
-          width="100%" 
-          height="600px" 
-          style="border: none;">
-  </iframe>
+::: pdf-container
+<iframe src="https://docs.google.com/gview?embedded=true&amp;url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20SINECO%20-%20UNILA%2C%20Foz%20do%20Iguaçu/texto.pdf" width="100%" height="600px" style="border: none;">
 
-  <a href="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20SINECO%20-%20UNILA%2C%20Foz%20do%20Iguaçu/texto.pdf" 
-     class="btn btn-success" target="_blank">
-     📑 Baixar o Paper
-  </a>
-</div>
+</iframe>
 
----
+<a href="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20SINECO%20-%20UNILA%2C%20Foz%20do%20Iguaçu/texto.pdf" 
+     class="btn btn-success" target="_blank"> 📑 Baixar o Paper </a>
+:::
+
+------------------------------------------------------------------------
 
 # 🎨 Banner
 
-<div class="pdf-container">
-  <iframe src="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20SINECO%20-%20UNILA%2C%20Foz%20do%20Iguaçu/banner.pdf" 
-          width="100%" 
-          height="600px" 
-          style="border: none;">
-  </iframe>
+::: pdf-container
+<iframe src="https://docs.google.com/gview?embedded=true&amp;url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20SINECO%20-%20UNILA%2C%20Foz%20do%20Iguaçu/banner.pdf" width="100%" height="600px" style="border: none;">
 
-  <a href="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20SINECO%20-%20UNILA%2C%20Foz%20do%20Iguaçu/banner.pdf" 
-     class="btn btn-info" target="_blank">
-     🖼️ Baixar o Banner
-  </a>
-</div>
+</iframe>
+
+<a href="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20SINECO%20-%20UNILA%2C%20Foz%20do%20Iguaçu/banner.pdf" 
+     class="btn btn-info" target="_blank"> 🖼️ Baixar o Banner </a>
+:::
