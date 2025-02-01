@@ -1,0 +1,20 @@
+---
+title: "Research Talks"
+listing:
+  - id: research-talks
+    contents: ["*/*.qmd", "*/*.ipynb"]
+    type: table
+    fields: [title, subtitle, citation, date, tags]
+    sort: "date desc"
+    categories: cloud
+    sort-ui: true
+    filter-ui: true
+    page-size: 36     
+page-layout: full
+title-block-banner: false
+comments: false
+toc: true
+---
+
+::: {#research-talks}
+:::

@@ -1,0 +1,62 @@
+---
+title: "Revealing land-use change as a key factor influencing the incidence of envenomation by <i>Lonomia</i> sp. in southern Brazil"
+image: image.png
+date: 2018-09-26 09:00:00
+author:
+  - name: "Marília Favalesso"
+    url: "http://www.mariliafavalesso.com"
+abstract: >
+    Using negative binomial regression, information-theoretic model evaluation/averaging, and external model validation, we investigated the effects of landscape (% of preserved areas, % of agricultural areas, % of preserved areas near agricultural areas and % of forest areas) and climatic covariates (temperature and rainfall in summer, Δ temperature and rainfall between summer and winter and Δ temperature and rainfall between summer and annual values) on cases of lonomism documented by DATASUS during the period of 2001-2006 at municipalities of southern Brazil.
+citation: 
+    container-title: "3rd International Symposium of Ecology"
+    url: "http://www.mariliafavalesso.com/2018-09-26-sineco-3th"
+    version: 1
+categories:
+  - lonomia
+  - doctorado
+  - uba
+  - inmet
+  - conicet
+tags: 
+  - PT-BR
+lang: pt-br
+---
+
+# 📑 Abstract
+
+::: pdf-container
+<iframe src="https://docs.google.com/gview?embedded=true&amp;url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20SINECO%20-%20UNILA%2C%20Foz%20do%20Iguaçu/resumen.pdf" width="100%" height="600px" style="border: none;">
+
+</iframe>
+
+<a href="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20SINECO%20-%20UNILA%2C%20Foz%20do%20Iguaçu/resumen.pdf" 
+       class="btn btn-primary" target="_blank"> 📄 Baixar o Abstract </a>
+:::
+
+------------------------------------------------------------------------
+
+# 📜 Paper
+
+::: pdf-container
+<iframe src="https://docs.google.com/gview?embedded=true&amp;url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20SINECO%20-%20UNILA%2C%20Foz%20do%20Iguaçu/texto.pdf" width="100%" height="600px" style="border: none;">
+
+</iframe>
+
+<a href="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20SINECO%20-%20UNILA%2C%20Foz%20do%20Iguaçu/texto.pdf" 
+       class="btn btn-success" target="_blank"> 📑 Baixar o Paper </a>
+:::
+
+------------------------------------------------------------------------
+
+# 🎨 Banner
+
+::: pdf-container
+<iframe src="https://docs.google.com/gview?embedded=true&amp;url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20SINECO%20-%20UNILA%2C%20Foz%20do%20Iguaçu/banner.pdf" width="100%" height="600px" style="border: none;">
+
+</iframe>
+
+<a href="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20SINECO%20-%20UNILA%2C%20Foz%20do%20Iguaçu/banner.pdf" 
+       class="btn btn-info" target="_blank"> 🖼️ Baixar o Banner </a>
+:::
+
+------------------------------------------------------------------------

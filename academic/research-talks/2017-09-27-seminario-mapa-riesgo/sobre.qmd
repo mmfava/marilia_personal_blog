@@ -1,0 +1,43 @@
+---
+title: "Mapa de riesgo y de probabilidad de ocurrencia de *Lonomia obliqua* y *Lonomia achelous* (Saturniidae, Lepidoptera)"
+subtitle: "Presentación de proyecto de tesis"
+image: image.png
+date: 2017-09-27 09:00:00
+author:
+  - name: "Marília Melo Favalesso"
+    url: "http://www.mariliafavalesso.com"
+abstract: >
+    En este seminario se presentará mi pré-proyecto de doctorado relacionado con dos lepidopteros de importancia sanitaria: las mariposas Lonomia obliqua Walker 1884 y Lonomia achelous Cremer 1977 (Saturniidae: Hemileucinae).
+citation: 
+  container-title: Seminarios del Instituto de Medicina Tropical (Argentina)
+  url: "http://www.mariliafavalesso.com"
+  version: 1
+categories:
+  - lonomia
+  - doctorado
+  - uba
+  - inmet
+  - conicet
+tags: 
+  - ES
+lang: es
+---
+
+# Sobre
+
+En este seminario se presentará mi pré-proyecto de doctorado relacionado con dos lepidopteros de importancia sanitaria: las mariposas *Lonomia obliqua* Walker 1884 y *Lonomia achelous* Cremer 1977 (Saturniidae: Hemileucinae). Las especies son conocidas por sus formas larvarias ser el agente etiológico del lonomismo, una forma de erucismo (accidentes con larvas) responsable por innumerables accidentes hemorrágicos en Sudamérica. La literatura retrata cerca de mil accidentes con las especies, y con 39 muertes en función de ésta. El Ministerio de Salud de Brasil (SVS) atribuye las muertes a retrasar el servicio a las víctimas y la falta de conocimiento de los profesionales de la salud. Además, no existe diagnóstico con criterios específicos para el lonomismo, siendo este realizado apenas a partir del histórico del paciente y descripción del espécimen que desencadenó los síntomas. Por lo tanto, el objetivo de mi estudio es contribuir con el conocimento sobre la distribución y características ecológicas de las dos especies de mayor importancia sanitaria en América del Sur, *L. obliqua* y L. *achelous*, para así poder colaborar con el diseño de estrategias de prevención de accidentes, así como también garantizar el suministro adecuado del antiveneno en países y regiones en donde pueda presentarse el accidente lonómico. Para ello, utilizó algoritmos de modelado de nicho para encontrar áreas con alta adecuación ambiental para las especies, y así desarrollar un mapa de riesgo para tales. También ya presentó resultados previos de distribución de *L. obliqua* en la provincia de Misiones - Argentina, y dentro de algunos biomas brasileños.
+
+## Slides
+
+<object data="https://docs.google.com/gview?embedded=true&amp;url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2017%20Semin%C3%A1rio%20&#39;Mapa%20de%20riesgo%20lonomismo&#39;%20INMET/slides.pdf" type="application/pdf" width="100%" height="600px" style="min-height:50vh;">
+
+<!-- Fallback se o navegador não suportar PDF -->
+
+<iframe src="https://docs.google.com/gview?embedded=true&amp;url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2017%20Semin%C3%A1rio%20&#39;Mapa%20de%20riesgo%20lonomismo&#39;%20INMET/slides.pdf" width="100%" height="400px" style="border: none;">
+
+</iframe>
+
+</object>
+
+<a href="https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2017%20Semin%C3%A1rio%20'Mapa%20de%20riesgo%20lonomismo'%20INMET/resumen.pdf" 
+   class="btn btn-primary" target="_blank"> 📄 Download PDF </a>

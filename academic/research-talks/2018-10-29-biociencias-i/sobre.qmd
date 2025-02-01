@@ -1,0 +1,90 @@
+---
+title: "Distribuição potencial e aspectos ecológicos da taturana venenosa Lonomia obliqua Walker 1855 no Brasil"
+image: image.png
+date: 2018-10-29 09:00:00
+author:
+  - name: "Marília Melo Favalesso"
+    url: "http://www.mariliafavalesso.com"
+abstract: >
+    No presente estudo, apresentamos um mapa de distribuição geográfica potencial de L. obliqua no Brasil, baseado na combinação de diferentes algoritmos SDM (Species Distribution Modeling). 
+citation: 
+  url: "http://www.mariliafavalesso.com"
+  version: 1
+  container-title: "I Simpósio Latino-Americano de Biociências"
+categories:
+  - lonomia
+  - doctorado
+  - uba
+  - inmet
+  - conicet
+tags: 
+  - PT-BR
+lang: pt-br
+conference:
+  name: "I Simpósio Latino-Americano de Biociências"
+  location: "Universidade Federal da Integração Latino-Americana – UNILA, Foz do Iguaçu - PR, Brasil"
+  date: "18-19 de outubro de 2018"
+  type: "Apresentação de painel"
+funder:
+  - name: "Conselho Nacional de Desenvolvimento Científico e Tecnológico – CNPq"
+  - name: "Consejo Nacional de Investigaciones Científicas y Técnicas – CONICET"
+---
+
+# 📢 Evento
+
+Este trabalho foi apresentado no **I Simpósio Latino-Americano de Biociências**, realizado na **Universidade Federal da Integração Latino-Americana (UNILA)**, em **Foz do Iguaçu - PR**, nos dias **18 e 19 de outubro de 2018**.
+
+-   **Tipo de apresentação:** Painel 🎤\
+-   **Instituição organizadora:** UNILA 🏫\
+-   **Financiamento:** Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET) 💰
+
+---------
+
+# 📑 Abstract 
+
+<div class="pdf-container">
+  <iframe src="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20Simp%C3%B3sio%20de%20Bioci%C3%AAncias%20I%20-%20UNILA/resumen.pdf" 
+          width="100%" 
+          height="600px" 
+          style="border: none;">
+  </iframe>
+
+  <a href="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20Simp%C3%B3sio%20de%20Bioci%C3%AAncias%20I%20-%20UNILA/resumen.pdf" 
+      class="btn btn-primary" target="_blank">
+      📄 Baixar o Abstract
+  </a>
+</div>
+
+---
+
+# 🎤 Slides da apresentação 
+
+<div class="pdf-container">
+  <iframe src="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20Simp%C3%B3sio%20de%20Bioci%C3%AAncias%20I%20-%20UNILA/apresenta%C3%A7%C3%A3o.pdf" 
+          width="100%" 
+          height="600px" 
+          style="border: none;">
+  </iframe>
+
+  <a href="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20Simp%C3%B3sio%20de%20Bioci%C3%AAncias%20I%20-%20UNILA/apresenta%C3%A7%C3%A3o.pdf" 
+      class="btn btn-success" target="_blank">
+      🎞️ Baixar os slides
+  </a>
+</div>
+
+---
+
+# 🎨 Banner 
+
+<div class="pdf-container">
+  <iframe src="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20Simp%C3%B3sio%20de%20Bioci%C3%AAncias%20I%20-%20UNILA/banner.pdf" 
+          width="100%" 
+          height="600px" 
+          style="border: none;">
+  </iframe>
+
+  <a href="https://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/mmfava/apresentacoes-eventos-cientificos-doc/main/2018%20Simp%C3%B3sio%20de%20Bioci%C3%AAncias%20I%20-%20UNILA/banner.pdf" 
+      class="btn btn-info" target="_blank">
+      🖼️ Baixar o banner
+  </a>
+</div>

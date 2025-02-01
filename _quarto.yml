@@ -14,7 +14,7 @@ website:
       - icon: github
         href: https://github.com/mmfava/
       - icon: instagram
-        href: https://www.instagram.com/biologadosdados/
+        href: https://www.instagram.com/mariliadados/
       - icon: linkedin
         href: https://www.linkedin.com/in/mariliafavalesso/
       - icon: envelope
@@ -29,6 +29,12 @@ website:
         href: notebooks/index.qmd
       - text: teaching/talks
         href: talks-teaching/index.qmd
+      - text: academic
+        menu:
+        - text: Research Talks
+          href: academic/research-talks/index.qmd
+        - text: Research Articles
+          href: academic/papers/index.qmd
       - text: resume
         menu:
           - text: en

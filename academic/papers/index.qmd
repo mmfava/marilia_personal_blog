@@ -1,0 +1,20 @@
+---
+title: "Research Articles"
+listing:
+  - id: research-articles
+    contents: ["*/*.qmd", "*/*.ipynb"]
+    type: table
+    fields: [title, date, citation, tags]
+    sort: "date desc"
+    categories: cloud
+    sort-ui: true
+    filter-ui: true
+    page-size: 36     
+page-layout: full
+title-block-banner: false
+comments: false
+toc: true
+---
+
+::: {#research-articles}
+:::
