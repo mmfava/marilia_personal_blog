@@ -25,17 +25,24 @@ lang: pt-br
 
 A Modelagem de Distribuição de Espécies (SDM) visa relacionar ocorrências conhecidas de uma determinada espécie com variáveis ambientais preditoras que, combinadas para formar modelos estatísticos teóricos, possibilitam encontrar novas áreas adequadas para a ocorrência dessa espécie no espaço geográfico.
 
-Neste curso introdutório, falei sobre os princípios básicos da SDM, quais são os dados utilizados na calibração e avaliação de modelos, quais algoritmos são comumente utilizados, as aplicações dessa abordagem na área da ecologia e um exemplo de aplicação com o [openModellerDesktop v.1.1.](https://openmodeller.sourceforge.net/). 
+Neste curso introdutório, falei sobre os princípios básicos da SDM, quais são os dados utilizados na calibração e avaliação de modelos, quais algoritmos são comumente utilizados, as aplicações dessa abordagem na área da ecologia e um exemplo de aplicação com o [openModellerDesktop v.1.1.](https://openmodeller.sourceforge.net/).
 
 ## Slides
 
 ### Dia 1
-<iframe src="1_MNE.pdf" width="100%" height="600px"></iframe>
 
+<iframe src="1_MNE.pdf" width="100%" height="600px">
+
+</iframe>
 
 ### Dia 2
-<iframe src="2_MNE.pdf" width="100%" height="600px"></iframe>
+
+<iframe src="2_MNE.pdf" width="100%" height="600px">
+
+</iframe>
 
 ### Dia 3
-<iframe src="3_MNE.pdf" width="100%" height="600px"></iframe>
 
+<iframe src="3_MNE.pdf" width="100%" height="600px">
+
+</iframe>

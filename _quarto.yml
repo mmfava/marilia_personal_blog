@@ -61,4 +61,4 @@ comments:
     repo: mmfava/marilia_personal_blog
 
 execute:
-  freeze: false
+  freeze: auto

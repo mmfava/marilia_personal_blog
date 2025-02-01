@@ -1,5 +1,6 @@
 [build]
   publish = "_site"
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF docker/"
 
 [[plugins]]
 package = "@quarto/netlify-plugin-quarto"

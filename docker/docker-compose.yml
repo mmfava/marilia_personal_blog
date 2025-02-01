@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  quarto-site:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/home/jovyan/work
+    container_name: desenvolvimento_blog_marilia
