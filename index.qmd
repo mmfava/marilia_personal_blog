@@ -27,7 +27,7 @@ Throughout my career, I have developed predictive models, analyzed large volumes
 
 As an active participant in data communities, I am always looking for opportunities to learn and share knowledge with colleagues and enthusiasts.
 
-Welcome! 
+Welcome!
 
 ### Olá!
 
@@ -37,7 +37,7 @@ Ao longo da minha carreira, desenvolvi modelos preditivos, analisei grandes volu
 
 Participante ativa em comunidades de dados, estou sempre à procura de oportunidades para aprender e compartilhar conhecimento com colegas e entusiastas.
 
-Seja bem-vind@! 
+Seja bem-vind\@!
 
 ### Hola!
 
@@ -47,6 +47,5 @@ A lo largo de mi carrera, he desarrollado modelos predictivos, analizado grandes
 
 Participante activa en comunidades de datos, siempre estoy en busca de oportunidades para aprender y compartir conocimientos con colegas y entusiastas.
 
-¡Bienvenid@!
-
+¡Bienvenid\@!
 :::

@@ -29,12 +29,12 @@ website:
         href: notebooks/index.qmd
       - text: teaching/talks
         href: talks-teaching/index.qmd
-      - text: academic
-        menu:
-        - text: Research Talks
-          href: academic/research-talks/index.qmd
-        - text: Research Articles
-          href: academic/papers/index.qmd
+      #- text: academic
+        # menu:
+        # - text: Research Talks
+        #   href: academic/research-talks/index.qmd
+        # - text: Research Articles
+        #   href: academic/papers/index.qmd
       - text: resume
         menu:
           - text: en
