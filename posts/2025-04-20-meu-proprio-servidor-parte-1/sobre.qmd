@@ -1,0 +1,96 @@
+---
+title: "Meu próprio servidor"
+subtitle: "Parte 1: Contexto e instalação"
+date: 2025-04-20
+author:
+  - name: "Marília Melo Favalesso"
+    email: "marilia.melo.favalesso@gmail.com"
+categories: 
+- posts
+- server
+- ubuntu
+- LTS
+lang: pt-br
+tags: [PT-BR]
+---
+
+# Contexto
+
+Há pouco tempo recuperei o notebook **Dell Inspiron 3437** que usei durante a graduação. Depois de passar por várias mãos – ora substituído por máquinas mais novas, ora emprestado para colegas em projetos de modelagem e simulação – este notebook de quase 11 anos foi designado para a sua próxima função: transformar‑se em **servidor local** para experimentos e aprendizado (Figura 1).
+
+![](figs/Pasted%20image%2020250420200216.png) Figura 1 — Um gato, um notebook, um pendrive e uma missão: criar um servidor doméstico.
+
+Para fins de entendimento, um **servidor** é qualquer computador configurado para fornecer serviços a outros dispositivos, chamados de *clientes*. Esses serviços podem incluir: armazenamento de arquivos, hospedagem de sites, execução de bancos de dados, aplicações web, sistemas de autenticação, dashboards interativos — entre muitos outros. O que define um servidor não é o seu hardware, mas sim o seu **papel dentro da arquitetura de rede**: estar disponível continuamente para receber requisições, processar dados e fornecer respostas a outros usuários ou sistemas.
+
+No meu caso, optei por montar um **servidor local**, ou seja, instalado e operando **dentro da minha própria infraestrutura física — em casa** — em vez de rodar em uma plataforma de computação em nuvem, como AWS, Google Cloud ou Azure. Isso significa que todo o processamento e armazenamento de dados ocorrerá neste notebook reaproveitado, conectado à minha rede doméstica, sem depender de serviços externos.
+
+Optar por um servidor local oferece vantagens como **controle total sobre os dados**, **independência de terceiros** e **flexibilidade para personalizar o ambiente de forma granular**. Em contrapartida, também implica assumir a responsabilidade pela **manutenção**, **atualizações de segurança** e **resolução de problemas** — desafios que fazem parte do aprendizado que busco com esse projeto.
+
+# Especificações do sistema
+
+O **Dell Inspiron 3437** conta com um processador **Intel Core i5-4200U**, um chip de baixo consumo da quarta geração da linha Core, com **dois núcleos físicos** e suporte a **quatro threads** via **Hyper-Threading**. Ele opera com frequência base de 1.6 GHz, podendo atingir até 2.6 GHz em modo turbo. A memória instalada é de **8 GB DDR3**, quantidade limitada para padrões atuais, mas **suficiente para hospedar serviços leves e executar aplicações em containers**, dentro do escopo deste projeto.
+
+Em termos gráficos, o sistema possui **duas GPUs**: uma **Intel HD Graphics (Haswell‑ULT)** integrada ao processador, e uma **NVIDIA dedicada da linha de entrada**, provavelmente uma GeForce 710M ou 820M. No entanto, como o sistema será executado em modo **headless** — ou seja, sem interface gráfica —, essas GPUs não desempenham papel relevante na operação do servidor.
+
+::: callout-note
+Para obter um diagnóstico rápido e visual do sistema, utilizei a ferramenta `neofetch`, que exibe as principais especificações de hardware e software de forma organizada e estética no terminal:
+
+``` bash
+# Instala o Neofetch 
+sudo apt install neofetch -y
+# Exibe as informações do sistema
+neofetch
+```
+:::
+
+# Distro
+
+Diante da configuração disponível e do objetivo de transformar o notebook em um servidor local, optei por instalar o **Ubuntu Server 24.04 LTS**. Trata-se de uma distribuição Linux amplamente utilizada em ambientes de servidor, reconhecida por sua **estabilidade operacional, suporte estendido (LTS) e arquitetura enxuta — ideal para máquinas com recursos limitados ou ambientes headless**. Por ser voltada para uso em servidores, essa versão do Ubuntu **não inclui interface gráfica por padrão**, o que reduz consideravelmente o consumo de recursos do sistema, como memória e processamento. Essa abordagem segue a lógica de uma **distribuição mínima** — com apenas os componentes essenciais para operação via terminal, sem sobrecarga visual ou de serviços desnecessários.
+
+Além disso, o Ubuntu Server na versão **LTS (Long Term Support)** garante **cinco anos de atualizações de segurança e manutenção**, o que o torna especialmente confiável para serviços que exigem estabilidade contínua. Outro ponto relevante é o suporte integrado ao **OpenSSH Server**, que pode ser habilitado durante a instalação e permite **gerenciar o servidor remotamente via terminal**, usando o protocolo seguro SSH (Secure Shell). Com isso, não é necessário manter periféricos conectados — o servidor pode ser operado inteiramente a partir de outro computador na rede, de forma segura e prática, mesmo em modo *headless*.
+
+![](figs/Pasted%20image%2020250420183338.png) Figura 2 - Print de tela do [site oficial da ubuntu](https://ubuntu.com/download/server) onde efetuei o download do `Ubuntu 24.04.2 LTS`.
+
+# Instalação
+
+O processo de instalação começou com o download da **imagem `.iso` oficial do Ubuntu Server**, diretamente do site da Canonical (Figura 2). O arquivo `.iso` é uma representação fiel do conteúdo de um disco de instalação — um formato padrão para distribuir sistemas operacionais Linux.
+
+Para garantir que o arquivo não tivesse sido corrompido ou alterado durante o download, utilizei a **soma de verificação SHA-256**. Esse procedimento consiste em calcular um valor hash (ou impressão digital) do arquivo localmente e compará-lo com o valor oficial disponibilizado pelo site. Quando os dois valores coincidem, isso confirma a **integridade e autenticidade** da imagem, prevenindo falhas durante a instalação.
+
+A criação do pendrive de instalação foi feita totalmente pela interface gráfica do **Ubuntu Desktop**, sem necessidade de comandos no terminal. Localizei o dispositivo no gerenciador de arquivos, cliquei com o botão direito sobre o **ícone do pendrive** e selecionei a opção de **formatação**, escolhendo o sistema de arquivos **FAT**, que oferece ampla compatibilidade com sistemas que utilizam boot UEFI. Após a formatação, copiei a imagem `.iso` do Ubuntu Server diretamente para o pendrive. Apesar de não lembrar se a desmontagem do volume foi feita manualmente ou automaticamente pelo sistema, todo o processo foi conduzido por meio da interface gráfica.
+
+Com o pendrive pronto e conectado ao notebook, reiniciei a máquina e, assim que o logotipo da **Dell** apareceu na tela, pressionei `F12` para acessar o **menu de boot**. A partir desse menu, selecionei o pendrive como dispositivo de inicialização, dando início ao processo de instalação do **Ubuntu Server 24.04 LTS**.
+
+Embora o instalador seja baseado em **modo texto**, ele apresenta uma interface limpa, responsiva e organizada em etapas sequenciais. Após selecionar o idioma e o layout de teclado, avancei para a configuração de rede. O sistema reconheceu automaticamente a **interface sem fio** (`wlp6s0`) e listou as redes Wi-Fi disponíveis, permitindo que eu me conectasse à rede doméstica ao informar a senha WPA2.
+
+Em seguida, foram apresentadas opções para configuração de **proxy** e escolha do **espelho de repositório de pacotes**. Mantive ambas com os valores padrão. A próxima etapa foi o **particionamento do disco**, onde optei pela opção “**Use entire disk and set up LVM**”. Essa escolha configura automaticamente as partições e adiciona uma camada de gerenciamento lógico sobre elas, oferecendo maior flexibilidade para redimensionamento e organização futura. Como o objetivo deste servidor é aprendizado e experimentação, optei por **não ativar a criptografia de disco**, o que simplifica o processo de boot e dispensa a digitação de senhas adicionais ao iniciar o sistema.
+
+::: callout-note
+O **particionamento do disco** define como o espaço físico do armazenamento (HD ou SSD) será organizado pelo sistema. Esse espaço físico corresponde à capacidade real do disco — por exemplo, "500 GB" — onde os dados serão gravados. O particionamento divide esse espaço em **partições**, que funcionam como unidades isoladas, cada uma podendo ser usada para um propósito específico: por exemplo, armazenar o sistema operacional (`/`), os arquivos de usuário (`/home`), ou atuar como memória virtual (swap).
+
+Ao escolher a opção **“Use entire disk and set up LVM”**, o instalador cria essas partições e, sobre elas, configura o **LVM (Logical Volume Manager)**. O LVM adiciona uma **camada de abstração** sobre o armazenamento físico, permitindo criar **volumes lógicos** — unidades de armazenamento flexíveis que o sistema enxerga como partições, mas que não estão rigidamente ligadas ao espaço físico original.
+
+Essa abordagem permite **redimensionar, mover ou combinar volumes** sem precisar reinstalar o sistema ou interromper os serviços em execução. Isso é especialmente útil em servidores, onde demandas de espaço mudam com o tempo e interrupções são indesejadas. Com LVM, por exemplo, é possível expandir o volume de dados de um serviço, adicionar novos discos ao conjunto de armazenamento ou criar *snapshots* para backup — tudo com mínimo impacto no funcionamento do sistema.
+:::
+
+Com o disco particionado, o instalador solicitou a criação de um usuário administrador. Informei nome, nome de login e senha. Na etapa seguinte, ativei o **OpenSSH Server**, permitindo o gerenciamento remoto do servidor via terminal desde o primeiro boot, sem a necessidade de manter teclado ou monitor conectados fisicamente.
+
+A última etapa ofereceu a instalação de *snaps* — pacotes de software autocontidos que incluem todas as dependências necessárias para rodar uma aplicação em qualquer distribuição Linux compatível com o Snap. Entre as opções disponíveis, selecionei o **Docker**, essencial para execução de containers, e o **Prometheus**, ferramenta de monitoramento baseada em séries temporais. Ambos foram instalados automaticamente junto com o sistema base.
+
+![](figs/Pasted%20image%2020250420200608.png) Figura 3 — Opções de *snaps* disponíveis no final da instalação do Ubuntu Server.
+
+Finalizada a instalação, o sistema solicitou a remoção do pendrive e realizou o primeiro boot. A partir desse ponto, o notebook já operava com Ubuntu Server, pronto para ser acessado remotamente e iniciar sua nova função como servidor local.
+
+# Próximos passos
+
+Com o sistema instalado e o servidor operacional, o próximo passo será configurar o **acesso remoto via chave SSH**. Embora o login por senha esteja funcional, a autenticação por chave pública oferece uma camada extra de segurança e praticidade.
+
+::: callout-note
+Ao acessar um servidor via SSH (Secure Shell), você pode se autenticar de duas formas: usando uma **senha** ou um par de **chaves criptográficas**. O método por **chave SSH** é muito mais seguro, pois usa um mecanismo de **criptografia assimétrica**.
+
+Funciona assim: você gera duas chaves no seu computador — uma **chave pública** (que é copiada para o servidor) e uma **chave privada** (que fica protegida no seu computador). Quando você tenta se conectar, o servidor verifica se a chave privada combina com a pública e, se tudo estiver certo, libera o acesso sem exigir senha.
+
+Além de segurança, esse método permite **automatizar tarefas** (como sincronizações, deploys e backups) de forma segura, sem precisar digitar senha toda vez. Por isso, é altamente recomendado para quem administra servidores — mesmo em ambientes domésticos.
+:::
+
+Além disso, darei início à instalação do **Apache Superset**, uma plataforma moderna de exploração e visualização de dados, baseada em Python. A ideia é usar o servidor para alguns experimentos envolvendo a ferramenta.
