@@ -2,12 +2,14 @@
 
 [www.mariliafavalesso.com](www.mariliafavalesso.com) <br>
 
-Este repositório contém o código-fonte do meu blog pessoal, construído com [Quarto 1.5.54](https://quarto.org/) e desenvolvido em um container Jupyter baseado na imagem [jupyter/base-notebook](https://hub.docker.com/r/jupyter/base-notebook/). Aqui, compartilho materiais sobre ciência de dados, modelagem, análises avançadas, programação e ecoepidemiologia.
+Este repositório contém o código-fonte do meu blog pessoal, construído com [Quarto 1.5.54](https://quarto.org/) e desenvolvido em um container Jupyter baseado na imagem [jupyter/base-notebook](https://hub.docker.com/r/jupyter/base-notebook/). 
+
+Aqui, compartilho materiais sobre *machine learning*, inteligência artificial e análise de dados avançada. 
 
 ## Deploy
 
 O blog é implantado automaticamente no Netlify a partir deste repositório. 
-Cada push no branch principal aciona uma nova implantação (ver [netlify.toml](netlify.toml)).
+Cada push no *branch* principal (master) aciona uma nova implantação (ver [netlify.toml](netlify.toml)).
 
 ## Pré-requisitos
 
@@ -59,6 +61,13 @@ R -e "install.packages(c('knitr', 'rmarkdown'), repos='https://cloud.r-project.o
 
 ```{bash}
 pip install chromium
+```
 
-``` 
+## Scripts auxiliares
+
+O diretório `setup` contém scripts para auxiliar na configuração do ambiente e automação de tarefas neste projeto:
+
+- [setup/README.md](setup/README.md): documentação e instruções detalhadas dos scripts.
+- `setup/criar_post.py`: gera automaticamente um novo post (ou notebook, talk, etc.) no formato Quarto, criando um diretório com data, slug e front matter YAML.
+- `setup/quarto.sh`: script Bash que verifica/instala o pacote `uv` e faz download/instalação do Quarto CLI em sistemas Debian/Ubuntu.
 
