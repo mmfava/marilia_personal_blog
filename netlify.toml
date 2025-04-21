@@ -1,7 +1,4 @@
 [build]
-  # Command to build the Quarto site
-  command = "quarto render"
-  # Folder to publish to Netlify
   publish = "_site"
   ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF docker/"
 
