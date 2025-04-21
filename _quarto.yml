@@ -25,7 +25,7 @@ website:
         href: index.qmd
       - text: blog
         href: posts/index.qmd
-      - text: experiments
+      - text: scripts
         href: experiments/index.qmd
       - text: teaching/talks
         href: talks-teaching/index.qmd
