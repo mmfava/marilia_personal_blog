@@ -12,9 +12,9 @@ citation:
   url: "https://www.mmfava.com"
   version: 1
 categories:
-  - R
-  - Code
-  - Course
+  - r
+  - code
+  - course
 lang: pt-br
 format: html
 tags: 

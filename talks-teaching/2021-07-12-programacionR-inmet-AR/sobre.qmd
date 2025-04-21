@@ -13,8 +13,8 @@ citation:
   url: "https://github.com/somaquadrados/introduccionalR"
   version: 1
 categories:
-  - R
-  - Code
+  - r
+  - code
 lang: es
 format: html
 tags: 

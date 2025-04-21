@@ -12,7 +12,7 @@ citation:
   url: "http://www.mmfava.com"
   version: 1
 categories:
-  - Scientific outreach
+  - scientific outreach
 lang: pt-br
 tag: 
   - PT-BR

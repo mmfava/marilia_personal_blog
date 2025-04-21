@@ -10,11 +10,11 @@ citation:
   url: "http://www.mariliafavalesso.com"
   version: 1
 categories:
-  - Shiny-apps
-  - R
-  - Venomous-animals
-  - Ecoepidemiology
-  - Scientific outreach
+  - shiny-apps
+  - r
+  - venomous-animals
+  - ecoepidemiology
+  - scientific outreach
 lang: es-ar
 tags: 
   - ES-AR

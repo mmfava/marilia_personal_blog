@@ -15,11 +15,11 @@ citation:
   url: "http://www.mmfava.com"
   version: 1
 categories:
-  - R
-  - Ecoepidemiology
-  - Code
-  - Spatial
-  - Data analysis
+  - r
+  - ecoepidemiology
+  - code
+  - spatial
+  - data analysis
 lang: es
 format: html
 tags: 

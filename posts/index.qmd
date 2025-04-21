@@ -3,10 +3,9 @@ title: "Posts"
 listing:
   - id: blog
     contents: "*/*.qmd"
-    type: grid
+    type: default
     fields: [image, date, title, subtitle]
     sort: "date desc"
-    categories: unnumbered
     sort-ui: true
     filter-ui: true
     page-size: 36     
@@ -17,7 +16,4 @@ toc: true
 ---
 
 ::: {#posts}
-
 :::
-
-

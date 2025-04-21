@@ -24,7 +24,7 @@ citation:
   url: http://www.mmfava.com
   version: 1
 categories:
-  - PhD
+  - phd
   - thesis
   - models
 lang: es-ar

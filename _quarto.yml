@@ -25,8 +25,8 @@ website:
         href: index.qmd
       - text: blog
         href: posts/index.qmd
-      - text: notebooks
-        href: notebooks/index.qmd
+      - text: experiments
+        href: experiments/index.qmd
       - text: teaching/talks
         href: talks-teaching/index.qmd
       #- text: academic

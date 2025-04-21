@@ -15,9 +15,9 @@ citation:
   url: "http://www.mmfava.com"
   version: 1
 categories:
-  - Data analysis
-  - Scientific outreach
-  - Podcast
+  - data analysis
+  - scientific outreach
+  - podcast
 lang: pt-br
 tags: 
   - PT-BR

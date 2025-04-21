@@ -12,10 +12,10 @@ citation:
   url: "http://www.mmfava.com"
   version: 1
 categories:
-  - R-ladies
-  - R
-  - SDM
-  - Code
+  - r-ladies
+  - r
+  - sdm
+  - code
 tags: 
   - PT-BR
 lang: pt-br

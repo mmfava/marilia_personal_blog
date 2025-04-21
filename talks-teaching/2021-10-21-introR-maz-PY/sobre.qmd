@@ -7,8 +7,8 @@ execute:
   output: false
 date: 2021-10-18 09:00:00
 categories:
-  - R
-  - Code
+  - r
+  - code
 tags:
   - ES-AR
 lang: es-ar

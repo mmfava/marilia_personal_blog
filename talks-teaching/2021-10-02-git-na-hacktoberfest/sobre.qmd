@@ -15,9 +15,9 @@ citation:
   url: "http://www.mmfava.com"
   version: 1
 categories:
-  - Code
-  - Git
-  - Github
+  - code
+  - git
+  - github
 lang: pt-br
 tags: 
   - PT-BR

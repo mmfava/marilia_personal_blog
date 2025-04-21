@@ -8,7 +8,7 @@ AUTOR = {
     "email": "marilia.melo.favalesso@gmail.com"
 }
 
-CATEGORIAS_DISPONIVEIS = ["posts", "notebooks", "talks-teaching", "academic"]
+CATEGORIAS_DISPONIVEIS = ["posts", "experiments", "talks-teaching", "academic"]
 
 import unicodedata
 import re
@@ -51,9 +51,18 @@ def criar_post(titulo, categoria="posts", data=None):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Cria novo post para blog Quarto")
+    parser = argparse.ArgumentParser(
+        description="Cria novo conteúdo Quarto (post, experiment, talk etc.) no projeto"
+    )
     parser.add_argument("titulo", help="Título do post entre aspas")
-    parser.add_argument("-c", "--categoria", default="posts", help="Categoria (default: posts)")
+    parser.add_argument(
+        "-c", "--categoria",
+        default="posts",
+        help=(
+            "Categoria (default: posts). "  
+            "Valores válidos (lowercase): posts, experiments, talks-teaching, academic"
+        )
+    )
     parser.add_argument("-d", "--data", help="Data no formato YYYY-MM-DD (default: hoje)")
 
     args = parser.parse_args()

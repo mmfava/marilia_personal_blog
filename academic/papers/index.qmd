@@ -6,7 +6,6 @@ listing:
     type: table
     fields: [title, date, citation, tags]
     sort: "date desc"
-    categories: cloud
     sort-ui: true
     filter-ui: true
     page-size: 36     

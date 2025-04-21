@@ -9,7 +9,7 @@ categories:
 - posts
 - server
 - ubuntu
-- LTS
+- lts
 lang: pt-br
 tags: [PT-BR]
 ---

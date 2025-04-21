@@ -10,8 +10,8 @@ citation:
   url: "http://www.mmfava.com"
   version: 1
 categories:
-  - Scientific outreach
-  - Venomous animals
+  - scientific outreach
+  - venomous animals
 lang: es-ar
 tags: 
   - ES-AR

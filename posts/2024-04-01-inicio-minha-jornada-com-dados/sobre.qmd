@@ -10,9 +10,9 @@ citation:
   url: "http://www.mmfava.com"
   version: 1
 categories:
-  - Git
-  - Github
-  - Soma dos Quadrados
+  - git
+  - github
+  - soma dos quadrados
 lang: pt-br
 tags: 
   - PT-BR

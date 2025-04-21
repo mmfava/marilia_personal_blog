@@ -15,11 +15,11 @@ citation:
   url: http://www.mmfava.com
   version: 1
 categories:
-  - Apache
-  - Superset
-  - Open-source
-  - Dataviz
-  - Python
+  - apache
+  - superset
+  - open-source
+  - dataviz
+  - python
 lang: pt-br
 tags: 
   - PT-BR

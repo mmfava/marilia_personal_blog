@@ -11,10 +11,10 @@ format:
     link-external-newwindow: true
 date: 2016-11-21
 categories:
-  - Data analysis
-  - Cluster
-  - PCA
-  - R
+  - data analysis
+  - cluster
+  - pca
+  - r
 tags: 
   - PT-BR
 ---

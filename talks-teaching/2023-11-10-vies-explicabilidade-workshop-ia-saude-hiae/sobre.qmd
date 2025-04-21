@@ -10,9 +10,9 @@ citation:
   url: "http://www.mmfava.com"
   version: 1
 categories:
-  - Scientific outreach
-  - Code
-  - Data analysis
+  - scientific outreach
+  - code
+  - data analysis
 lang: pt-br
 tags: 
   - PT-BR
