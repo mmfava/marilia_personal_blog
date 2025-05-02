@@ -1,0 +1,632 @@
+---
+title: "Dívida técnica oculta em sistemas de *Machine Learning*"
+subtitle: "Débito técnico em sistemas de ML/IA (Parte 1.1)"
+image: image.png
+author:
+  - name: "Marília Melo Favalesso"
+    email: "marilia.melo.favalesso@gmail.com"
+date: "2025-05-02"
+citation: 
+  url: "http://www.mariliafavalesso.com"
+  version: 1
+categories:
+  - mlops
+  - ia  
+lang: pt-br
+---
+
+# ***Hidden Technical Debt in Machine Learning Systems***
+
+Você já se perguntou o que pode estar silenciosamente corroendo a saúde de um sistema de machine learning, mesmo quando tudo parece funcionar bem? Ao iniciar meus estudos em MLOps, uma das primeiras recomendações do meu mentor, Adelmo Filho, foi o artigo [Hidden Technical Debt in Machine Learning Systems” (Sculley et al., 2015)](https://proceedings.neurips.cc/paper_files/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf). Escrito por engenheiros do Google, ele é considerado um marco por introduzir formalmente o conceito de dívida técnica no contexto de ML — e segue atual mesmo uma década após sua publicação.
+
+Mais do que discutir algoritmos ou métricas, o texto revela como decisões de engenharia invisíveis, muitas vezes negligenciadas, se acumulam e comprometem a sustentabilidade de sistemas de aprendizado de máquina. Neste post, compartilho minhas observações durante a leitura e concluo com uma tabela-resumo dos principais tipos de dívida técnica, seus sintomas, causas comuns e estratégias de mitigação.
+
+## 1.  Introdução
+
+> **Desenvolver e implantar sistemas de machine learning é rápido e barato, mas mantê-los ao longo do tempo é difícil e caro**.
+
+O conceito de **dívida técnica** ajuda a ilustrar esse paradoxo. Ele se refere aos **custos futuros gerados por decisões técnicas tomadas para acelerar o desenvolvimento no curto prazo**, como atalhos no design, ausência de testes ou acoplamentos excessivos. Inicialmente essas escolhas podem parecer vantajosas, mas tendem a gerar complexidade, dificultar a manutenção e aumentar o custo de evolução do sistema ao longo do tempo.
+
+Em sistemas de **aprendizado de máquina**, essa dívida é ainda mais crítica — e frequentemente invisível — porque vai além do código. O comportamento do sistema depende diretamente dos dados, modelos e pipelines de processamento, o que introduz riscos que **métodos tradicionais de engenharia de software nem sempre conseguem antecipar ou mitigar**.
+
+Problemas como **acoplamento entre componentes, dependência excessiva dos dados de treinamento, feedbacks ocultos entre sistemas, mudanças silenciosas no ambiente externo e erosão das fronteiras modulares** são formas comuns de dívida técnica em ML. Esses fatores, se não forem cuidadosamente gerenciados, tornam os sistemas frágeis, difíceis de escalar ou modificar, e altamente custosos de manter.
+
+Mais do que propor novas técnicas, o objetivo central é **chamar atenção para os riscos estruturais e de longo prazo** desses sistemas, e reforçar a importância de boas práticas que envolvam não só o código, mas também a arquitetura sistêmica, os dados e a operação contínua dos modelos em produção.
+
+## 2.  Modelos complexos erodem fronteiras
+
+A engenharia de software tradicional mostra que **fronteiras de abstração bem definidas, via encapsulamento e design modular, facilitam a manutenção do código** e permitem realizar mudanças isoladas com segurança. Essas fronteiras ajudam a preservar invariantes e a consistência lógica dos dados que entram e saem de cada componente. No entanto, **em sistemas de aprendizado de máquina, essas fronteiras são difíceis de manter**, pois o comportamento desejado muitas vezes **não pode ser expresso apenas por lógica de código**, exigindo dependência direta de dados externos. Como o mundo real não se encaixa em abstrações rígidas, **essa erosão de fronteiras tende a aumentar substancialmente a dívida técnica em sistemas de ML**.
+
+### 2.1 Emaranhamento
+
+> **"Changing Anything Changes Everything" (Mudar Qualquer Coisa Muda Tudo)**
+
+Um dos principais desafios técnicos em sistemas de aprendizado de máquina está relacionado ao fenômeno conhecido como **entanglement**, ou **emaranhamento**. Esse conceito refere-se à forma como os diversos sinais[^1] de entrada de um modelo acabam se influenciando mutuamente, dificultando ou até impossibilitando a aplicação de melhorias localizadas e controladas.
+
+[^1]: Em **Sculley et al. (2015)**, o termo **"sinais"** (ou *signals*, no original) refere-se a **features de entrada** de um modelo de machine learning — ou seja, os **dados observáveis ou derivados** que alimentam o modelo e a partir dos quais ele aprende ou faz predições.
+
+    No contexto do paper, “sinais” não são apenas colunas de um dataset, mas incluem:
+
+    -   **Variáveis derivadas** de múltiplas fontes de dados;
+
+    -   **Sinais intermediários**, como saídas de outros modelos;
+
+    -   **Métricas operacionais** que refletem o estado do ambiente;
+
+    -   **Inputs encadeados** em pipelines de produção.
+
+    O uso do termo “sinal” reforça a ideia de que essas entradas têm um papel ativo e dinâmico no comportamento do sistema — **o modelo aprende padrões a partir deles**. E justamente por isso, eles se tornam pontos críticos para dívida técnica, pois:
+
+    -   Podem ser **instáveis ou mal definidos**;
+
+    -   Sofrem de **emaranhamento** (entanglement) com outros sinais;
+
+    -   **Influenciam e são influenciados** por decisões do sistema (feedback loops);
+
+    -   Muitas vezes **não são rastreados ou versionados adequadamente.**
+
+Em modelos de *machine learning*, especialmente os de maior complexidade, os recursos (features) não são tratados de maneira isolada. O modelo aprende com base na **combinação conjunta** dos dados de entrada, de modo que **alterar qualquer parte do sistema — mesmo que pareça pequena ou localizada — pode impactar profundamente o comportamento de outras partes**. Essa interdependência entre features faz com que o sistema se torne sensível a mudanças aparentemente inofensivas, como a adição, remoção ou transformação de um único recurso. Essa característica é sintetizada no princípio CACE proposto pelos autores: **"Changing Anything Changes Everything"** — ou seja, **qualquer mudança, por menor que seja, tem o potencial de alterar o funcionamento do sistema como um todo**.
+
+Esse fenômeno ocorre tanto em modelos que são retreinados periodicamente (modo **batch**) quanto naqueles que se atualizam continuamente a partir de novos dados (modo **online**). Mesmo quando o modelo é reconstruído do zero, com um dataset atualizado, ele recalibra internamente os pesos de todas as features para se adaptar à nova distribuição. Assim, mudar a escala, a granularidade ou a frequência de uma única feature pode levar o modelo a reorganizar as importâncias relativas das demais. Em ambientes de produção, essa interdependência invisível dificulta a manutenção e a evolução dos modelos, pois **melhorias pontuais em um aspecto podem gerar efeitos colaterais negativos em outros**.
+
+Além disso, o **emaranhamento compromete a interpretabilidade e a auditabilidade dos modelos**. Como os efeitos de cada entrada estão "misturados", torna-se difícil atribuir causalidade clara a uma predição ou entender por que uma mudança em uma variável impactou o resultado final. Isso é especialmente problemático em contextos regulatórios, médicos ou financeiros, nos quais a rastreabilidade das decisões do sistema é crítica.
+
+Uma consequência comum do *entanglement* é a **dificuldade em realizar experimentos controlados e análises comparativas**. Por exemplo, ao tentar testar o impacto de uma nova feature, o modelo pode alterar seus parâmetros internos de forma não transparente, gerando resultados instáveis e difíceis de interpretar. Do mesmo modo, ao corrigir uma feature antiga ou ajustar sua origem de dados, o desempenho global pode piorar mesmo que, isoladamente, aquela alteração tenha sido benéfica. Esses efeitos se tornam ainda mais imprevisíveis quando o modelo é parte de um ensemble, no qual várias instâncias interagem e se compensam — uma mudança em um componente pode quebrar o equilíbrio do conjunto, prejudicando a performance geral.
+
+Apesar desses riscos, há algumas **estratégias** possíveis para mitigar o emaranhamento, como **isolar modelos por subproblemas, evitar features redundantes, monitorar sistematicamente as distribuições de entrada e empregar técnicas de validação robustas que incluam testes de sensibilidade a mudanças em features**. No entanto, nenhuma dessas abordagens é trivial, e todas exigem investimentos conscientes em engenharia de sistemas e boas práticas de manutenção.
+
+Por fim, é importante reconhecer que o emaranhamento é um **efeito emergente natural de sistemas estatísticos complexos**, e não um erro de projeto em si. No entanto, ignorá-lo — ou tratar modelos como caixas-pretas que funcionam isoladamente do restante da infraestrutura — é o que transforma esse fenômeno técnico em uma **forma oculta de débito técnico**, que se acumula silenciosamente e compromete a escalabilidade e sustentabilidade de soluções baseadas em aprendizado de máquina no longo prazo.
+
+::: callout-note
+## Treinamento: Batch vs Online
+
+| **Característica** | **Batch** | **Online** |
+|------------------------|------------------------|------------------------|
+| **Fonte de dados** | Todos de uma vez (dataset fixo) | Um por um ou em pequenos blocos |
+| **Frequência de treino** | Eventual (manual ou agendado) | Contínua ou muito frequente |
+| **Estabilidade** | Alta (mesmo modelo por um tempo) | Baixa (o modelo muda com frequência) |
+| **Uso típico** | Modelos offline, análises históricas | Sistemas adaptativos, em tempo real |
+
+**Explicação**: O **treinamento batch** oferece maior previsibilidade, pois o modelo é treinado com um volume fixo de dados de forma pontual. Já o **treinamento online** prioriza a adaptabilidade, permitindo que o modelo se atualize continuamente à medida que novos dados chegam. Essa distinção é crucial no design de sistemas de machine learning: batch tende a ser mais estável e fácil de versionar, mas menos responsivo a mudanças; online, por sua vez, exige maior vigilância para lidar com instabilidades, *drift* e efeitos de retroalimentação.
+:::
+
+### 2.2 Cascatas de Correção
+
+> Modelos são sistemas completos por si só. **Construir um novo modelo com base nas saídas de outro pode parecer uma solução rápida e eficiente no curto prazo, mas tende a gerar, ao longo do tempo, uma cascata de correções que aumenta a complexidade e compromete a estabilidade do sistema**.
+
+Em sistemas de aprendizado de máquina, é comum que um modelo já implantado resolva satisfatoriamente um determinado problema (`A`). Contudo, com o tempo, novas demandas surgem, exigindo adaptações para lidar com variações sutis desse problema original (`A'`). Diante desse cenário, uma prática recorrente — e aparentemente eficiente — é a criação de um novo modelo (`m'a`) que **usa as previsões do modelo original (`ma`) como entrada e aprende apenas uma pequena correção para resolver a nova tarefa**. Embora essa abordagem possa economizar tempo e parecer pragmática no curto prazo, ela introduz um risco arquitetural importante: o início de uma **cascata de correções**.
+
+Ao criar esse modelo corretivo, o sistema passa a depender fortemente do comportamento do modelo anterior. Qualquer melhoria ou alteração em `ma` pode alterar as entradas que `m'a` espera, impactando negativamente seu desempenho. À medida que variações adicionais do problema surgem (`A''`, `A'''` etc.), pode-se cair na tentação de empilhar mais modelos corretivos, cada um treinado sobre as previsões do anterior. Essa sequência leva a uma cadeia de dependências altamente acoplada, na qual cada componente herda as limitações e erros do anterior — muitas vezes ajustando-se não ao problema de forma abstrata, mas ao comportamento específico e enviesado dos modelos que o precedem.
+
+Essa estrutura pode se tornar rapidamente insustentável. Uma das principais consequências desse acoplamento em cascata é o que os autores chamam de **impasse de melhoria**: uma situação em que **melhorar qualquer componente individual da cadeia, paradoxalmente, degrada a performance do sistema como um todo**. Isso ocorre porque os modelos posteriores, ao terem aprendido a “corrigir” padrões específicos de erro dos modelos anteriores, passam a se comportar de maneira subótima quando esses erros desaparecem ou mudam. O sistema, assim, perde flexibilidade e se torna dependente de disfunções internas que, teoricamente, deveriam ser resolvidas.
+
+Além disso, **cascatas de correção comprometem a transparência e a rastreabilidade do sistema**. Cada camada adicional adiciona opacidade, dificultando a análise de erros, o rastreamento de causas e a tomada de decisões sobre ajustes. A complexidade gerada também impõe desafios a testes, validação e monitoramento, tornando o sistema mais sujeito a falhas silenciosas e de difícil diagnóstico.
+
+Para mitigar esse problema, os autores sugerem duas estratégias principais. A primeira consiste em **incorporar as correções diretamente no modelo original**, tornando-o mais expressivo e capaz de lidar com múltiplos contextos. Isso pode ser feito por meio da adição de novas features que ajudem o modelo a diferenciar casos específicos, evitando a necessidade de empilhar novos modelos sobre ele. A segunda estratégia propõe **desacoplar completamente os problemas**, criando **modelos independentes para as variações** (`A'`, `A''`) ao invés de encadear dependências. Embora mais custoso inicialmente, esse caminho favorece a modularidade e a manutenção a longo prazo.
+
+### 2.3 Consumidores não declarados
+
+> Consumidores do sistema ou saída dos modelos que não são declarados/conhecidos, criando uma dívida de visibilidade.
+
+Em sistemas de aprendizado de máquina em produção, é comum que os resultados de um modelo — como previsões, escores ou classificações — sejam disponibilizados para múltiplos componentes do sistema. Essas saídas podem ser acessadas em tempo real por APIs, armazenadas em arquivos intermediários, ou registradas em logs para uso posterior. O problema surge quando **outros sistemas começam a consumir essas saídas sem declarar explicitamente essa dependência**. Esses são os chamados **consumidores não declarados** — partes do sistema que se conectam a um modelo de forma silenciosa, criando um **acoplamento oculto** que pode se tornar altamente problemático. Na engenharia de software mais clássica, essas questões são referidas como dívida de visibilidade.
+
+Na prática, isso significa que **o modelo `ma` passa a influenciar diretamente partes da infraestrutura que os engenheiros nem sempre sabem que existem**. Qualquer modificação feita no modelo — seja para corrigir um viés, alterar uma feature, mudar um limiar de decisão ou simplesmente atualizar para uma nova versão — pode impactar negativamente os consumidores não mapeados, resultando em falhas inesperadas, bugs silenciosos ou até comportamento inconsistente em partes críticas do sistema. Esse tipo de dependência invisível compromete a segurança, a auditabilidade e a confiabilidade de toda a arquitetura.
+
+Além do risco técnico, há uma **consequência organizacional** importante: **melhorias no modelo se tornam mais difíceis de implementar**. Como não se sabe quem depende de `ma`, qualquer alteração pode ser bloqueada por receios de quebrar sistemas que, por falta de visibilidade, não se sabe como proteger. Isso cria um ambiente onde **a evolução do sistema é travada pelo medo da regressão invisível**, resultando em estagnação técnica e aumento de dívida estrutural.
+
+Em cenários mais críticos, consumidores não declarados podem até gerar **loops de feedback ocultos**. Isso acontece, por exemplo, quando a saída de um modelo influencia diretamente a coleta de dados futuros que serão usados para treiná-lo. Se esse processo de coleta for mediado por sistemas que consomem `ma` sem conhecimento dos desenvolvedores, **o modelo começa a afetar sua própria entrada de dados de forma não controlada**, distorcendo estatísticas e obscurecendo os efeitos reais de atualizações — um problema abordado mais a fundo na discussão sobre *feedback loops*.
+
+O desafio é que **esses consumidores são difíceis de detectar**, especialmente em sistemas distribuídos e complexos. A menos que o sistema tenha sido desenhado desde o início com **políticas explícitas de controle de acesso**, **monitoramento de dependências** e **SLAs bem definidos**, é natural que engenheiros — pressionados por prazos e buscando eficiência — recorram à fonte de dados mais conveniente, sem se preocupar com a rastreabilidade ou com os impactos sistêmicos dessa decisão.
+
+Para mitigar essa forma de dívida técnica, é fundamental adotar **práticas de engenharia que promovam o encapsulamento e a transparência nas interfaces de modelos**. Isso inclui limitar quem pode acessar as saídas de um modelo, registrar explicitamente todos os consumidores conhecidos, exigir contratos formais de uso (SLAs) e criar ferramentas que permitam rastrear o impacto de cada alteração. Em outras palavras, é necessário **tratar os modelos como componentes críticos e versionáveis da arquitetura de software**, e não apenas como funções utilitárias isoladas.
+
+## 3.  Dependência de dados custam mais que as de código
+
+> **Em sistemas de ML, as dependências de dados são ainda mais perigosas que as de código, porque são invisíveis por padrão e fáceis de ignorar — mas acumulam dívida técnica com igual ou maior impacto.**
+
+No desenvolvimento tradicional de software, já é amplamente reconhecido que **muitas dependências entre trechos de código** aumentam a complexidade do sistema e acumulam **dívida técnica**. Quando um trecho de código depende fortemente de outros, mudanças se tornam difíceis, arriscadas e caras. No entanto, esse tipo de dependência pode ser **rastreadas automaticamente por ferramentas de análise estática**, como compiladores ou analisadores de dependências, o que ajuda a mitigar os riscos.
+
+Por outro lado, em sistemas de **machine learning**, há um tipo de dependência mais sutil e mais perigosa: as **dependências de dados**. Essas ocorrem quando um modelo passa a depender de sinais, features ou fontes externas de dados — muitas vezes geradas por outros sistemas, bancos de dados, modelos ou pipelines. Diferentemente das dependências de código, **não há ferramentas bem estabelecidas para rastrear essas conexões**. Isso significa que **é muito fácil construir cadeias longas e frágeis de dependência de dados sem perceber**.
+
+O grande problema aqui é que **essas cadeias de dependência são difíceis de desfazer e ainda mais difíceis de visualizar**. Você pode ter um modelo que depende de uma feature, que vem de um processamento externo, que depende de uma transformação em outro pipeline, que usa dados de uma fonte que muda constantemente — e, se qualquer parte dessa cadeia for modificada, o modelo pode falhar ou se degradar sem que o time de ML perceba imediatamente.
+
+### 3.1 Dependência de dados instáveis
+
+> Reconhecer e tratar as **dependências de dados instáveis** como um elemento de projeto crítico — e não como uma consequência secundária — é um passo fundamental para construir sistemas de *machine learning* robustos, escaláveis e sustentáveis ao longo do tempo.
+
+À medida que sistemas de aprendizado de máquina se tornam mais complexos e interconectados, é cada vez mais comum que modelos consumam **features geradas por outros sistemas** como parte do seu conjunto de entrada. Esses sinais externos podem vir de pipelines de dados, bases de conhecimento, tabelas de lookup, ou até mesmo de outros modelos de *machine learning*. Em geral, essa prática visa acelerar o desenvolvimento, reduzir redundância e reutilizar sinais valiosos já disponíveis na organização. No entanto, ela introduz uma **categoria crítica de risco arquitetural**: as **dependências de dados instáveis**.
+
+Uma dependência de dados é considerada instável quando o sinal consumido **muda de forma imprevisível ao longo do tempo**, seja no conteúdo, na semântica ou na forma de geração. Isso pode ocorrer de maneira **implícita**, como quando o dado de entrada é gerado por outro modelo que se atualiza continuamente, ou deriva de uma tabela dinâmica, como uma matriz TF/IDF ou um mapeamento semântico que evolui com o corpus. Também pode ocorrer de forma **explícita**, quando o controle sobre a geração daquele dado está nas mãos de outra equipe ou sistema, que pode modificar sua lógica sem coordenação direta com o time responsável pelo modelo que o consome.
+
+Esse tipo de instabilidade é particularmente perigoso porque **pode quebrar, silenciosamente, os pressupostos sob os quais o modelo foi treinado**. Um exemplo clássico é o de um modelo que aprendeu com base em uma feature mal calibrada — digamos, um escore que não seguia uma escala padronizada. O modelo, nesse cenário, se ajusta aos erros presentes nesse dado e constrói previsões compatíveis com essa realidade imperfeita. Se essa feature for corrigida posteriormente, sem uma reavaliação completa do modelo, o comportamento aprendido se torna obsoleto. A consequência pode ser uma degradação abrupta de performance, cujas causas são difíceis de rastrear, já que o próprio modelo não foi alterado.
+
+A dificuldade aqui reside no fato de que **não há ferramentas de análise estática amplamente disponíveis para detectar dependências de dados da mesma forma que há para dependências de código**. O acoplamento é invisível, muitas vezes não documentado, e cresce à medida que novos sinais são incorporados ao pipeline. Como resultado, é muito fácil construir longas cadeias de dependência entre sistemas e dados que, eventualmente, se tornam frágeis, opacas e extremamente difíceis de refatorar.
+
+Uma das estratégias mais eficazes para mitigar os riscos associados a dependências de dados instáveis é o **versionamento explícito dos sinais utilizados como input**. Em vez de permitir que determinados sinais — como um mapeamento semântico, uma transformação estatística, ou uma feature derivada de um pipeline externo — evoluam dinamicamente ao longo do tempo, sem controle, o ideal é **congelar uma versão estável desses dados no momento em que ela é validada e considerada confiável para uso no treinamento e na produção**.
+
+Esse "congelamento" significa criar uma **snapshot imutável** daquele sinal, assegurando que o modelo estará sempre exposto à mesma entrada, independentemente de mudanças posteriores no sistema que gera esse dado. Ao tratar a entrada como um componente versionado, com identificadores únicos e histórico de alterações, a organização passa a lidar com os dados **como um artefato de software**, sujeito ao mesmo rigor que se aplica ao código-fonte ou aos próprios modelos. Isso facilita tanto a reprodutibilidade dos experimentos quanto a estabilidade dos pipelines em produção, uma vez que mudanças são introduzidas de forma explícita, controlada e validada antes de entrarem em uso.
+
+Contudo, embora o versionamento aumente significativamente a robustez do sistema, ele não está isento de desvantagens. Um dos principais desafios é o risco de **obsolescência**. Sinais congelados por longos períodos podem deixar de refletir a realidade atual, especialmente em domínios altamente dinâmicos — como comportamento de usuários, linguagem natural ou mercados financeiros. Isso pode levar a uma degradação progressiva do desempenho dos modelos, caso eles continuem a operar com representações defasadas do mundo real.
+
+Outro aspecto crítico é a **sobrecarga operacional** que o versionamento impõe. Para cada sinal versionado, é necessário manter **metadados descritivos, mecanismos de auditoria, ferramentas de gestão de versões e processos de validação**. Além disso, quando múltiplas versões coexistem — por exemplo, diferentes modelos usando versões distintas da mesma feature — a infraestrutura precisa ser capaz de servir, monitorar e atualizar esses dados de forma independente, o que implica em maior complexidade de engenharia, consumo de recursos e riscos operacionais.
+
+Apesar desses custos, o versionamento de dados é amplamente considerado uma **prática fundamental para sistemas de ML maduros**, pois oferece um ganho substancial em **rastreabilidade, controle de qualidade e capacidade de diagnóstico de falhas**. Ele representa uma mudança de paradigma: em vez de tratar os dados como algo volátil e externo, passamos a vê-los como parte integrante e estável da lógica de decisão dos modelos, merecendo o mesmo cuidado que qualquer outro componente crítico da arquitetura.
+
+Portanto, reconhecer e tratar as **dependências de dados instáveis** como um elemento de projeto crítico — e não como uma consequência secundária — é um passo fundamental para construir sistemas de machine learning robustos, escaláveis e sustentáveis ao longo do tempo. Em um *ecossistema* onde os dados são tão determinantes quanto o código, proteger a integridade das entradas do modelo é tão importante quanto garantir a qualidade da arquitetura algorítmica.
+
+::: callout-note
+## 🧊 Versionamento de features
+
+Quando uma feature é gerada por outro sistema ou modelo (por exemplo, um cluster map criado por uma equipe de NLP), é essencial versionar o **output aplicado** — ou seja, a versão exata do mapeamento usada no momento do treinamento do seu modelo.
+
+Mesmo sem acesso ao código ou modelo que gera a feature, você pode salvar a versão congelada do resultado, garantindo que: - Seu modelo sempre receba o mesmo input com que foi treinado. - Mudanças futuras na lógica de geração da feature não causem degradação silenciosa. - Você possa reprocessar dados antigos ou retreinar modelos com total reprodutibilidade.
+
+**Exemplo prático:** Suponha que a equipe de NLP fornece um mapeamento semântico de produtos para clusters. Ao receber esse dado, você salva uma cópia da versão estável:
+
+```         
+features/
+└── semantic_map/
+    ├── v1/
+    │   └── produto_para_cluster.parquet
+    └── v2/
+        └── produto_para_cluster.parquet
+```
+
+No código do seu modelo:
+
+``` python
+# Durante o treinamento
+semantic_map = load_map("features/semantic_map/v1/produto_para_cluster.parquet")
+df['cluster'] = df['produto_id'].map(semantic_map)
+```
+
+Essa abordagem permite que seu modelo continue operando com estabilidade, mesmo se a equipe *upstream* lançar uma nova versão (`v2`) com outra lógica. Seu modelo v1 continua usando a `v1` do mapeamento; só futuros modelos (como v2) usariam a `v2` após validação.
+:::
+
+### 3.2 Dependências de dados subutilizados
+
+> Remover dependências de dados subutilizadas não apenas simplifica o sistema e reduz custos operacionais, mas também aumenta sua robustez, auditabilidade e sustentabilidade a longo prazo. **Em um sistema de aprendizado de máquina, onde os dados são o insumo central, toda *feature* irrelevante não é apenas redundante — é uma fonte potencial de fragilidade e erro**.
+
+Em sistemas de *machine learning*, tão importante quanto adicionar boas features é saber **quando e por que removê-las**. Uma fonte silenciosa, porém significativa, de fragilidade e dívida técnica são as chamadas **dependências de dados subutilizadas**. Elas se referem a **sinais de entrada que contribuem muito pouco — ou até nada — para o desempenho do modelo, mas que ainda assim permanecem no pipeline, muitas vezes sem serem reavaliadas com o tempo**.
+
+Assim como em engenharia de software há bibliotecas e pacotes que são pouco utilizados ou obsoletos, em ML há features que não oferecem ganho de modelagem significativo, mas que, por diversos motivos, permanecem ativas. O problema é que essas features, mesmo irrelevantes do ponto de vista preditivo, ainda carregam riscos técnicos reais. **Elas aumentam a complexidade do sistema, ampliam a superfície de falha e tornam o modelo mais vulnerável a mudanças externas**. Em alguns casos, alterações ou remoções em fontes de dados aparentemente “sem importância” podem causar falhas críticas no pipeline de inferência ou, pior, gerar comportamentos imprevisíveis no modelo.
+
+Um exemplo clássico dessa armadilha ocorre quando há uma transição entre dois esquemas de numeração de produtos. Para garantir compatibilidade, tanto os identificadores antigos quanto os novos são incluídos como features no modelo. Com o tempo, apenas os produtos antigos mantêm os dois identificadores, enquanto os novos recebem apenas o novo código. Se o modelo continuar utilizando os identificadores antigos como parte da sua lógica de predição — mesmo que de forma marginal — e, eventualmente, esses dados deixarem de ser populados no banco de dados, o sistema pode falhar de forma silenciosa e inesperada. Esse tipo de dependência pode levar horas ou dias para ser diagnosticada, especialmente se a feature for considerada “secundária” ou “inofensiva”.
+
+Essas dependências subutilizadas podem surgir de várias formas ao longo da vida útil do sistema:
+
+- **Features legadas**, que foram úteis em versões iniciais do modelo, mas perderam relevância com o tempo;
+
+- **Features agrupadas**, adicionadas em lote sem avaliação individual, geralmente sob pressão de prazos;
+
+- **ε-features**, que trazem ganhos ínfimos de precisão, mas aumentam a complexidade e dificulta
+
+- **Features altamente correlacionadas**, em que o modelo aprende a depender de uma feature não causal, tornando-se frágil a mudanças sutis nas correlações do mundo real.
+
+O risco aqui não está apenas na irrelevância da feature, mas na **falsa sensação de segurança**. Features aparentemente inócuas podem se tornar pontos de falha quando há mudanças de upstream, limpeza de dados, migração de sistemas ou atualizações não coordenadas.
+
+A boa prática é que essas dependências sejam periodicamente reavaliadas. **Uma estratégia recomendada é aplicar avaliações de "leave-one-feature-out" (LOFO), em que se observa o impacto da remoção individual de cada feature no desempenho do modelo**. Esse tipo de análise ajuda a identificar sinais redundantes ou dispensáveis, orientando decisões de limpeza e simplificação do pipeline.
+
+### 3.3 Análise estática de dependências dos dados
+
+Em engenharia de software tradicional, a análise estática de dependências é um pilar fundamental para o entendimento, manutenção e evolução de sistemas. Compiladores e ferramentas de build são capazes de construir **grafos de dependência de código** de forma automática, permitindo saber exatamente quais módulos dependem de quais bibliotecas, o que pode ser alterado com segurança, e o que precisa ser recompilado após uma mudança. Essa visibilidade permite um ciclo de desenvolvimento mais confiável e previsível.
+
+No entanto, em sistemas de **machine learning**, onde o comportamento do sistema é altamente influenciado pelos dados, essa análise se torna significativamente mais complexa. Aqui, não são apenas funções e pacotes que importam — são as **features**: sinais extraídos, transformados, pré-processados e integrados ao modelo. E cada uma dessas features pode ter sua própria cadeia de dependência com outras tabelas, sistemas externos ou transformações intermediárias.
+
+Esse cenário exige um novo tipo de rastreamento: a **análise estática de dependência de dados** — ou seja, a capacidade de identificar, de forma automatizada, **quais dados são usados, por quais modelos, em quais etapas do pipeline, e com quais transformações aplicadas**.
+
+A ausência desse tipo de rastreamento cria **um campo fértil para dívidas técnicas invisíveis**. Sem essa visibilidade, é fácil manter features redundantes, desatualizadas ou subutilizadas. Também se torna difícil prever o impacto de alterações nas fontes de dados. Por exemplo, remover ou atualizar uma coluna em uma tabela pode quebrar silenciosamente um modelo em produção, caso não se saiba que aquele campo era consumido indiretamente por ele.
+
+O paper sugere que a prática de análise estática de dependência de dados ainda era rara na época, mas já vislumbrava soluções. Uma delas é o uso de **sistemas automatizados de gerenciamento de features**, que permitem que **cada feature seja anotada com metadados** — por exemplo: sua origem, finalidade, tipo, frequência de atualização e consumidores. Com esse tipo de anotação, ferramentas de validação automática podem ser executadas para garantir que: - Todas as dependências estão corretamente documentadas. - Alterações em upstream não afetam consumidores sem aviso. - A exclusão ou substituição de dados não comprometa a integridade do sistema.
+
+Atualmente, diversas ferramentas modernas já incorporam essa lógica, como os **Feature Stores** (ex: Tecton, Feast, Featureform), sistemas de **data lineage** (como OpenMetadata, DataHub e Amundsen) e frameworks como o **dbt**, amplamente usado em engenharia analítica e cada vez mais adotado em pipelines de ML. Essas ferramentas permitem **visualizar o fluxo de dados, identificar todos os consumidores e intermediários**, e aplicar regras de validação e versionamento.
+
+O benefício é claro: com análise estática de dependência de dados, torna-se possível realizar **refatorações seguras**, manter o sistema limpo e enxuto, e responder rapidamente a mudanças no ambiente ou na lógica de negócio. Além disso, essa análise é fundamental para garantir **reprodutibilidade de experimentos**, **compliance com normas de auditoria** e **resiliência de sistemas em produção**.
+
+::: callout-note
+
+## **Exemplo**
+
+Imagine que você tem um modelo de ML que prevê a probabilidade de *churn* de clientes. Esse modelo utiliza uma feature chamada `tempo_desde_ultima_compra`, que é calculada a partir de uma tabela `transacoes_clientes`.
+
+Em uma análise estática de dependência de dados bem estruturada, essa relação estaria documentada assim:
+
+```         
+Feature: tempo_desde_ultima_compra
+Origem: tabela transacoes_clientes
+Transformações: calculado como diferença entre data de hoje e última data de compra
+Consumidores: modelo_churn_v2, dashboard_monitoramento_clientes
+Último uso validado: 2024-10-10
+Frequência de atualização: diária
+...
+```
+
+Se, futuramente, um engenheiro propuser renomear uma coluna em `transacoes_clientes` ou migrar essa tabela, o sistema de análise poderá automaticamente alertar todos os times impactados. Isso evita que mudanças no upstream causem falhas silenciosas no modelo ou nos dashboards.
+:::
+
+## 4.  Loops de feedback
+
+> **Loops de feedback representam uma das formas mais complexas e silenciosas de dívida técnica em sistemas de machine learning.** Eles desafiam os fundamentos do aprendizado supervisionado, comprometem a validade de métricas e decisões, e podem causar uma erosão gradual — porém profunda — da qualidade e confiabilidade dos sistemas em produção. Para enfrentá-los, é preciso ir além da modelagem estatística tradicional e adotar práticas que integrem engenharia, ciência de dados e visão sistêmica, com foco na compreensão do impacto que os modelos têm sobre o ambiente que os alimenta.
+
+À medida que sistemas de machine learning se tornam parte integrante de processos decisórios em tempo real, é inevitável que comecem a **influenciar o próprio ambiente que observam e do qual aprendem**. Essa influência cíclica — na qual o modelo altera o mundo, o mundo responde, e o modelo aprende com essa nova realidade — caracteriza o fenômeno conhecido como **loop de feedback**. Embora muitas vezes invisível à primeira vista, esse processo pode distorcer os dados, criar viés estatístico, comprometer a qualidade dos modelos e dificultar drasticamente sua avaliação e evolução.
+
+Um loop de feedback ocorre quando as **ações de um modelo afetam o comportamento dos usuários ou dos sistemas ao seu redor**, que por sua vez alteram os dados coletados — dados esses que alimentam o reentreinamento ou a avaliação do próprio modelo. Isso gera um ciclo de retroalimentação que, se não for cuidadosamente monitorado e controlado, **pode levar o sistema a reforçar seus próprios vieses, degradar sua performance ao longo do tempo ou até convergir para decisões subótimas**.
+
+### 4.1 Loops de feedback diretos
+
+> O modelo aprende com o que ele mesmo criou.
+
+A forma mais direta de feedback acontece quando **as decisões do modelo afetam diretamente os dados com os quais ele será treinado futuramente**. Um exemplo clássico ocorre em sistemas de recomendação. Imagine um modelo que sugere produtos a partir de dados de cliques dos usuários. Naturalmente, ele recomenda os itens com maior probabilidade de clique — o que, por sua vez, aumenta a quantidade de dados desses itens. Produtos menos recomendados acabam com menos cliques, menos dados e menos chances de aparecer novamente. Com o tempo, o modelo **fica preso em um ciclo fechado**, no qual só aprende sobre os itens que já conhece bem, **ignorando a diversidade e as oportunidades de descoberta**.
+
+Essa auto-referência pode levar à estagnação e a uma visão distorcida do comportamento real dos usuários. Idealmente, esse problema poderia ser mitigado com o uso de algoritmos como **bandits contextuais**, que incorporam mecanismos de **exploração ativa** — exibindo itens menos populares de forma controlada para aprender com novos padrões. No entanto, bandits nem sempre são viáveis em ambientes complexos com grandes espaços de ação, como catálogos extensos de produtos, conteúdo ou anúncios.
+
+Como alternativa prática, empresas costumam adotar **randomização parcial**, como exibir aleatoriamente 5% dos conteúdos em vez de seguir exclusivamente as recomendações do modelo. Outra abordagem é **manter conjuntos de controle**, ou seja, subconjuntos de usuários cujas interações não são influenciadas pelo modelo e servem como referência neutra para monitoramento e revalidação.
+
+### 4.2 Loops de feedbacks ocultos
+
+> O modelo aprende com o que ele mesmo criou, mas de forma indireta!
+
+Mais complexos e perigosos são os **loops de feedback ocultos**. Diferentemente dos diretos, aqui o modelo **não influencia diretamente seus próprios dados**, mas sim **por meio de interações indiretas com outros sistemas ou com o comportamento humano**. Isso pode ocorrer quando **dois ou mais sistemas autônomos interagem no mesmo ambiente**, influenciando uns aos outros de formas não explícitas.
+
+Por exemplo, considere uma página de e-commerce onde um sistema de recomendação escolhe os produtos exibidos e outro modelo seleciona as avaliações que acompanham cada item. Se o primeiro modelo melhora e começa a mostrar produtos mais relevantes, isso pode mudar a forma como os usuários interagem com as avaliações, alterando indiretamente os dados que alimentam o segundo modelo. Com o tempo, os dois sistemas começam a afetar os dados de entrada um do outro, criando um ciclo de influência difícil de rastrear.
+
+Esse tipo de feedback também pode ocorrer entre **modelos pertencentes a diferentes empresas**, como no mercado financeiro. Imagine que duas instituições usam modelos de previsão para fazer ordens de compra e venda de ações. Se um dos modelos começa a influenciar de forma significativa os movimentos do mercado, isso muda o contexto que o outro modelo observa — e vice-versa. **O modelo deixa de observar o mundo real e passa a observar o reflexo das decisões de outros modelos**.
+
+Esses loops ocultos são especialmente perigosos porque **não estão representados explicitamente na arquitetura do sistema**. Eles emergem da interação entre componentes autônomos, muitas vezes mantidos por equipes distintas, e podem criar instabilidade, reforço de vieses e comportamento imprevisível em escala.
+
+::: callout-note
+## **Riscos e dificuldade de avaliação**
+
+O maior problema dos loops de feedback é que eles **corrompem a base estatística do aprendizado supervisionado**, que parte da suposição de que os dados representam, de forma independente, a realidade que se quer modelar. Quando o modelo passa a aprender com seus próprios efeitos no ambiente, essa suposição deixa de ser válida. Com isso, métricas de avaliação perdem sua confiabilidade, retreinamentos automáticos podem amplificar erros, e versões futuras do modelo passam a se comparar com uma baseline enviesada — ou seja, **o progresso aparente pode ser ilusório**.
+
+Além disso, loops de feedback tendem a se acumular lentamente. Mudanças sutis no comportamento dos usuários ou nos padrões de dados podem não ser notadas de imediato, mas ao longo de semanas ou meses, causam derivações significativas e degradam a performance global do sistema.
+
+**Estratégias de mitigação**
+
+Apesar da complexidade, existem formas de mitigar os efeitos de loops de feedback: - **Introdução controlada de aleatoriedade**, especialmente em sistemas de recomendação ou ranqueamento. - **Criação de grupos de controle**, com dados não afetados pelas decisões do modelo, para fins de comparação e validação.
+
+- **Monitoramento contínuo de distribuição de dados**, especialmente nas entradas do modelo. 
+- **Uso de logging contextualizado**, registrando não apenas os dados observados, mas também as condições em que foram coletados (por exemplo, se o usuário viu o conteúdo por sugestão ou busca direta). 
+- **Simulações offline com dados históricos não influenciados**, para isolar o impacto da decisão do modelo sobre a coleta.
+
+Além disso, em ambientes críticos, vale considerar o uso de **modelos robustos à retroalimentação**, como aqueles que aplicam aprendizado por reforço com controle explícito de exploração, ou mesmo abordagens causais que busquem identificar relações de causa e efeito reais, e não apenas correlações observadas.
+
+:::
+
+## 5. *Antipatterns* de Sistemas de ML
+
+> Antipadrões em sistemas de aprendizado de máquina são práticas recorrentes que, embora funcionais no curto prazo, levam ao acúmulo de complexidade estrutural — como na configuração — comprometendo a reprodutibilidade, a manutenção e a escalabilidade dos modelos ao longo do tempo.
+
+Em sistemas de aprendizado de máquina, boa parte da atenção recai sobre os dados, os modelos e as métricas de performance. No entanto, existe uma camada frequentemente negligenciada — mas absolutamente crítica — que pode se tornar uma fonte significativa de dívida técnica: **a configuração do sistema** (Figura 1).
+
+A **dívida de configuração** refere-se ao acúmulo de complexidade, fragilidade e ambiguidade nos mecanismos de parametrização e controle de comportamento dos sistemas de ML. Isso inclui, por exemplo, variáveis de ambiente, parâmetros de execução, arquivos de configuração, flags de treinamento e deploy, chaves de ativação de recursos, entre outros. Em sistemas tradicionais de software, a gestão de configuração já é desafiadora. Mas em ML, onde o comportamento do sistema depende não apenas do código, mas de uma interação sutil entre dados, features, hiperparâmetros e contexto de inferência, esse desafio se amplifica significativamente.
+
+Um dos principais riscos da dívida de configuração está na **proliferação de parâmetros frágeis e mal documentados**, que afetam diretamente a lógica de predição, mas cujo significado, escopo ou impacto são pouco compreendidos. À medida que o sistema evolui, novas opções são adicionadas — muitas vezes para dar suporte a experimentos temporários, ajustes finos ou exceções específicas. No entanto, raramente há um esforço sistemático de remoção, unificação ou racionalização dessas opções. O resultado é um ambiente com **caminhos de execução altamente condicionais**, difíceis de testar e quase impossíveis de reproduzir com precisão.
+
+Além disso, **a separação entre configuração e código nem sempre é clara**. Em muitos casos, flags de configuração controlam aspectos fundamentais do comportamento do sistema, como quais features serão usadas, qual modelo será carregado, qual função de perda será otimizada ou qual pipeline de pré-processamento será executado. Essa lógica condicional transforma o sistema em uma **família de sistemas possíveis**, cuja combinação de configurações define o comportamento real — mas que raramente é testada ou validada de forma exaustiva.
+
+Esse cenário se agrava quando diferentes ambientes (desenvolvimento, staging, produção) possuem **configurações parcialmente divergentes**, ou quando scripts de reentreinamento e deploy são desacoplados do controle central de configuração. Nesses casos, bugs podem surgir não porque o modelo ou os dados mudaram, mas porque **uma flag foi alterada em um contexto, mas esquecida em outro** — quebrando a consistência e tornando a análise de falhas um processo demorado e incerto.
+
+Outro problema recorrente é a **configuração não versionada**. Sem um sistema que registre qual conjunto de parâmetros foi usado em cada experimento ou deploy, torna-se impossível reproduzir os resultados ou entender por que determinado comportamento ocorreu. Em projetos maduros de ML, o versionamento da configuração é tão importante quanto o versionamento do modelo e dos dados. Ferramentas como MLflow, Hydra, Sacred ou sistemas de tracking internos são cada vez mais adotadas para lidar com esse desafio.
+
+Por fim, há o aspecto humano: com configurações complexas e dispersas, **o conhecimento do sistema passa a depender fortemente da memória dos engenheiros que o construíram**. Isso cria um risco organizacional importante, já que a saída de um colaborador pode significar a perda do entendimento sobre interações críticas entre parâmetros e comportamentos. Além disso, a curva de aprendizado para novos membros da equipe aumenta consideravelmente, comprometendo a escalabilidade do time e a continuidade do projeto.
+
+### 5.1 Código de cola
+
+> O **código de cola** é uma das formas mais insidiosas de dívida técnica em sistemas de aprendizado de máquina. Ele surge de maneira orgânica, como uma tentativa de fazer componentes se conectarem, mas cresce sem controle até se tornar **a maior parte da complexidade real do sistema**. Reconhecê-lo, gerenciá-lo e mitigá-lo com boas práticas de engenharia — como abstrações claras, padrões internos e encapsulamento de dependências — é essencial para evitar que o sistema se torne rígido, ineficiente e impossível de evoluir. Em última instância, lidar com código de cola não é apenas uma questão de estilo ou organização — é um passo fundamental para construir **sistemas de ML sustentáveis, escaláveis e verdadeiramente inteligentes**.
+
+Em sistemas de aprendizado de máquina, muito da complexidade prática não está concentrada no modelo em si, mas sim na quantidade de infraestrutura necessária para que esse modelo funcione corretamente dentro de um sistema maior. Uma das fontes mais comuns — e frequentemente invisíveis — dessa complexidade é o chamado *código de cola*. Esse termo se refere ao **conjunto de scripts, funções auxiliares e lógicas de integração escritas com o único propósito de fazer com que diferentes partes de um sistema se comuniquem: transformar formatos de entrada, adaptar chamadas de API, empacotar ou desempacotar previsões, contornar limitações de bibliotecas externas ou simplesmente alinhar interfaces entre componentes que não foram projetados para trabalhar juntos**.
+
+Embora esse código não contenha lógica de aprendizado, ele acaba sustentando o sistema inteiro. Em muitos projetos, o código responsável por treinar ou inferir com um modelo representa uma fração minúscula — cerca de 5% — enquanto os outros 95% se referem a esse tipo de código de suporte. O problema é que esse código se acumula de forma incremental e raramente recebe atenção formal. Ele nasce como um script auxiliar para testar uma biblioteca, depois se transforma em um pipeline com múltiplos tratamentos ad hoc, até que o sistema inteiro passa a depender de pequenos fragmentos de código que ninguém mais entende completamente. E como esses fragmentos estão espalhados por notebooks, jobs agendados, wrappers customizados e deploys improvisados, o sistema se torna rígido, difícil de testar, e cada vez mais caro de modificar.
+
+Considere, por exemplo, um sistema de recomendação construído sobre o `XGBoost`. No início, um cientista de dados desenvolve o modelo em um notebook, com dados localmente preparados. Para operacionalizar o modelo, a equipe cria scripts para transformar os dados do banco relacional para o formato `DMatrix`, lida com serialização dos arquivos `.model`, implementa validação manual para lidar com entradas faltantes, e escreve um serviço de inferência que traduz os resultados de volta para IDs de produtos. Quando se decide testar o mesmo modelo usando `LightGBM`, descobre-se que os formatos mudam, os parâmetros são diferentes, o comportamento da serialização não é compatível, e os scripts escritos anteriormente são todos dependentes de chamadas específicas ao `XGBoost`. Ou seja, não é o modelo que impede a troca: é o código de cola que cresceu em volta dele.
+
+Esse padrão se repete em sistemas que utilizam APIs externas, como as oferecidas por plataformas de nuvem (AWS Sagemaker, Vertex AI, etc.). O modelo pode ser treinado localmente, mas para produção, é necessário um wrapper que envie requisições HTTP com autenticação, serialização em JSON, adaptação de tempo de timeout, logging customizado, e transformações nos dados para se adequarem à estrutura esperada pela API. Esse wrapper se torna parte da lógica central, mas carrega toda a fragilidade do código não padronizado: mudanças na API, alteração de headers, limites de requisições ou atualizações do SDK podem quebrar o sistema — e a equipe frequentemente descobre isso apenas em produção.
+
+Com o tempo, o acoplamento entre o sistema e os detalhes específicos da biblioteca ou serviço se torna tão forte que **testar uma alternativa passa a ser inviável**, mesmo que ela traga ganhos substanciais. Além disso, a presença massiva de código de cola dificulta a adoção de práticas como reuso, testes unitários, modularização e documentação. Cada novo engenheiro que entra no time precisa aprender não apenas como o modelo funciona, mas também como decifrar as pontes improvisadas que o conectam ao restante da infraestrutura.
+
+Uma forma eficaz de mitigar esse acoplamento é construir uma camada de abstração interna que encapsule as bibliotecas externas em APIs padronizadas. Em vez de o sistema inteiro depender diretamente de chamadas específicas do `XGBoost` ou do `Keras`, a equipe define interfaces genéricas como `Model.train()`, `Model.predict()` e `Model.save()`. Cada backend — seja um modelo local, uma API de nuvem ou um modelo embarcado — implementa essa interface por meio de adaptadores. Com isso, o restante do sistema pode interagir com qualquer modelo de forma unificada. Essa abordagem é amplamente usada em frameworks maduros como `sklearn`, mas também pode (e deve) ser reproduzida internamente em arquiteturas corporativas.
+
+Por exemplo, em projetos que envolvem múltiplos algoritmos (árvores, redes neurais, regressões lineares), a equipe pode construir uma interface `ModelAPI` que define um contrato mínimo para qualquer modelo ser plugável no pipeline. Quando se decide trocar um modelo baseado em LightGBM por um de rede neural treinado com `PyTorch`, nenhuma modificação estrutural é necessária: apenas se muda a implementação interna da interface. Isso reduz a quantidade de cola específica e transforma o sistema em algo modular, testável e mais sustentável.
+
+Portanto, o código de cola é uma forma sutil — mas complexa — de dívida técnica. Ele cresce com decisões locais, fragmentos de código úteis no curto prazo, e integrações feitas “só para funcionar”. Mas à medida que se acumula, ele **prende o sistema às escolhas do passado**, tornando qualquer tentativa de inovação um processo doloroso. Para construir sistemas de machine learning potente e escaláveis, será necessário reconhecer o código de cola como parte da arquitetura, aplicar abstrações intencionais e buscar sempre isolar dependências externas em camadas bem definidas.
+
+### 5.2 Selva de pipelines
+
+> Pipeline jungles surgem quando a preparação de dados e o fluxo de processamento em sistemas de ML evoluem de forma desorganizada e ad hoc, resultando em pipelines frágeis, difíceis de entender, manter ou reproduzir — um terreno fértil para dívida técnica silenciosa.
+
+À medida que sistemas de aprendizado de máquina evoluem, é comum que a preparação de dados — uma etapa crítica para qualquer pipeline — se torne gradualmente mais complexa e difícil de manter. O que começa com um script simples para ler dados e aplicar algumas transformações, com o tempo pode se transformar em um emaranhado de extrações, junções, tratamentos e filtragens, muitas vezes intercalados por arquivos intermediários salvos em diretórios temporários, jobs agendados por cron, planilhas manuais e integrações frágeis com APIs externas. Esse cenário recebe, com razão, o nome de **pipeline jungle**: uma selva de passos interdependentes, acoplamentos implícitos e lógica fragmentada, onde o menor erro pode quebrar todo o fluxo — e onde ninguém, além da pessoa que originalmente escreveu os scripts, consegue navegar com segurança.
+
+Esse tipo de selva de pipeline é uma forma especializada — e avançada — de *código de cola*. Ela se forma quase sempre de maneira orgânica, quando novos sinais são incorporados ao sistema de forma incremental, à medida que hipóteses são testadas, novas fontes de dados se tornam disponíveis e o escopo do projeto se amplia. Inicialmente, a evolução parece natural e até produtiva: o sistema passa a capturar cada vez mais aspectos do problema. Mas, sem um desenho arquitetônico claro e sem governança de dados, o acúmulo de pequenas adaptações leva a um ponto em que **a estrutura do pipeline deixa de ser compreensível como um todo**.
+
+É comum que em projetos com pipeline jungles surjam situações como: múltiplos scripts fazendo joins entre tabelas com schemas levemente diferentes; arquivos intermediários gerados em formatos variados (CSV, JSON, Parquet) espalhados por diretórios locais e buckets na nuvem; scripts que dependem de ordem específica de execução e falham silenciosamente se pulados; e duplicação de lógica de pré-processamento em notebooks distintos. A detecção de erros se torna difícil, pois não há testes unitários entre etapas, e qualquer validação exige rodar o fluxo completo — o que costuma ser caro, demorado e altamente suscetível a falhas em cascata.
+
+Por exemplo, imagine um sistema que utiliza dados de transações bancárias, registros de atendimento em call center e scores de risco gerados por modelos auxiliares. Cada nova fonte de dados exige scripts para ingestão, transformação e alinhamento temporal. Quando alguém propõe adicionar um novo feature de sazonalidade, percebe-se que as datas foram convertidas para três timezones diferentes em etapas distintas, e que a fonte original de horários nem está mais disponível. A tentativa de “consertar” esse detalhe adiciona mais uma camada de processamento condicional — e a selva se adensa.
+
+Esse tipo de pipeline não apenas é difícil de manter, mas também **bloqueia a inovação**. Qualquer tentativa de testar uma nova feature, mudar a origem de um dado ou alterar a estratégia de amostragem passa a exigir esforço desproporcional, pois o sistema inteiro precisa ser revalidado. O custo de teste aumenta, o risco de regressão cresce e a confiança no sistema diminui. Em ambientes de produção, pipeline jungles são terreno fértil para erros silenciosos, vieses não rastreados e métricas que deixam de refletir a realidade.
+
+Uma forma de evitar essa situação é encarar a preparação de dados e a extração de features de maneira holística. Isso significa pensar no pipeline como uma infraestrutura crítica desde o início, com padrões claros, versionamento, modularização e rastreabilidade entre etapas. Em muitos casos, adotar essa abordagem exige abandonar completamente a pipeline legada e reconstruir tudo do zero — um investimento alto, mas que pode resultar em **redução substancial de custo operacional e aceleração real da inovação**. Ao repensar o fluxo como um sistema coerente, e não como uma sequência de gambiarras, torna-se possível criar pipelines testáveis, confiáveis e reprodutíveis.
+
+Além disso, o texto alerta para uma das causas estruturais do surgimento dessas selvas: a separação excessiva entre os papéis de pesquisa e engenharia. Quando cientistas de dados trabalham isolados, testando modelos com dados preparados manualmente, e depois transferem o “modelo final” para engenheiros que devem colocá-lo em produção, perde-se a oportunidade de alinhar premissas, padronizar processos e evitar retrabalho. Essa fragmentação de responsabilidades cria espaços onde a complexidade cresce sem supervisão e onde a cola entre etapas se torna o verdadeiro motor do sistema. Em contraste, times híbridos — onde engenheiros e pesquisadores trabalham juntos, compartilham código e responsabilidades — tendem a produzir pipelines mais limpas, melhor documentadas e mais resilientes.
+
+Portanto, **pipeline jungles não são apenas um problema técnico**. Elas são um reflexo de escolhas organizacionais, culturais e arquiteturais. Reconhecer sua presença e atuar de forma proativa na sua eliminação é fundamental para garantir que a inteligência do sistema esteja no modelo — e não em como os dados mal preparados conseguem chegar até ele.
+
+### 5.3 Caminhos de código experimental mortos
+
+> *Dead experimental codepaths* são caminhos de execução criados para testes ou experimentos temporários que permanecem no código sem propósito claro, aumentando a complexidade ciclomática, dificultando testes e abrindo espaço para falhas silenciosas — uma forma sutil, porém perigosa, de dívida técnica.
+
+
+À medida que sistemas de aprendizado de máquina crescem e se tornam mais complexos, especialmente quando cercados por código de cola e pipelines desorganizados, torna-se cada vez mais comum — e até tentador — **introduzir ramificações condicionais no código de produção** para testar novas ideias, parâmetros ou abordagens algorítmicas. Esse comportamento, geralmente bem-intencionado, leva à criação de **caminhos de código experimental**, ou seja, blocos de lógica que só são executados sob certas condições específicas, muitas vezes controladas por flags ou parâmetros pouco documentados.
+
+A lógica por trás dessa prática é compreensível: ao invés de construir uma nova infraestrutura, criar uma nova versão ou isolar a experimentação em um ambiente separado, é muito mais rápido **adicionar um `if`** ou uma flag que ative uma alternativa experimental diretamente no código que já está em produção. Isso permite testar novas funções de perda, substituições pontuais de modelo, transformações alternativas de features ou ajustes em estratégias de inferência com mínimo esforço. Para o experimento pontual, essa abordagem parece ideal: econômica, prática e de baixo impacto.
+
+O problema começa quando **esses caminhos de código experimentais não são removidos após o teste**. Em vez de serem descartados ou isolados após a validação de sua utilidade, eles permanecem no sistema, muitas vezes esquecidos. E com o tempo, **novos experimentos são adicionados sobre os antigos**, criando um acúmulo invisível de lógicas condicionais que só funcionam em combinações específicas, raramente testadas. Esse cenário leva a um aumento expressivo da **complexidade ciclomática** — uma métrica que mede o número de caminhos de execução possíveis em um sistema. Quanto mais caminhos, maior o risco de interações não previstas, e mais difícil se torna validar e garantir o comportamento correto do sistema como um todo.
+
+O efeito colateral dessa prática é a criação de **dívida técnica silenciosa**: uma estrutura que funciona, mas que se torna progressivamente mais frágil e difícil de entender. Pequenas alterações começam a ter efeitos colaterais imprevisíveis. Bugs surgem em combinações de flags que ninguém mais lembra de testar. E o esforço para dar manutenção no código aumenta exponencialmente, pois é preciso considerar ramificações que, na prática, já não fazem mais sentido. Isso é particularmente comum em projetos de ML com longos ciclos de vida, nos quais muitos engenheiros contribuíram em momentos diferentes, deixando rastros de experimentos inacabados ou abandonados no código-base.
+
+Um caso extremo e real desse tipo de problema foi o colapso do sistema da **Knight Capital**, uma empresa de serviços financeiros que, em 2012, perdeu US\$ 465 milhões em apenas 45 minutos. A falha foi atribuída à ativação acidental de código legado — um bloco experimental antigo que ainda estava presente na base de produção, mas que havia sido desativado há anos. Durante uma atualização de rotina, esse caminho foi erroneamente reativado em parte dos servidores, desencadeando um comportamento inesperado e catastrófico no sistema de negociação automatizada.
+
+Esse exemplo ilustra de forma dramática os perigos de deixar **caminhos de código experimentais mortos** em sistemas críticos. Assim como no desenvolvimento tradicional se recomenda revisar periodicamente flags obsoletas (*dead flags*), **sistemas de ML também precisam de rotinas de limpeza, refatoração e auditoria técnica constantes**. Muitas vezes, apenas uma fração dos caminhos disponíveis no código está realmente em uso. O restante pode ter sido testado uma vez, não validado, e simplesmente deixado para trás por falta de tempo ou clareza de responsabilidade.
+
+Prevenir essa forma de dívida técnica exige disciplina e boas práticas de engenharia. Entre elas, destaca-se a importância de **documentar experimentos**, **isolar testes temporários em ambientes separados**, e **criar processos regulares de revisão de código e poda de ramificações não utilizadas**. Além disso, o uso de ferramentas de rastreamento de experimentos (como MLflow, Weights & Biases ou sistemas internos de experimentação) pode ajudar a separar o que está em produção do que está em teste, evitando que o experimental vaze para o código estável.
+
+Em última instância, **a experimentação é parte essencial da inovação em machine learning**. Mas quando ela se mistura de forma desorganizada com o código de produção, os custos a longo prazo podem superar os benefícios de curto prazo. Construir sistemas robustos não significa evitar a experimentação, mas sim **estruturar o processo de modo que o novo possa ser testado, avaliado e, quando necessário, descartado com segurança**.
+
+::: callout-important 
+
+## Gerenciar código morto
+
+Experimentos implementados como ramificações condicionais no código de produção podem parecer práticos no curto prazo, mas acumulam complexidade e aumentam o risco de falhas silenciosas.
+
+**Boas práticas para mitigar essa dívida técnica:**
+
+-   **Documente todos os experimentos**: registre o objetivo, a data, a flag usada e o responsável.
+-  **Evite misturar experimentação e produção**: isole experimentos em pipelines, branches ou ambientes separados.
+-   **Use ferramentas de tracking** (ex: MLflow, W&B, Neptune): mantenha a lógica experimental fora do código principal.
+-   **Revisite periodicamente ramificações condicionais**: remova ou refatore trechos que não estão mais em uso.
+-   **Aplique testes automatizados** para cobrir os caminhos de código que permanecerem ativos.
+-   **Adote estratégias de *feature toggling* controlado**: com gerenciamento centralizado de flags e versões.
+
+**Lembre-se**: o código de produção deve ser simples, confiável e previsível. A experimentação deve ser incentivada — mas sempre com estrutura, rastreabilidade e controle.
+:::
+
+### 5.4 Dívida de abstração
+
+> Dívida de abstração em aprendizado de máquina ocorre quando faltam interfaces conceituais claras para representar modelos, predições ou pipelines, forçando equipes a improvisar soluções locais que dificultam reuso, interoperabilidade e evolução sustentável dos sistemas.
+
+Em engenharia de software, boas abstrações são a base de sistemas robustos, reutilizáveis e sustentáveis. Elas permitem que componentes complexos sejam tratados de forma simplificada e previsível, favorecendo a modularidade, a testabilidade e a escalabilidade do sistema. No entanto, quando olhamos para o ecossistema de *machine learning*, especialmente em ambientes de produção, o que encontramos é uma **lacuna profunda na definição de abstrações fortes e consistentes**.
+
+A **dívida de abstração** em ML surge justamente da **ausência de interfaces conceituais claras para elementos fundamentais** do fluxo de trabalho, como o que exatamente constitui um “modelo”, o que representa uma “predição”, ou como se define e padroniza um “fluxo de dados” de forma que seja interoperável entre ferramentas, linguagens e plataformas. Ao contrário de áreas como bancos de dados — que encontraram, no modelo relacional, uma abstração universal e de enorme sucesso — o aprendizado de máquina ainda luta para estabelecer fundamentos sólidos que transcendam contextos específicos.
+
+Essa ausência de abstrações leva a uma fragmentação generalizada. Cada framework define seus próprios padrões e interfaces. Um “modelo” no `scikit-learn` é um objeto com métodos `fit` e `predict`, enquanto em `TensorFlow`, é uma instância que precisa de sessões ou gráficos. Em ambientes distribuídos, a diversidade é ainda maior: há dezenas de bibliotecas que implementam seus próprios conceitos de servidores de parâmetros, de estratégias de sincronização, ou de formas de partição de dados. Isso torna **a interoperabilidade entre ferramentas difícil, o reuso de código limitado e a experimentação mais custosa**.
+
+Como consequência, engenheiros e cientistas de dados muitas vezes precisam construir suas próprias abstrações locais — definindo estruturas internas para lidar com modelos, metadados, entradas, inferência e deploy — e adaptando essas estruturas para cada nova biblioteca ou contexto de execução. O sistema final se torna altamente acoplado à forma como essas abstrações foram improvisadas, acumulando **dívida estrutural** que será difícil de resolver no futuro.
+
+Essa dificuldade em estabelecer padrões também afeta o aprendizado distribuído. O uso de **MapReduce** em sistemas de ML, por exemplo, se popularizou não porque fosse ideal para algoritmos iterativos — de fato, ele não é — mas por falta de alternativas viáveis e bem definidas. Em contrapartida, a **abstração de servidor de parâmetros** surgiu como uma proposta mais adequada para lidar com sincronização de pesos em algoritmos distribuídos, especialmente em redes neurais profundas. Contudo, até mesmo essa ideia, que parecia promissora, acabou sendo implementada de maneiras distintas por diferentes frameworks (`MXNet`, `TensorFlow`, `Petuum`, etc.), resultando em **especificações concorrentes e pouca portabilidade**.
+
+A ausência de uma linguagem comum para descrever fluxos de dados e processos de ML afeta até mesmo o trabalho colaborativo. Quando um engenheiro se refere a uma “feature pipeline” ou a um “modelo versionado”, essas expressões podem significar coisas completamente diferentes dependendo do time, da ferramenta ou da fase do ciclo de vida. Essa falta de consenso leva à duplicação de esforços, inconsistências na documentação e dificuldades na automação e reprodutibilidade.
+
+Assim, a dívida de abstração não é apenas um problema técnico — ela é um **sintoma de imaturidade da própria disciplina**. Enquanto outras áreas da computação consolidaram suas fundações ao longo das décadas, o campo de ML, embora avançado em pesquisa e inovação algorítmica, ainda carece de um alicerce arquitetônico sólido. Isso se reflete em sistemas frágeis, acoplados a ferramentas específicas, e que exigem esforço constante para adaptar, integrar e manter coesão entre suas partes.
+
+Construir essas abstrações é um passo essencial para o futuro da engenharia de ML. Iniciativas como MLflow, TFX, KubeFlow, Metaflow, Feast e outros tentam padronizar partes do ciclo de vida — como tracking de experimentos, pipelines, serving e feature stores —, mas o campo ainda está longe de um consenso universal. Até lá, engenheiros continuarão carregando o peso de reinventar abstrações em cada novo projeto, e esse esforço contínuo, embora invisível, é uma das formas mais silenciosas — e profundas — de dívida técnica em machine learning.
+
+::: callout-note
+
+## **Evolução das Abstrações em ML (2015 → 2025)**
+
+Desde a publicação do paper *Hidden Technical Debt in ML Systems*, o ecossistema evoluiu significativamente, com o surgimento de ferramentas e boas práticas que reduziram a dívida de abstração:
+
+✅ **Frameworks completos de MLOps**: MLflow, Metaflow, KubeFlow, ZenML e Vertex AI estruturam pipelines, tracking, deploy e versionamento.
+
+✅ **Abstrações padronizadas para modelos**: interfaces unificadas (`fit`, `predict`, `save`) com scikit-learn, PyTorch Lightning e Hugging Face facilitam integração e portabilidade.
+
+✅ **Feature stores modernos**: como Feast, Tecton e Databricks FS, oferecem versionamento, rastreabilidade e separação clara entre dados e modelo.
+
+✅ **Pipelines como código com estrutura modular**: Kedro se destaca ao oferecer uma arquitetura clara e reprodutível para projetos de dados e ML, com separação entre lógica, dados, parâmetros e estrutura padronizada de pipelines.
+
+✅ **Infraestrutura como abstração**: práticas como versionamento de tudo (dados, modelos, pipelines, configs) e workflows declarativos trazem reprodutibilidade, manutenção e escalabilidade.
+
+💡 O ecossistema de ML ainda é diverso, mas hoje já é possível construir soluções sustentáveis sobre bases bem definidas — evitando a reinvenção constante de abstrações frágeis.
+:::
+
+
+### 5.5 Common Smells
+
+> *Common smells* são sinais sutis — mas recorrentes — de que um sistema de aprendizado de máquina está acumulando dívida técnica, manifestando-se como fragilidade estrutural, acoplamento excessivo, dependências obscuras ou práticas inconsistentes que comprometem a manutenção e a evolução do sistema.
+
+À medida que sistemas de machine learning amadurecem, a complexidade envolvida em sua manutenção e evolução cresce inevitavelmente. Mesmo que um sistema esteja funcionando corretamente do ponto de vista funcional — entregando predições, mantendo bons scores em métricas e passando pelos testes automatizados — ele pode estar, silenciosamente, acumulando **dívida técnica significativa**. Essa dívida não se revela necessariamente como um erro, mas como um **“cheiro” de código ou arquitetura ruim**, ou seja, **sinais sutis de que algo está errado ou mal estruturado**, mesmo que ainda não tenha quebrado.
+
+Esses *smells* não são exclusivos de ML, mas assumem formas específicas nesse contexto. Um dos primeiros sinais é quando o modelo parece estar funcionando, mas **pequenas mudanças ou ajustes o quebram com frequência** — alterações mínimas nos dados de entrada, pequenas atualizações de bibliotecas ou mudanças de configuração disparam bugs inesperados ou causam degradação de performance. Isso sugere um sistema frágil, com componentes acoplados de forma excessiva ou com lógica não suficientemente isolada.
+
+Outro cheiro comum é o **“modelo Frankenstein”**, onde pedaços de modelos, regras manuais, heurísticas antigas e novos experimentos coexistem num só pipeline. O código começa a parecer uma colcha de retalhos: cada parte foi adicionada para resolver um problema local, sem pensar no todo. A consequência é um sistema opaco, difícil de testar, e onde cada nova feature ou correção traz efeitos colaterais imprevisíveis.
+
+A **dependência excessiva de arquivos intermediários não controlados** também é um sinal clássico. Em vez de um pipeline bem orquestrado, com controle de versões e reprocessamento automático, os dados passam por diversas transformações manuais, salvos em arquivos temporários em diretórios locais ou buckets aleatórios. Isso dificulta a reprodutibilidade, abre espaço para erros silenciosos e torna o sistema fortemente dependente de conhecimento tácito.
+
+Além disso, há o sintoma da **desatualização silenciosa**, quando parte do sistema muda (por exemplo, o pré-processamento ou o banco de dados de origem), mas outras partes continuam assumindo a versão anterior. Isso pode acontecer por ausência de versionamento de dados, por falta de testes de integração ou simplesmente por desorganização estrutural. O resultado é um sistema que aparenta funcionar, mas **não está mais produzindo resultados consistentes com o que foi originalmente validado**.
+
+Finalmente, talvez o cheiro mais comum — e o mais preocupante — seja o da **falta de clareza sobre a fronteira entre o modelo e o sistema**. Em muitos projetos, a lógica do modelo é tratada como uma caixa-preta mágica, enquanto a equipe de engenharia lida com os dados e com o deploy. Essa divisão artificial — entre “pesquisa” e “produção” — cria fricções, duplicação de esforços e uma arquitetura na qual ninguém tem uma visão completa. O modelo aprende com dados que foram tratados manualmente em notebooks e, quando entra em produção, não consegue mais replicar aquele ambiente, produzindo resultados inconsistentes.
+
+Esses *smells*, ainda que sutis, são **sinais claros de que a base do sistema precisa de atenção estrutural**. Eles não significam que o modelo está errado, mas que o ambiente que o suporta é frágil. E como em qualquer sistema de engenharia, **ignorar esses sinais tende a tornar futuras modificações mais caras, mais lentas e mais arriscadas**.
+
+Combater esses "cheiros" exige disciplina, revisão periódica de código e arquitetura, uso de ferramentas que promovem modularidade, versionamento e rastreabilidade — além de um alinhamento mais profundo entre quem pesquisa e quem produz. A inteligência de um sistema de ML não está apenas no modelo, mas **em tudo que o cerca — e nos sinais que esse entorno emite quando começa a se degradar**.
+
+::: callout-note
+
+## 🧪 Common Smells em Sistemas de Machine Learning
+
+Sinais sutis — mas perigosos — de que seu sistema de ML pode estar acumulando dívida técnica:
+
+- **Modelo frágil a pequenas mudanças**: alterações mínimas em dados, configs ou libs quebram o sistema com frequência.
+- **Caminhos de código mortos**: flags experimentais esquecidas, ramificações antigas ou lógica condicional mal mantida.
+- **Modelo Frankenstein**: mistura de partes desconectadas — modelos antigos, heurísticas manuais, regras customizadas.
+- **Pipeline desestruturado**: acúmulo de scripts, joins e arquivos intermediários sem orquestração clara (pipeline jungle).
+- **Dependência de arquivos temporários soltos**: dados transformados em diretórios locais, sem rastreabilidade ou versionamento.
+- **Reprodução inconsistente**: modelos treinados em ambientes manuais, com dados tratados fora do pipeline oficial.
+- **Separação artificial entre pesquisa e engenharia**: silos entre quem desenvolve o modelo e quem o coloca em produção.
+- **Falta de visibilidade e rastreamento**: ausência de logs, versionamento, tracking de experimentos e origem dos dados.
+
+⚠️ Estes cheiros não quebram o sistema de imediato — mas tornam manutenção, inovação e confiabilidade cada vez mais difíceis.
+:::
+
+## 6. Dívida de configuração
+
+> Dívida de configuração ocorre quando parâmetros, flags e arquivos de controle se acumulam de forma desorganizada e mal documentada, tornando o comportamento do sistema difícil de entender, reproduzir e manter.
+
+Entre as diversas formas de dívida técnica que assombram sistemas de machine learning, a **dívida de configuração** é uma das mais silenciosas e traiçoeiras. Ela não se manifesta diretamente na lógica do modelo, nos dados ou no desempenho — mas sim na forma como o comportamento do sistema é parametrizado, ajustado e controlado. À primeira vista, adicionar parâmetros configuráveis parece uma prática saudável: ela permite testar variações, adaptar o sistema a diferentes contextos e facilitar a experimentação. No entanto, quando mal gerida, essa flexibilidade **se transforma em um labirinto de opções pouco documentadas, frágeis e altamente interdependentes**.
+
+No contexto de ML, a configuração abrange tudo: hiperparâmetros de treino, escolhas de algoritmos, seleção de features, formatos de entrada, caminhos de dados, thresholds de corte, políticas de deploy e até flags de debug. Como o comportamento do modelo depende fortemente dessas variáveis, **a configuração acaba se tornando parte da lógica funcional do sistema** — embora frequentemente fique escondida em arquivos `.yaml`, `config.json`, variáveis de ambiente ou mesmo hardcoded em scripts.
+
+O problema se agrava quando **essas configurações se proliferam descontroladamente**, muitas vezes como resultado de experimentos pontuais ou exceções operacionais. Cada novo parâmetro introduz um ponto adicional de complexidade ciclomática — e quanto mais caminhos possíveis de execução, mais difícil se torna prever, testar e validar o comportamento do sistema como um todo. Sistemas que crescem dessa forma exigem não apenas mais esforço para manter compatibilidade com versões antigas, mas também se tornam muito mais suscetíveis a regressões inesperadas. Pequenas alterações em um parâmetro podem ter efeitos colaterais em outras partes do pipeline, especialmente quando há lógica condicional baseada em múltiplas flags.
+
+Essa fragmentação torna **a reprodutibilidade extremamente frágil**. Dois experimentos com o "mesmo modelo" podem produzir resultados distintos simplesmente porque foram executados com configurações ligeiramente diferentes — e, sem versionamento centralizado, pode ser impossível identificar o motivo. Muitas equipes descobrem esse problema tarde demais, quando tentam refazer uma entrega antiga ou investigar a causa de uma mudança de comportamento em produção.
+
+Além disso, quando o controle de configuração é disperso — com parâmetros espalhados por vários arquivos, notebooks e scripts — a entrada de novos membros na equipe se torna mais difícil, a manutenção mais lenta, e o risco de erro humano se multiplica. Nesse cenário, **o conhecimento do sistema passa a residir na cabeça de quem o construiu**, e qualquer tentativa de escalar ou industrializar a solução fica comprometida.
+
+Outro aspecto crítico, apontado por Sculley et al. (2015), é a **sensibilidade da configuração a mudanças no ambiente externo**. Thresholds fixos, por exemplo, tornam-se rapidamente obsoletos à medida que os dados evoluem, comprometendo o desempenho do sistema. **Essa rigidez frente à dinâmica do mundo real — conhecida como *drift operacional* — agrava a dívida de configuração, pois exige atualizações manuais constantes, propensas a falhas e difíceis de escalar**.
+
+Para lidar com essa dívida, é essencial **tratar configuração como parte formal da arquitetura do sistema**. Isso inclui centralizar os parâmetros em um repositório versionado, padronizar a estrutura dos arquivos de configuração, documentar claramente o impacto de cada variável e criar mecanismos para validação automática dos valores. Ferramentas como **Hydra**, **OmegaConf**, **MLflow**, **Weights & Biases**, e estruturas como **Kedro** e **Metaflow** já incorporam práticas maduras de gerenciamento de configuração — separando de forma clara lógica de negócio, dados e parametrização.
+
+Além disso, práticas como **tracking automático de configurações em experimentos**, **uso de schemas validados**, e **infraestrutura como código (IaC)** para ambientes, ajudam a garantir que o mesmo experimento pode ser reproduzido em diferentes contextos, com total rastreabilidade. Em sistemas críticos, vale ainda considerar o uso de **respostas automatizadas a desvios de configuração**, como validação contínua de parâmetros em produção, *rollbacks* automáticos e monitoramento com alertas inteligentes.
+
+## 7. Lidando com mudanças no mundo real
+
+> Sistemas de machine learning, por natureza, não operam isoladamente. Eles interagem diretamente com o mundo real — seja por meio de decisões automatizadas, recomendações, classificações, diagnósticos ou predições. No entanto, o mundo real **não é uma constante estática**. Ele é dinâmico, volátil e imprevisível. Essa instabilidade contínua representa uma fonte crítica de **dívida técnica sistêmica**, pois exige que o sistema seja capaz não apenas de tolerar variações, mas de **detectar, interpretar e reagir a mudanças contextuais em tempo real**.
+
+Ao contrário dos sistemas tradicionais, em que a lógica é explicitamente codificada, **os sistemas de ML encapsulam essa lógica em distribuições estatísticas aprendidas dos dados**. Isso significa que qualquer mudança nos padrões de entrada, na semântica de variáveis ou nas condições de uso pode comprometer silenciosamente o funcionamento do modelo — **sem que uma única linha de código tenha sido alterada**. Em outras palavras, **o mundo muda, mas o modelo permanece preso a pressupostos que já não valem**.
+
+Um dos sintomas mais comuns dessa desconexão é a obsolescência de **thresholds manuais**. Em tarefas de classificação, é comum definir limites fixos para decisões binárias — como aprovar ou recusar um crédito, marcar um e-mail como spam, ou exibir um anúncio. Esses limiares costumam ser definidos com base em dados históricos. Porém, à medida que o modelo evolui ou que os dados mudam, **esses thresholds tornam-se inválidos**, degradando progressivamente a acurácia e a consistência das decisões. Em sistemas com múltiplos modelos, essa degradação escala rapidamente, tornando a atualização manual impraticável.
+
+Contudo, **o problema vai além dos thresholds**. A verdadeira questão é a **fragilidade de sistemas que assumem que o mundo é estável**, quando, na prática, **o comportamento dos dados de entrada pode mudar a qualquer momento**. Para enfrentar isso, são necessárias arquiteturas com **mecanismos de monitoramento contínuo e reativos**, capazes de identificar desvios entre o comportamento esperado e o observado.
+
+O artigo propõe três abordagens fundamentais:
+
+1. **Viés de predição (prediction bias)**
+   Monitorar a correspondência entre a distribuição das predições e a dos rótulos observados permite detectar mudanças súbitas no ambiente. Embora essa métrica possa ser satisfeita até por modelos nulos, variações inesperadas nessa relação são frequentemente indicativas de falhas sistêmicas ou *drift* de dados. Quando fatiado por atributos como localização, faixa etária ou dispositivo, esse viés se torna um poderoso sinal para disparar investigações.
+
+2. **Limites de ação (action limits)**
+   Em sistemas que tomam decisões no mundo real — como lances em tempo real, bloqueios de conteúdo ou decisões financeiras — a definição de limites superiores serve como um mecanismo de *sane check*. Esses limites atuam como travas de segurança: se atingidos, devem disparar alertas e acionar respostas automáticas ou intervenção manual imediata. Eles não evitam o problema, mas impedem que ele cause danos sistêmicos antes de ser diagnosticado.
+
+3. **Monitoramento de produtores de dados upstream**
+   O modelo é apenas o ponto final de uma cadeia. Qualquer mudança em APIs, schemas, fluxos de ingestão ou pipelines intermediários pode corromper silenciosamente os dados de entrada. Por isso, **os sistemas que produzem dados para o modelo devem ter SLAs explícitos, métricas de confiabilidade e mecanismos de alerta propagados downstream**. Da mesma forma, falhas do modelo devem ser comunicadas de volta a todos os consumidores e integradores.
+
+Essas estratégias de detecção, embora necessárias, **não são suficientes**. A **resposta à mudança precisa ser tão rápida quanto a própria mudança**. Em ambientes críticos, **esperar por uma resposta humana via alerta manual é arriscado e, muitas vezes, tarde demais**. Sistemas modernos devem incorporar **respostas automatizadas**, como pipelines de rollback, ajustes dinâmicos de thresholds, reprocessamento automático de batches ou até mesmo desativação segura de modelos em produção — sempre com critérios bem calibrados para evitar *overreaction*.
+
+## 8. Outras áreas de débito
+
+> Além dos modelos e pipelines, a dívida técnica em sistemas de ML também se acumula nos testes de dados, na reprodutibilidade, nos processos operacionais e na cultura organizacional — dimensões frequentemente negligenciadas, mas essenciais para a sustentabilidade sistêmica dessas soluções.
+
+Grande parte da atenção sobre dívida técnica em sistemas de aprendizado de máquina recai sobre modelos, pipelines e configuração. No entanto, **há um conjunto igualmente importante — e frequentemente negligenciado — de áreas complementares onde a dívida se acumula de forma silenciosa, progressiva e estrutural**. Esses elementos não estão no coração algorítmico do sistema, mas atuam como sua infraestrutura de suporte, e qualquer fragilidade neles pode comprometer gravemente a escalabilidade, confiabilidade e sustentabilidade da solução como um todo.
+
+Essas formas de dívida não são apenas adicionais: elas **refletem a natureza sistêmica do desenvolvimento de ML moderno**. O artigo de Sculley et al. já apontava que o comportamento do sistema emerge da interação entre dados, modelos, infraestrutura, lógica de negócio e operações contínuas. A dívida técnica, portanto, **não está restrita ao código nem ao modelo — ela permeia o ecossistema inteiro.**
+
+### 8.1 Dívida de teste de dados
+
+Enquanto o código é tradicionalmente testado com métodos bem definidos (como testes unitários e de integração), **os dados, que são o principal insumo em ML, raramente são tratados com o mesmo rigor**. A **dívida de teste de dados** surge da ausência de verificações sistemáticas de integridade, distribuição, consistência e semântica dos dados utilizados em produção.
+
+Testar dados envolve práticas como:
+
+* Detecção de **valores ausentes ou anômalos**;
+* Monitoramento de **distribuições e deriva temporal (drift)**;
+* Validações semânticas para garantir que campos categóricos ou métricas sigam padrões esperados.
+
+A ausência desses testes leva a regressões silenciosas e instabilidade dos modelos, sobretudo quando pipelines evoluem ou fontes externas mudam. Sem testes adequados de dados, **mesmo um modelo "correto" pode falhar ao operar sobre entradas corrompidas ou obsoletas**.
+
+### 8.2 Dívida de reprodutibilidade
+
+A reprodutibilidade — capacidade de repetir um experimento e obter os mesmos resultados — é um pilar da ciência, mas **segue sendo uma das maiores fontes de dívida técnica em sistemas de ML aplicados**. Essa dívida se manifesta quando torna-se difícil repetir experimentos, auditar resultados ou rastrear falhas de forma confiável, devido a fatores como:
+
+* Aleatoriedade nos algoritmos de otimização;
+* Variações não determinísticas causadas por paralelismo e diferenças de hardware;
+* Falta de versionamento rigoroso de dados, código e configurações;
+* Dependência de ambientes locais, sem encapsulamento formal.
+
+Sem controle adequado, o sistema se transforma em uma *“caixa preta histórica”*: mesmo quando funciona, **não se sabe exatamente por quê — nem se consegue reproduzir seus comportamentos passados**. Ferramentas como MLflow, DVC, Metaflow, W\&B e Docker ajudam, mas exigem disciplina, infraestrutura e uma cultura de engenharia madura.
+
+### 8.3 Dívida de gerenciamento de processos
+
+À medida que os sistemas de ML amadurecem, deixam de ser protótipos isolados e passam a ser **plataformas complexas com múltiplos modelos, pipelines e dependências paralelas**. Isso gera uma dívida operacional crítica: **a falta de padronização, visibilidade e automação no gerenciamento de processos**.
+
+Essa dívida se manifesta por meio de:
+
+* Reentrenamento manual com scripts esquecidos;
+* Agendamentos não rastreados (cron jobs frágeis);
+* Falta de orquestração formal;
+* Dependência de intervenções humanas para tarefas recorrentes.
+
+Esse cenário não só **aumenta o custo operacional**, como também **fragiliza o sistema frente a mudanças**. Ferramentas como Airflow, Argo, Kubeflow Pipelines ou ZenML têm emergido para mitigar esse tipo de dívida, mas sua adoção exige mudança de práticas e mindset organizacional.
+
+### 8.4 Dívida cultural
+
+Talvez a forma mais invisível — e mais determinante — de dívida técnica em ML seja a **dívida cultural**. Ela se manifesta quando a organização mantém uma divisão rígida entre pesquisa e engenharia, entre desenvolvimento exploratório e produção. Esse desalinhamento leva a:
+
+* Transferência de notebooks sem contexto;
+* Desconexão entre as suposições do modelo e as restrições da infraestrutura;
+* Falta de prioridade para aspectos como explicabilidade, monitoramento, sustentabilidade ou segurança.
+
+Além disso, há uma cultura dominante que ainda **supervaloriza métricas como acurácia ou AUC**, enquanto negligencia **qualidades sistêmicas essenciais como rastreabilidade, manutenibilidade, transparência ou estabilidade em produção**.
+
+Combater essa dívida exige **mudança de valores e incentivos**: valorizar simplicidade, padronização, documentação, código limpo, reprodutibilidade e colaboração entre cientistas e engenheiros. Equipes híbridas, com papéis bem definidos e visão compartilhada, são um antídoto poderoso contra essa forma de dívida.
+
+## 9. Conclusão
+
+> O comportamento de um sistema de ML não está apenas no código — está em todo o sistema que o cerca.
+
+A metáfora da dívida técnica tornou-se uma das formas mais eficazes de comunicar os custos ocultos e acumulativos de decisões de engenharia mal calibradas. Em sistemas de machine learning, ela ganha força ao dar nome e visibilidade a aspectos complexos, não funcionais e muitas vezes invisíveis — até que se tornem críticos. No entanto, sua utilidade conceitual esbarra em um desafio prático: como mensurar uma dívida que é estrutural, progressiva e silenciosa, até o ponto de paralisar a evolução do sistema?
+
+O problema não está apenas em reconhecer sua existência, mas em definir critérios pragmáticos para avaliar sua profundidade e impacto. Velocidade de entrega e volume de novas funcionalidades, por exemplo, são métricas enganosas: ganhos rápidos podem ocultar improvisações arquiteturais que minam a sustentabilidade do sistema a médio e longo prazo.
+
+Para isso, o artigo propõe um conjunto de testes de estresse conceituais, que ajudam a diagnosticar a saúde do sistema. Quão fácil seria substituir um modelo por outro? Qual é o fechamento transitivo das dependências de dados? Conseguimos medir o impacto de uma mudança? Melhorias locais provocam regressões globais? Novos membros conseguem contribuir rapidamente? Quando as respostas a essas perguntas são negativas, o sistema está em dívida — técnica, estrutural e organizacional.
+
+Identificar essa dívida exige sensibilidade arquitetural. Corrigi-la, exige cultura. Requer decisões conscientes de priorização, tempo dedicado à refatoração e valorização de práticas sustentáveis — como padronização de pipelines, simplificação de dependências e investimento em testes e documentação. Essas escolhas não são naturais nem imediatas: precisam ser cultivadas por uma cultura que valorize excelência em engenharia tanto quanto inovação algorítmica.
+
+Soluções que elevam a performance às custas de complexidade não controlada raramente valem o custo. O acúmulo de dependências frágeis, exceções mal documentadas ou parâmetros hardcoded tende a passar despercebido — até que se torne intransponível.
+
+No fim das contas, sistemas de ML não são apenas modelos em produção, mas ecossistemas vivos, com comportamento emergente e dívida acumulável. Sua sustentabilidade depende menos da acurácia de um algoritmo e mais da qualidade das decisões que sustentam tudo ao seu redor.
+
+# **Síntese**
+
+## Technical Debt in ML
+
+| Dívida                                                                                          | *Debt Smells*                                                        | Causas Comuns                                                                 | Mitigação                                                                 |
+|-----------------------------|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|--------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| 2.1 Erosão de fronteiras        | Modelos complexos tornam difícil manter abstrações e modularidade, violando encapsulamento ideal.  | Interfaces opacas; mudanças em uma parte afetam outras; lógica difusa entre camadas. | Uso de modelos como caixas-pretas; acoplamento de entrada/saída a lógica de negócio. | Isolamento de modelos por domínio; validação de interfaces; separação entre lógica algorítmica e operacional. |
+| 2.2 Emaranhamento | Alterar uma feature muda o comportamento de muitas outras, tornando o sistema imprevisível.        | Instabilidade ao modificar features; dificuldade de testes localizados.           | Correlação estatística entre features; dependências implícitas não controladas. | Remoção de redundância entre features; teste de sensibilidade; modularização por subproblema.                       |
+| 2.3 Cascata de correções        | Novo modelo criado para corrigir erros do anterior, gerando cadeia frágil de dependências.         | Complexidade crescente; regressões inesperadas ao alterar componentes.            | Empilhamento de modelos sem reengenharia; correções pontuais reativas.        | Refatorar modelo original ao invés de empilhar; desacoplamento entre tarefas e versões.                         |
+| 3.1 Dependência Instável de Dados      | O sistema consome dados de outras fontes (modelos, tabelas, APIs) que mudam com o tempo, sem controle claro. Isso pode causar falhas imprevisíveis quando essas fontes são atualizadas. | Mudanças externas causam quebras silenciosas; dificuldade em reproduzir erros. | Falta de versionamento; fontes externas controladas por outros times.         | Criar versões congeladas de sinais e só atualizar após validação; padronizar contratos de dados. |
+| 3.2 Dependência Subutilizada de Dados  | O sistema utiliza variáveis que têm pouco ou nenhum impacto real no desempenho do modelo, mas que aumentam a complexidade e fragilidade. | Quebras causadas por remoção de campos irrelevantes; maior vulnerabilidade a mudanças. | Inclusão de features redundantes, legadas ou irrelevantes sem avaliação formal. | Remover features com impacto marginal usando análise leave-one-feature-out; revisar periodicamente as entradas. |
+| 3.3 Falta de Análise Estática de Dados | Não há ferramentas para rastrear e documentar as dependências entre dados e features, dificultando migrações e controle de mudanças. | Dependências “fantasmas” surgem; alterações simples causam efeitos cascata.     | Ausência de anotação formal ou automação para inspeção de dependências.       | Adotar ferramentas de gestão de features com anotação e validação; visualizar árvores de dependência. |
+| 4.1 Feedback Loop Direto        | O modelo influencia os próprios dados de treino ao longo do tempo. Isso distorce o aprendizado, pois os dados futuros são impactados pelas predições atuais. | Mudança de comportamento do sistema sem mudanças de código; enviesamento progressivo dos dados de entrada.     | Uso de algoritmos supervisionados onde seria necessário contextual bandits; ausência de randomização.     | Introduzir aleatoriedade controlada; manter subconjuntos de dados não influenciados para validação.             |
+| 4.2 Feedback Loop Oculto        | Interações indiretas entre sistemas independentes afetam os dados ou o ambiente, criando efeitos colaterais imprevisíveis e cumulativos.         | Mudanças inesperadas de performance em componentes não relacionados; dificuldade extrema de rastrear causas.   | Sistemas distintos compartilham ambiente; mudanças em um sistema afetam comportamento do outro indiretamente. | Análise causal do sistema como um todo; simulações de impacto; monitoramento cruzado de sistemas correlacionados. |
+| 5.1 Glue Code                     | Grande volume de código necessário para integrar pacotes genéricos de ML com o sistema. Congela o sistema em torno de dependências específicas.            | Dificuldade de atualizar bibliotecas; acoplamento excessivo; baixa reutilização.                                               | Uso direto de bibliotecas genéricas sem abstrações; separação entre times de pesquisa e engenharia.   | Criar APIs padronizadas; encapsular bibliotecas; fomentar times híbridos (pesquisa + engenharia).             |
+| 5.2 Pipeline Jungle               | Pipelines de preparação de dados crescem de forma orgânica e descontrolada, acumulando transformações frágeis e não orquestradas.                          | Falhas difíceis de rastrear; testes caros; alto custo de manutenção e inovação.                                                 | Adição incremental de sinais e fontes; ausência de projeto holístico do pipeline.                     | Refatorar pipelines do zero; adotar ferramentas de orquestração; projetar coleta e extração como sistema.     |
+| 5.3 Dead Experimental Codepaths   | Caminhos de código criados para experimentos temporários permanecem ativos, aumentando a complexidade e risco de regressões.                              | Aumento de complexidade ciclomática; bugs inesperados; branches esquecidos ativos em produção.                                 | Falta de política de limpeza de código experimental; pressa por experimentação sem revisão posterior. | Revisões periódicas; limpeza de branches obsoletos; testes automatizados para cobertura de fluxos ativos.     |
+| 5.4 Abstraction Debt              | Ausência de abstrações robustas e consensuais para componentes-chave de ML, como modelos, dados, predições e aprendizado distribuído.                      | Baixa reutilização; dificuldade de escalar; componentes fortemente acoplados.                                                   | Imaturidade da engenharia de ML; múltiplas abordagens concorrentes para os mesmos conceitos.          | Desenvolver interfaces padrão; adotar arquiteturas baseadas em componentes desacoplados e bem definidos.      |
+| 5.5 Common Smells (Design Smells) | Indícios subjetivos de problemas estruturais como uso excessivo de tipos primitivos, múltiplas linguagens ou protótipos improvisados usados em produção. | Predições ou parâmetros mal anotados; fragmentação tecnológica; dependência excessiva de protótipos.                            | Falta de rigor na engenharia de produção; ausência de validação de escalabilidade.                    | Usar tipos ricos e anotados; unificar stack tecnológica; criar ambientes de prototipagem isolados e descartáveis. |
+| 6.0 Configuration Debt       | Acúmulo de complexidade e fragilidade nas configurações de sistemas de ML, com múltiplas dependências implícitas e configurações não validadas impactando o comportamento. | Diferenças silenciosas entre ambientes; bugs causados por flags; alta dificuldade de rastreabilidade.       | Crescimento orgânico de parâmetros; falta de validação; ausência de versionamento e revisão estruturada.      | Uso de arquivos versionados; validação automática de configurações; ferramentas como Hydra, MLflow; revisão por código.  |
+| 7.0 Mudanças no mundo externo           | O ambiente em que sistemas de ML operam é dinâmico, o que torna modelos treinados com dados históricos obsoletos rapidamente.                                        | Degradação de performance; limiares desatualizados; decisões inconsistentes; aumento de erros operacionais. | Thresholds fixos; falta de monitoramento contínuo; ausência de automação na resposta a desvios.       | Aprendizado de limiares com validação; monitoramento em tempo real; limites de ação; propagação de falhas entre sistemas.         |
+| 8.1 Dívida de Testes de Dados     | Falta de testes estatísticos e de integridade sobre os dados de entrada, que substituem a lógica codificada em sistemas de ML.                                            | Erros silenciosos; deriva de distribuição não detectada; falhas inesperadas em produção.     | Ausência de sanidade nos dados; falta de testes de schema, valor e distribuição.              | Implementar validações semânticas e estatísticas; monitoramento contínuo das distribuições de entrada.                   |
+| 8.2 Dívida de Reprodutibilidade   | Dificuldade em repetir experimentos com os mesmos resultados devido a algoritmos aleatórios, paralelismo, variáveis de ambiente e dados mutáveis.                        | Resultados inconsistentes; dificuldade para depurar; bloqueios em auditoria ou compliance.   | Falta de controle de versões de dados e código; ausência de seeds fixas; ambientes não isolados. | Uso de ferramentas de experiment tracking, versionamento de datasets, containers e controle de aleatoriedade.             |
+| 8.3 Dívida de Gerenciamento       | Complexidade operacional crescente em sistemas com múltiplos modelos, configurações e pipelines interdependentes.                                                        | Processos manuais; erros operacionais; dificuldade de escalar; reações lentas a incidentes.  | Ausência de automação e orquestração; falta de visualização e monitoramento.                  | Automação de deploy, uso de sistemas de orquestração (e.g., Airflow, Kubeflow), ferramentas de recuperação de incidentes. |
+| 8.4 Dívida Cultural               | Cultura organizacional que valoriza somente ganhos algorítmicos, negligenciando aspectos sistêmicos como manutenção, estabilidade e clareza.                           | Retenção de complexidade desnecessária; resistência à remoção de features; silos entre times. | Separação entre pesquisa e engenharia; falta de incentivo à excelência operacional.            | Incentivar cultura de engenharia de sistemas; promover equipes híbridas; valorizar estabilidade e rastreabilidade.        |
+
+
+## Perguntas para apoiar o diagnóstico 
+
+1. **Quão fácil é testar, em larga escala, uma nova abordagem algorítmica?**
+→ Se o sistema está fortemente acoplado ou sem isolamento, qualquer substituição de modelo exige retrabalho estrutural — um sinal claro de dívida técnica.
+
+2. **Qual é o fechamento transitivo de todas as dependências de dados?**
+→ Ou seja, até que ponto os dados usados por um modelo dependem de sinais indiretos ou fontes externas instáveis?
+
+3. **Quão bem conseguimos medir o impacto de uma mudança no sistema?**
+→ Ausência de métricas, benchmarks históricos e rastreabilidade impede qualquer avaliação objetiva de regressões.
+
+4. **Uma melhoria em um modelo ou sinal tende a degradar outros?**
+→ Isso indica interdependência não gerenciada — um forte indicador de dívida estrutural.
+
+5. **Com que rapidez um novo membro da equipe consegue contribuir de forma significativa?**
+→ Tempo excessivo de onboarding pode sinalizar falta de documentação, ausência de padrões, complexidade acoplada ou conhecimento tácito demais.
+
+...
+
+THE END! 
