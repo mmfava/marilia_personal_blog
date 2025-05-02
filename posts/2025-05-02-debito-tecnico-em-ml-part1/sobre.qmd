@@ -1,6 +1,6 @@
 ---
-title: "Débito técnico em Sistemas de ML/IA"
-subtitle: "Parte 1: Geral"
+title: "Débito técnico em sistemas de ML"
+subtitle: "Débito técnico em sistemas de ML/IA (Parte 1.1)"
 image: image.png
 author:
   - name: "Marília Melo Favalesso"
@@ -21,7 +21,7 @@ lang: pt-br
 
 O avanço acelerado da inteligência artificial (IA) em setores como finanças, saúde, varejo e administração pública tem impulsionado uma transformação profunda na engenharia de software. Aplicações baseadas em IA — como sistemas de recomendação, detecção de fraudes e apoio ao diagnóstico médico — já impactam milhões de pessoas e estão cada vez mais presentes em decisões críticas.
 
-Entretanto, essa adoção em larga escala escancara fragilidades nos processos tradicionais de desenvolvimento, exigindo que repensemos qualidade, manutenção e sustentabilidade de sistemas. Um conceito central nesse debate é o de **dívida técnica**, cunhado por Ward Cunningham em 1992. Assim como uma dívida financeira viabiliza ganhos imediatos ao custo de compromissos futuros, a dívida técnica refere-se às consequências de atalhos tomados para acelerar entregas — como pular testes, documentações ou refatorações. Com o tempo, esse passivo aumenta a complexidade, eleva os custos de manutenção e reduz a capacidade de evolução do sistema.
+Entretanto, essa adoção em larga escala escancara fragilidades nos processos tradicionais de desenvolvimento, exigindo que repensemos qualidade, manutenção e sustentabilidade de sistemas. Um conceito central nesse debate é o de **dívida técnica**, cunhado por Ward Cunningham em 1992. Assim como uma dívida financeira viabiliza ganhos imediatos ao custo de compromissos futuros, a dívida técnica refere-se às consequências de atalhos tomados para acelerar entregas — como pular testes, documentações ou refatorações. Com o tempo, esse passivo aumenta a complexidade, eleva os custos de manutenção e reduz a capacidade de evolução do sistema. Em outras palavras: **A dívida precisa ser paga**.
 
 Nos sistemas tradicionais, essas dívidas se manifestam em código mal estruturado, design deficiente, arquitetura inflexível e pouca cobertura de testes. Em soluções de **Machine Learning** (ML), a situação é ainda mais complexa: além de herdar as dívidas clássicas, modelos de IA introduzem novas fontes de passivo ligadas à sua natureza dinâmica, estatística e, muitas vezes, opaca. Entre os principais fatores: - **Dependência de dados instáveis ou enviesados** - Dificuldade de rastrear experimentos, versões e configurações - Baixa ou nenhuma interpretabilidade de decisões do modelo - Riscos de **retroalimentação invisível** — por exemplo, em sistemas de recomendação, o modelo prioriza os itens mais clicados, reforçando padrões e ignorando alternativas relevantes.
 
