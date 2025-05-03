@@ -4,7 +4,7 @@ listing:
   - id: blog
     contents: "*/*.qmd"
     type: default
-    fields: [image, date, title, subtitle]
+    fields: [image, categories, date, title, subtitle, reading-time]
     sort: "date desc"
     sort-ui: true
     filter-ui: true

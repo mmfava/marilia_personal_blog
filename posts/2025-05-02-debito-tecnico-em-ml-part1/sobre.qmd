@@ -1,6 +1,6 @@
 ---
-title: "Débito técnico em sistemas de ML"
-subtitle: "Débito técnico em sistemas de ML/IA (Parte 1.1)"
+title: "A pressa é a inimiga da perfeição!"
+subtitle: "Débito técnico em sistemas de ML/IA"
 image: image.png
 author:
   - name: "Marília Melo Favalesso"
@@ -15,9 +15,7 @@ categories:
 lang: pt-br
 ---
 
-# Débito técnico em sistemas de ML
-
-## Introdução
+# Introdução
 
 O avanço acelerado da inteligência artificial (IA) em setores como finanças, saúde, varejo e administração pública tem impulsionado uma transformação profunda na engenharia de software. Aplicações baseadas em IA — como sistemas de recomendação, detecção de fraudes e apoio ao diagnóstico médico — já impactam milhões de pessoas e estão cada vez mais presentes em decisões críticas.
 
@@ -35,7 +33,7 @@ Imagine um sistema de recomendação que não é reavaliado por anos. Ele contin
 Com a tecnologia no centro das decisões estratégicas, torna-se essencial compreender as origens e implicações da dívida técnica em sistemas baseados em IA. Só assim será possível desenvolver soluções mais robustas, auditáveis e sustentáveis — tanto do ponto de vista técnico quanto organizacional e social.
 :::
 
-## Particularidades de sistemas de ML
+# Particularidades de sistemas de ML
 
 Soluções de aprendizado de máquina seguem um ciclo contínuo e interdependente que vai da coleta de dados à operação em produção. Esse ciclo é composto por diferentes etapas, cada uma com suas próprias exigências técnicas e potenciais fontes de dívida técnica.
 
@@ -47,11 +45,11 @@ Concluído o treinamento, é preciso realizar a **validação** do modelo com da
 
 Cada uma dessas etapas pode acumular dívida técnica caso não seja tratada com cuidado — e quanto mais invisível a dívida, maior seu potencial destrutivo no longo prazo.
 
-## Taxonomia de débitos em ML
+# Taxonomia dos débitos
 
 Aqui organizo as dívidas técnicas em três grupos: **estrutural**, **algorítmica** e **sociotécnica**. Esta taxonomia baseia-se em estudos consolidados sobre dívida técnica em IA, referênciados ao final do texto, e visa facilitar a análise prática desses problemas. Embora não seja uma taxonomia oficial consolidada, ela sintetiza abordagens recorrentes encontradas na literatura técnica e empírica recente.
 
-### Dívidas estruturais
+## Dívidas estruturais
 
 As dívidas estruturais dizem respeito aos alicerces técnicos do sistema. Comprometem escalabilidade, reprodutibilidade e rastreabilidade, e são críticas desde os primeiros ciclos do projeto.
 
@@ -67,7 +65,7 @@ As dívidas estruturais dizem respeito aos alicerces técnicos do sistema. Compr
 | **Documentation & Knowledge** | Ausência de documentação técnica e decisões de projeto. Gera dependência de conhecimento tácito. | README ausente, decisões arquivadas apenas em chats, ausência de histórico de mudanças. |
 | **External Dependency Debt** | Dependência de bibliotecas ou APIs externas instáveis, não testadas ou não versionadas. | Atualização de pacote que quebra compatibilidade com código legado. |
 
-### Dívidas algorítmicas
+## Dívidas algorítmicas
 
 Estas dívidas são específicas da natureza estatística, iterativa e dependente de dados dos sistemas de ML.
 
@@ -81,7 +79,7 @@ Estas dívidas são específicas da natureza estatística, iterativa e dependent
 | **Experiment Tracking Debt** | Execuções e hiperparâmetros não rastreados comprometem replicação e avaliação. | Treinos locais em notebooks sem MLflow ou controle de versões. |
 | **Feedback Loops** | O modelo influencia os dados futuros e gera vieses autocumulativos. | Recomendador que prioriza itens mais clicados reforça padrões e exclui diversidade. |
 
-### Dívidas sociotécnicas
+## Dívidas sociotécnicas
 
 Relacionam-se à cultura, organização e valores humanos envolvidos no desenvolvimento de sistemas de IA.
 
@@ -94,11 +92,11 @@ Relacionam-se à cultura, organização e valores humanos envolvidos no desenvol
 | **Organizational/Process** | Falta de colaboração entre times, desalinhamento entre metas técnicas e de negócio, processos frágeis. | Cientistas de dados e devops desalinhados, requisitos mal traduzidos, ausência de workflows claros. |
 | **Regulatory Debt** | Falta de conformidade com regulamentações (ex.: GDPR, AI Act), ausência de auditoria ou mecanismos formais. | Sistema sem log de decisões automatizadas, ausência de consentimento informado, falta de rastreio. |
 
-## Conclusão
+# Conclusão
 
 A dívida técnica em IA é multifacetada, abrangendo aspectos clássicos da engenharia de software e novos desafios trazidos por dados, modelos e contextos sociais. Ela pode comprometer não apenas a performance, mas também a confiabilidade, auditabilidade e integridade dos sistemas.
 
-## Referências
+# Referências
 
 -   Pepe, F., Zampetti, F., Mastropaolo, A., Bavota, G., & Di Penta, M. (2024). [*A Taxonomy of Self-Admitted Technical Debt in Deep Learning Systems*](https://arxiv.org/abs/2409.11826) arXiv:2409.11826.
 -   Recupito, G., Pecorelli, F., Catolino, G., Lenarduzzi, V., Taibi, D., Di Nucci, D., & Palomba, F. (2024). [*Technical Debt in AI-Enabled Systems: On the Prevalence, Severity, Impact, and Management Strategies for Code and Architecture*](https://doi.org/10.1016/j.jss.2024.112151) Journal of Systems and Software, 216, 112151.
