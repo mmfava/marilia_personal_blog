@@ -1,6 +1,6 @@
 ---
 title: "A pressa é a inimiga da perfeição!"
-subtitle: "Débito técnico em sistemas de ML/IA"
+subtitle: "Tipos de débitos em sistemas de ML"
 image: image.png
 author:
   - name: "Marília Melo Favalesso"

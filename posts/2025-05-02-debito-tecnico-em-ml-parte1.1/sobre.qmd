@@ -1,6 +1,6 @@
 ---
-title: "Devo mas não sei, pago quando puder?"
-subtitle: "Dívida técnica oculta em sistemas de ML."
+title: "Devo mas não sei, pago se eu puder?"
+subtitle: "Sobre dívidas ocultas em sistemas de ML."
 image: image.png
 author:
   - name: "Marília Melo Favalesso"
@@ -11,8 +11,11 @@ citation:
   version: 1
 categories:
   - mlops
-  - ia  
+  - ml
 lang: pt-br
+tags: 
+  - google
+  - mlops
 ---
 
 # ***Hidden Technical Debt in Machine Learning Systems***
@@ -578,7 +581,7 @@ No fim das contas, sistemas de ML não são apenas modelos em produção, mas ec
 ## Technical Debt in ML
 
 | Dívida | *Debt Smells* | Causas Comuns | Mitigação |   |
-|--------------|---------------|--------------|--------------|--------------|
+|---------------|---------------|---------------|---------------|---------------|
 | 2.1 Erosão de fronteiras | Modelos complexos tornam difícil manter abstrações e modularidade, violando encapsulamento ideal. | Interfaces opacas; mudanças em uma parte afetam outras; lógica difusa entre camadas. | Uso de modelos como caixas-pretas; acoplamento de entrada/saída a lógica de negócio. | Isolamento de modelos por domínio; validação de interfaces; separação entre lógica algorítmica e operacional. |
 | 2.2 Emaranhamento | Alterar uma feature muda o comportamento de muitas outras, tornando o sistema imprevisível. | Instabilidade ao modificar features; dificuldade de testes localizados. | Correlação estatística entre features; dependências implícitas não controladas. | Remoção de redundância entre features; teste de sensibilidade; modularização por subproblema. |
 | 2.3 Cascata de correções | Novo modelo criado para corrigir erros do anterior, gerando cadeia frágil de dependências. | Complexidade crescente; regressões inesperadas ao alterar componentes. | Empilhamento de modelos sem reengenharia; correções pontuais reativas. | Refatorar modelo original ao invés de empilhar; desacoplamento entre tarefas e versões. |
