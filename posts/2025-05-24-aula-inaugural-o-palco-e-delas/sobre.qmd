@@ -1,0 +1,35 @@
+---
+title: "O Palco é Delas!"
+subtitle: "Aula inaugural"
+date: 2025-05-20
+author:
+  - name: "Marília Melo Favalesso"
+    email: "marilia.melo.favalesso@gmail.com"
+categories:
+    - posts
+    - talks
+    - courses
+    - "O palco é delas"
+lang: pt-br
+tags: 
+    - PT-BR
+    - "O palco é delas"
+---
+
+# O Palco é Delas
+
+## Aula inaugural
+
+![](images/paste-1.png)
+
+Na terceira semana de maio (17/05) participei do primeiro encontro do curso **O Palco é Delas**, uma iniciativa pensada para mulheres que desejam dar os primeiros (ou próximos) passos como palestrantes na área de tecnologia. O curso é conduzido por duas referências: Patricia Parra (a Pachi) e Letícia Leonardo – ou “Pom Pom”, um apelido nascido nos tempos de Twitter, quando ela mesma não imaginava que um dia seria criadora de conteúdo e figura pública.
+
+Pachi e Letícia abriram o encontro contando suas próprias trajetórias: ambas começaram desenvolvendo software, migraram para a área de Developer Relations e, pouco a pouco, passaram a ocupar espaços de fala, primeiro no online e depois presencialmente. Ambas contaram como enfrentaram o nervosismo, dúvidas e a famigerada síndrome do impostor. Apesar de parecer batido, é sempre reconfortante ouvir experiências que ecoam o que tantas de nós sentimos: o receio de não sermos suficientes, de não sermos “inteligentes” ou “especialistas o bastante”, além do medo de expor nossas ideias em ambientes majoritariamente masculinos e cuja linguagem reflete a cultura desse grupo.
+
+Entre tantas orientações compartilhadas, três pontos ficaram especialmente marcados para mim. Primeiro, não precisamos ser as maiores especialistas do mundo para palestrar: sempre há valor no nosso jeito de explicar, nas nossas experiências e até nas dúvidas que carregamos, porque isso pode ajudar outras pessoas. Em segundo lugar, a responsabilidade pela comunicação é sempre de quem fala; se a mensagem não ficou clara, cabe a nós ajustar a linguagem, buscar exemplos do cotidiano, escutar quem está ouvindo e adaptar o discurso até que faça sentido para aquele público. E, por fim, é fundamental lembrar que confiança se constrói na prática: o nervosismo faz parte do processo — não é um sinal de que não somos boas o suficiente, mas apenas um companheiro natural do palco, presente até mesmo para quem já acumula anos de experiência.
+
+O curso em si é estruturado em módulos que vão desde o enfrentamento de barreiras até a preparação e apresentação da própria palestra. A cada sábado, avançamos sobre temas como escolha de tópicos para palestrar, storytelling, montagem de slides, marca pessoal, oratória e, claro, muita troca de experiências. O último mês será todo voltado para mentoria personalizada, e o encerramento ficará por conta de um evento de apresentações ao vivo — nosso grande “palco” onde vamos colocar em prática o que aprendemos.
+
+Outro aspecto que adorei foi a ênfase na comunidade: networking não é só trocar cartões ou seguir no LinkedIn, mas construir relações genuínas de apoio, escuta e inspiração. As histórias de superação, os perrengues compartilhados e até os bastidores com gatos (quem nunca?) espelham aquilo que me atraiu para a área tech — o nosso lado humano.
+
+Saí desse primeiro encontro com a sensação de que “O Palco é Delas” irá se consolidar como uma construção coletiva de coragem, presença e pertencimento. Cada uma de nós tem algo a compartilhar, independentemente do tempo de carreira ou do cargo atual. E, ao nos vermos representadas e apoiadas, entendemos que ocupar o palco é não só possível, mas necessário para transformar a tecnologia em um espaço cada vez mais plural.

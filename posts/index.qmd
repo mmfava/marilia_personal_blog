@@ -5,6 +5,8 @@ listing:
     contents: "*/*.qmd"
     type: default
     fields: [image, categories, date, title, subtitle, reading-time]
+    image-align: right
+    image-height: 150px
     sort: "date desc"
     sort-ui: true
     filter-ui: true
